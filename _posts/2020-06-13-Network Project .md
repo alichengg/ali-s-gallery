@@ -1,96 +1,10 @@
-> Our project is to design an information technology infrastructure for Optimus Consultants. In the past, Optimus Consultants has suffered a series of IT disasters, which caused the company to lose important information. Delayed project completion and lose of customer. Realizing the importance of information technology infrastructure, the new CEO of Optimus Consultants decided to deploy a reliable and scalable information technology infrastructure to ensure the company\'s efficient operations.
->
-> Optimus Consultants will have multiple branches in Auckland, Whangarei, Thames, Tauranga, Rotorua, Palmerston North, and New Plymouth, and the company\'s headquarters will be located in Hamilton. The company will employ about 100 employees and their roles will be structural engineer, civil engineer, technician, management, accounting, payroll, marketing and office manager / receptionist. At the same time, the new information technology infrastructure can support employees to work from home.
->
-> Optimus Consultants\' business is to provide specific designs for the construction of residential houses and commercial buildings, roads, subdivisions and public facilities. The company will establish contact with the client-builder or architect and carry out specific designs. For example, when designing a house beam, a project manager is assigned to the project, and one or more engineers use AutoCAD, MS Excel or other engineering software to design. Drawings and calculation reports are then generated and checked by senior engineers. Finally, issue a report invoice to the customer and deliver the report to the customer after the customer pays.
->
-> I will divide the implementation of the entire project into 3 main phases:
->
-> First of all, I will have a specific Proposed Design. The Proposed Design will present a more specific diagram of component connections and possible technologies used. Also, I will analyse the reasons for using these technologies.
->
-> Second, I will use the GNS3 to create the entire project. I will use ASA firewalls, routers, and switches. And realize the construction of each server in computers.
->
-> Finally, during the project stage, I will record the configuration, which will include the detailed deployment process, technical complexity, and working solution.
+This project is to design an information technology infrastructure for Optimus Consultants. In the past, Optimus Consultants has suffered a series of IT disasters, which caused the company to **lose important information**. Delayed project completion and lose of customer. Realizing the importance of information technology infrastructure, the new CEO of Optimus Consultants decided to deploy a reliable and scalable information technology infrastructure to ensure the company\'s efficient operations.
 
-# Research
+Optimus Consultants will have **multiple branches** in Auckland, Whangarei, Thames, Tauranga, Rotorua, Palmerston North, and New Plymouth, and the company\'s headquarters will be located in Hamilton. The company will employ about 100 employees and their roles will be structural engineer, civil engineer, technician, management, accounting, payroll, marketing and office manager / receptionist. At the same time, the new information technology infrastructure can support employees to work from home.
 
-> There are many ways can be for fulfilling the needs of this project. Both Windows and Linux are very suitable platforms for deploying related servers. In this part, I will list the required service deployments and give several possible technologies to complete these deployments.
+Optimus Consultants\' business is to provide specific designs for the construction of residential houses and commercial buildings, roads, subdivisions and public facilities. The company will establish contact with the client-builder or architect and carry out specific designs. For example, when designing a house beam, a project manager is assigned to the project, and one or more engineers use **AutoCAD**, **MS Excel** or other **engineering software** to design. Drawings and calculation reports are then generated and checked by senior engineers. Finally, issue a report invoice to the customer and deliver the report to the customer after the customer pays.
 
-## Technology Analysis
 
--   **Directory services**
-
-> **Active Directory** is a popular Directory service that can centrally manage users, computers, and other objects on the network. Its main function is to authenticate and authorize users and computers in the Windows domain (Rackspace Support ,2016, p.1). It is supported on both Linux and Windows. Compared with Linux, Windows Active Directory provides a good interface interaction.
->
-> **OpenDJ** is a **directory server** written based on JAVA, supporting access control and function expansion. This software supports Linux and Windows. OpenDJ provides a high-performance Vertical Scalability directory server (vharseko,2020, p.1). it is known for the simplest and fastest directory to deploy and manage (p.1).
->
-> Windows Active Directory provides a good interface interaction.
-
--   **Domain controller**
-
-> [**Microsoft**](https://en.wikipedia.org/wiki/Microsoft_Servers) **Domain controllers** are used to control or manage all computers in the domain. You can create and delete user accounts from it, and grant or revoke access. It can provide a safe management mode. **Active Directory** can be used as a Domain controller.
->
-> **Zentyal** is a Domain controller server based on Ubuntu system. Zentyal integrates many open source components, and it also has the Microsoft Exchange Server protocol (Wikipedia, 2020, p.1). Therefore, it supports the native compatibility of the Microsoft Outlook client.
-
--   **DHCP and DNS**
-
-> By setting the IP address pool, **DHCP** can automatically assign IP addresses to devices on the network without manually configuring IP addresses, and can also avoid IP conflicts. **DNS** is used to connect to a specific network computer or the Internet. It can resolve domain names by IP address or IP by domain name. Both DNS and DHCP can create services on **Windows**.
->
-> **ASA firewall and Router** can also quickly set up DNS and DHCP servers, it usually only needs a few codes to achieve. It is a very fast and efficient deployment method.
-
--   **Deployment/imaging Services**
-
-> **Windows Deployment Services** supports the deployment of Windows operating systems. Users can use WDS to implement network-based installation to set up the client, so other users can directly install related systems through the network without relying on USB or CD for installation.
->
-> **Microsoft Deployment Toolkit** is a tool for automating desktop and server deployment. It can reduce deployment time and standardize desktop and server images (Microsoft, n.d., p.1). MDT also enables you to manage security and ongoing configuration more easily (p.1). It can effectively reduce the complexity and time of deployment in an enterprise environment (p.1).
-
--   **Data Storage**
-
-> As a **shared file**, because of the need to consider permissions, **FTP** server seems to be a very good choice. The authorization of FTP is clearer, and each file can be authorized intuitively.
->
-> In addition, setting a **shared folder** directly on the network is also an option, but it is more complicated than FTP in setting permissions.
-
--   **Virtual Private Network**
-
-> There are many popular **VPN** servers nowadays, and there are **remote connections** based on **PPPoE**, which can be easily created under **Windows**.
->
-> **ASA firewall** provides an **SSL VPN** which is more secure. SSL is a popular remote VPN mode. It can provide **Web-based** connections and can automatically guide users to install related VPN clients via the Web (F5 GLOSSARY, n.d., p.1).
-
--   **Authentication server**
-
-> **Network Policy Server** in **Windows** can provide an **Authentication server**. When a remote user connects, the Network Policy Server will start the authentication service.
->
-> In addition, the **ASA firewall** has the **AAA** authentication protocol. Compared to creating a RADIUS server on Windows, the AAA server is easier to configure.
-
--   **Data backup**
-
-> **Shadow Copy** is usually required for a file transfer server. It is very easy to open in **Windows**. Shadow Copy can be used to restore the functionality of earlier versions of files.
->
-> If we are concerned about data security, we can rely on some open source backup software, such as **Areca Backup**.
-
-# Project Methodology
-
-## Waterfall
-
-The Waterfall methodology was very helpful to this project. This project is divided into many small tasks. Each task can represent a stage. It is almost impossible to change the order between these tasks.
-
-From Network Project Propal, from this task, we can understand the background, needs and plans of the entire project. First of all, I learned the basic information of the company and the overall project direction. The second is the Project scope, which can help me to conduct a demand analysis, for example, what services do I need to set up the server need to include. Then, you can have an understanding of the technology of the project, and finally consider how to plan the time. Network Project Propal allows me to have a good understanding of the project and clarify my goals.
-
-Design document is an important plan document before the actual operation. We first need to plan a rough network topology diagram, and then start to design the server, such as Active Directory, we need to design its role in each site, and staff distribution. In addition, this task also allows us to conduct a lot of technical research and give at least two options for each requirement to increase the flexibility of the entire project.
-
-After Design document, we really started to implement, according to our previous Desing document ideas, to implement the entire project. It can be said that Design Document provides great convenience for actual operation, it makes the actual operation very clear. If the use of Design document is not used, I may have no direction on the implementation.
-
-Project Report can be said to be a review of the entire project, including the overall needs and goals of the project. It also includes our initial design ideas and final design results. Project Report depends on previous tasks. If any task is not completed, it will affect the Project Report.
-
-## Effective
-
-The Waterfall methodology defines a very clear working idea, it can serve my time plan well, because each task will stipulate the completion time, so the entire task will not appear very complicated and difficult to start.
-
-Secondly, each task is actually serving the next task. For example, Design document plays a great role in guiding the implementation. It can make me more aware of what I need to accomplish and how to accomplish it in Implementation.
-
-## Other methodology considerations
-
-Agile is also an excellent methodology, but it is not very helpful for this project. Agile provides a very flexible management method, which is very suitable for projects with more changes. But the complexity of the project is not high, and the task assignment is very clear. Secondly, Agile generally does not have a clear fixed plan, which may make the progress management of the project very messy. Therefore, The Waterfall methodology is a very good choice for this project.
 
 # Design
 
@@ -99,6 +13,62 @@ Agile is also an excellent methodology, but it is not very helpful for this proj
 ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image001.jpg)
 
 Figure 1 Final network Diagram
+
+
+
+## Technology Analysis
+
+-   **Directory services**
+
+***Active Directory*** is a popular Directory service that can centrally manage users, computers, and other objects on the network. Its main function is to authenticate and authorize users and computers in the Windows domain (Rackspace Support ,2016, p.1). It is supported on both Linux and Windows. Compared with Linux, Windows Active Directory provides a good interface interaction.
+
+***OpenDJ*** is a directory server written based on JAVA, supporting access control and function expansion. This software supports Linux and Windows. OpenDJ provides a high-performance Vertical Scalability directory server (vharseko,2020, p.1). it is known for the simplest and fastest directory to deploy and manage (p.1).
+
+Windows Active Directory provides a good interface interaction.
+
+-   **Domain controller**
+
+***Microsoft Domain controllers*** are used to control or manage all computers in the domain. You can create and delete user accounts from it, and grant or revoke access. It can provide a safe management mode. ***Active Directory*** can be used as a Domain controller.
+
+***Zentyal*** is a Domain controller server based on Ubuntu system. Zentyal integrates many open source components, and it also has the Microsoft Exchange Server protocol (Wikipedia, 2020, p.1). Therefore, it supports the native compatibility of the Microsoft Outlook client.
+
+-   **DHCP and DNS**
+
+By setting the IP address pool, ***DHCP*** can automatically assign IP addresses to devices on the network without manually configuring IP addresses, and can also avoid IP conflicts. ***DNS*** is used to connect to a specific network computer or the Internet. It can resolve domain names by IP address or IP by domain name. Both DNS and DHCP can create services on ***Windows***.
+
+***ASA* *firewall* *and* *Router*** can also quickly set up DNS and DHCP servers, it usually only needs a few codes to achieve. It is a very fast and efficient deployment method.
+
+-   **Deployment/imaging Services**
+
+***Windows Deployment Services*** supports the deployment of Windows operating systems. Users can use WDS to implement network-based installation to set up the client, so other users can directly install related systems through the network without relying on USB or CD for installation.
+
+***Microsoft Deployment Toolkit*** is a tool for automating desktop and server deployment. It can reduce deployment time and standardize desktop and server images (Microsoft, n.d., p.1). MDT also enables you to manage security and ongoing configuration more easily (p.1). It can effectively reduce the complexity and time of deployment in an enterprise environment (p.1).
+
+-   **Data Storage**
+
+As a ***shared file***, because of the need to consider permissions, ***FTP*** server seems to be a very good choice. The authorization of FTP is clearer, and each file can be authorized intuitively.
+
+In addition, setting a ***shared folder*** directly on the network is also an option, but it is more complicated than FTP in setting permissions.
+
+-   **Virtual Private Network**
+
+There are many popular ***VPN*** servers nowadays, and there are remote connections based on PPPoE, which can be easily created under Windows.
+
+***ASA firewall*** provides an SSL VPN which is more secure. SSL is a popular remote VPN mode. It can provide Web-based connections and can automatically guide users to install related VPN clients via the Web (F5 GLOSSARY, n.d., p.1).
+
+-   **Authentication server**
+
+***Network Policy Server*** in Windows can provide an Authentication server. When a remote user connects, the Network Policy Server will start the authentication service.
+
+In addition, the ASA firewall has the ***AAA*** authentication protocol. Compared to creating a RADIUS server on Windows, the AAA server is easier to configure.
+
+-   **Data backup**
+
+***Shadow Copy*** is usually required for a file transfer server. It is very easy to open in Windows. Shadow Copy can be used to restore the functionality of earlier versions of files.
+
+If we are concerned about data security, we can rely on some open source backup software, such as ***Areca Backup***.
+
+
 
 ## Technologies used
 
@@ -268,7 +238,7 @@ Data security is a very important factor, because the company has suffered serio
 
 -   Set the out port ip address, and set Security-level to 0.
 
-> Areas with high security levels can directly access areas with low security levels, but areas with low security levels cannot directly access areas with high security levels.
+Areas with high security levels can directly access areas with low security levels, but areas with low security levels cannot directly access areas with high security levels.
 
 1.  ASA-H(config)# **int** management 0/0  
 
@@ -1054,15 +1024,15 @@ Figure 127 Shadow Copies Setting
 
 ### Security policy
 
-> ⚫ **Identification and authentication policies**
+⚫ **Identification and authentication policies**
 
 -   The company\'s internal FTP is developed for all employees, and the FTP server has specific authorization settings.
 
 -   All users need to log in to the FTP server using the account and password.
 
-> Password policies
->
-> ⚫ **Password policies**
+Password policies
+
+⚫ **Password policies**
 
 -   Please modify your account password every month.
 
@@ -1070,7 +1040,7 @@ Figure 127 Shadow Copies Setting
 
 -   The password for logging into the FTP server and the intranet should not be the same.
 
-> ⚫ **Acceptable use policies**
+⚫ **Acceptable use policies**
 
 -   Any malicious attack on the server will be investigated.
 
@@ -1078,39 +1048,37 @@ Figure 127 Shadow Copies Setting
 
 -   Don't try to log in with someone else's account.
 
-> ⚫ **Remote access policies**
+⚫ **Remote access policies**
 
 -   All users can access the company\'s internal resources by installing the vpn client, the most
 
 -   It requires employees to carry out account and password to authorize access.
 
-> ⚫ **Network maintenance policies**
+⚫ **Network maintenance policies**
 
 -   Please do not install or update related software by yourself. The network management is responsible for updating together.
 
 -   We will release a new version of the software to the client through the server and update it uniformly.
 
-> ⚫ **Incident handling policies**
+⚫ **Incident handling policies**
 
--   When a network failure occurs, please contact the network administrator in time
-
-> for troubleshooting, please do not make changes to the settings yourself.
+-   When a network failure occurs, please contact the network administrator in time for troubleshooting, please do not make changes to the settings yourself.
 
 ### Enterprise Security Strategy
 
-> ⚫ **Internal training**
->
-> Employee training is a means to maintain network security, it can make employees consciously prevent some social engineering attacks, such as phishing websites, spam ect.
->
-> At the same time, it is necessary to train employees to have professional ethics and not to act beyond their authority
->
-> ⚫ **Update security components in time**
->
-> Cisco will provide anti-virus signature updates, so such information needs to be reviewed and updated in a timely manner.
->
-> ⚫ **Pay attention to information security incidents**
->
-> Be vigilant against the new types of cyber attacks nowadays, and implement them in a timely manner after the release of defense strategies. For example, the wannacry ransomware virus that occurred a few years ago, when it is confirmed to propagate through TCP port 445, we need to close the port in time to ensure security.
+⚫ **Internal training**
+
+Employee training is a means to maintain network security, it can make employees consciously prevent some social engineering attacks, such as phishing websites, spam ect.
+
+At the same time, it is necessary to train employees to have professional ethics and not to act beyond their authority
+
+⚫ **Update security components in time**
+
+Cisco will provide anti-virus signature updates, so such information needs to be reviewed and updated in a timely manner.
+
+⚫ **Pay attention to information security incidents**
+
+Be vigilant against the new types of cyber attacks nowadays, and implement them in a timely manner after the release of defense strategies. For example, the wannacry ransomware virus that occurred a few years ago, when it is confirmed to propagate through TCP port 445, we need to close the port in time to ensure security.
 
 -   
 
@@ -1122,7 +1090,7 @@ Figure 127 Shadow Copies Setting
 
 -   Methodology
 
-> Active Directory Domain Services is a combination of Directoty services and Domain controller. We can test whether the client can join the company\'s domain to test whether the server works normally. Active Directory can add domain users, so users should be able to use the users stored in Active Directory to Log in to the client. So the test can be divided into 2 parts:
+Active Directory Domain Services is a combination of Directoty services and Domain controller. We can test whether the client can join the company\'s domain to test whether the server works normally. Active Directory can add domain users, so users should be able to use the users stored in Active Directory to Log in to the client. So the test can be divided into 2 parts:
 
 1.  Test whether the client can join the domain
 
@@ -1130,143 +1098,143 @@ Figure 127 Shadow Copies Setting
 
 -   result
 
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image127.png)
->
-> Figure 128 Active Directory Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image128.png){width="5.768055555555556in" height="4.5569444444444445in"}
->
-> Figure 129 Active Directory Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image129.png){width="5.768055555555556in" height="4.529166666666667in"}
->
-> Figure 130 Active Directory Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image130.png){width="5.768055555555556in" height="4.550694444444445in"}
->
-> Figure 131 Active Directory Test
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image127.png)
+
+Figure 128 Active Directory Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image128.png){width="5.768055555555556in" height="4.5569444444444445in"}
+
+Figure 129 Active Directory Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image129.png){width="5.768055555555556in" height="4.529166666666667in"}
+
+Figure 130 Active Directory Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image130.png){width="5.768055555555556in" height="4.550694444444445in"}
+
+Figure 131 Active Directory Test
 
 ### DHCP
 
 -   Methodology
 
-> The DHCP server should be able to automatically give the client an ip address. DHCP requires the client to be set to DHCP mode, so you need to verify that DHCP requires:
+The DHCP server should be able to automatically give the client an ip address. DHCP requires the client to be set to DHCP mode, so you need to verify that DHCP requires:
 
 1.  Test whether the client can obtain the correct IP address in the automatic address acquisition mode
 
 -   result
 
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image131.png){width="5.768055555555556in" height="3.988888888888889in"}
->
-> Figure 132 DHCP Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image132.png){width="5.768055555555556in" height="4.554861111111111in"}
->
-> Figure 133 DHCP Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image133.png){width="5.768055555555556in" height="4.579166666666667in"}
->
-> Figure 134 DHCP Test
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image131.png){width="5.768055555555556in" height="3.988888888888889in"}
+
+Figure 132 DHCP Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image132.png){width="5.768055555555556in" height="4.554861111111111in"}
+
+Figure 133 DHCP Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image133.png){width="5.768055555555556in" height="4.579166666666667in"}
+
+Figure 134 DHCP Test
 
 ### DNS
 
--   Methodology
+Methodology
 
-> DNS can provide an address resolution service. In this project, DNS is set up to resolve local websites. It should need to have the ability to resolve IP addresses by domain name, and it can send requests to other DNS servers to resolve more Domain name or IP address. So verify DNS requirements:
->
-> 1\. Use the "nslookup" command to test the area resolution service
->
-> 2\. Test whether the client can browse the web normally
->
-> 3\. Test whether the client can access the local website through the domain name.
+DNS can provide an address resolution service. In this project, DNS is set up to resolve local websites. It should need to have the ability to resolve IP addresses by domain name, and it can send requests to other DNS servers to resolve more Domain name or IP address. So verify DNS requirements:
+
+1\. Use the "nslookup" command to test the area resolution service
+
+2\. Test whether the client can browse the web normally
+
+3\. Test whether the client can access the local website through the domain name.
 
 -   result
 
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image134.png){width="5.768055555555556in" height="3.3256944444444443in"}
->
-> Figure 135 DNS Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image135.png){width="5.768055555555556in" height="4.313194444444444in"}
->
-> Figure 136 DNS Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image136.png){width="5.768055555555556in" height="4.543055555555555in"}
->
-> Figure 137 DNS Test
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image134.png){width="5.768055555555556in" height="3.3256944444444443in"}
+
+Figure 135 DNS Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image135.png){width="5.768055555555556in" height="4.313194444444444in"}
+
+Figure 136 DNS Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image136.png){width="5.768055555555556in" height="4.543055555555555in"}
+
+Figure 137 DNS Test
 
 ### Deployment/Imaging service
 
 -   Methodology
 
-> Windows Deployment Services is a network-based installation server for window systems. For clients joining the domain, you need to be able to select the network through the bios interface to install the window system：
->
-> 1\. Test whether the client can install windows from the network option in the BIOS.
+Windows Deployment Services is a network-based installation server for window systems. For clients joining the domain, you need to be able to select the network through the bios interface to install the window system：
+
+1\. Test whether the client can install windows from the network option in the BIOS.
 
 -   result
 
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image137.png){width="5.768055555555556in" height="4.050694444444445in"}
->
-> Figure 138 WDS Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image138.png){width="5.768055555555556in" height="3.829861111111111in"}
->
-> Figure 139 WDS Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image139.png){width="5.768055555555556in" height="4.5375in"}
->
-> Figure 140 WDS Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image140.png){width="5.768055555555556in" height="4.388888888888889in"}
->
-> Figure 141 WDS Test
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image137.png){width="5.768055555555556in" height="4.050694444444445in"}
+
+Figure 138 WDS Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image138.png){width="5.768055555555556in" height="3.829861111111111in"}
+
+Figure 139 WDS Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image139.png){width="5.768055555555556in" height="4.5375in"}
+
+Figure 140 WDS Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image140.png){width="5.768055555555556in" height="4.388888888888889in"}
+
+Figure 141 WDS Test
 
 ## File System Privilege Test
 
 -   Methodology
 
-> The FTP server is an open server of the entire company network, and its security is very important. FTP provides a very convenient access authorization management interface, and administrators can easily perform authorization management. Therefore, the verification methods are:
->
-> 1\. All sites can access the FTP server including remote access
->
-> 2\. The user can only access the folder where the department is located and personal folders. Cannot access other user or department folders.
+The FTP server is an open server of the entire company network, and its security is very important. FTP provides a very convenient access authorization management interface, and administrators can easily perform authorization management. Therefore, the verification methods are:
+
+1\. All sites can access the FTP server including remote access
+
+2\. The user can only access the folder where the department is located and personal folders. Cannot access other user or department folders.
 
 -   result
 
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image141.png){width="5.768055555555556in" height="4.533333333333333in"}
->
-> Figure 142 File System Privilege Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image142.png){width="5.768055555555556in" height="4.685416666666667in"}
->
-> Figure 143 File System Privilege Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image143.png){width="5.768055555555556in" height="4.49375in"}
->
-> Figure 144 File System Privilege Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image144.png){width="5.768055555555556in" height="4.560416666666667in"}
->
-> Figure 145 File System Privilege Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image145.png){width="5.768055555555556in" height="4.501388888888889in"}
->
-> Figure 146 File System Privilege Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image146.png){width="5.768055555555556in" height="4.503472222222222in"}
->
-> Figure 147 File System Privilege Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image147.png){width="5.768055555555556in" height="4.500694444444444in"}
->
-> Figure 148 File System Privilege Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image148.png){width="5.768055555555556in" height="4.561111111111111in"}
->
-> Figure 149 File System Privilege Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image149.png){width="5.768055555555556in" height="4.533333333333333in"}
->
-> Figure 150 File System Privilege Test
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image141.png){width="5.768055555555556in" height="4.533333333333333in"}
+
+Figure 142 File System Privilege Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image142.png){width="5.768055555555556in" height="4.685416666666667in"}
+
+Figure 143 File System Privilege Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image143.png){width="5.768055555555556in" height="4.49375in"}
+
+Figure 144 File System Privilege Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image144.png){width="5.768055555555556in" height="4.560416666666667in"}
+
+Figure 145 File System Privilege Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image145.png){width="5.768055555555556in" height="4.501388888888889in"}
+
+Figure 146 File System Privilege Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image146.png){width="5.768055555555556in" height="4.503472222222222in"}
+
+Figure 147 File System Privilege Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image147.png){width="5.768055555555556in" height="4.500694444444444in"}
+
+Figure 148 File System Privilege Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image148.png){width="5.768055555555556in" height="4.561111111111111in"}
+
+Figure 149 File System Privilege Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image149.png){width="5.768055555555556in" height="4.533333333333333in"}
+
+Figure 150 File System Privilege Test
 
 ## Server Security Test
 
@@ -1274,141 +1242,142 @@ Figure 127 Shadow Copies Setting
 
 -   Methodology
 
-> The purpose of site to site VPN is to allow other branches to access the FTP server. Therefore testing Site to site VPN requires:
->
-> 1\. All branches internal clients can access the FTP server
+The purpose of site to site VPN is to allow other branches to access the FTP server. Therefore testing Site to site VPN requires:
+
+1\. All branches internal clients can access the FTP server
 
 -   result
 
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image150.png){width="5.768055555555556in" height="4.570833333333334in"}
->
-> Figure 151 Site to site Virtual Private Network Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image142.png){width="5.768055555555556in" height="4.685416666666667in"}
->
-> Figure 152 Site to site Virtual Private Network Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image151.png){width="5.768055555555556in" height="4.557638888888889in"}
->
-> Figure 153 Site to site Virtual Private Network Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image152.png){width="5.768055555555556in" height="4.555555555555555in"}
->
-> Figure 154 Site to site Virtual Private Network Test
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image150.png){width="5.768055555555556in" height="4.570833333333334in"}
+
+Figure 151 Site to site Virtual Private Network Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image142.png){width="5.768055555555556in" height="4.685416666666667in"}
+
+Figure 152 Site to site Virtual Private Network Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image151.png){width="5.768055555555556in" height="4.557638888888889in"}
+
+Figure 153 Site to site Virtual Private Network Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image152.png){width="5.768055555555556in" height="4.555555555555555in"}
+
+Figure 154 Site to site Virtual Private Network Test
 
 ### Remote Virtual Private Network
 
 -   Methodology
 
-> Remote Virtual Private Network provides employees with a channel to remotely connect to the company\'s internal server. To verify Remote VPN, try to use the Cisco AnyConnect Secure Mobility Client in the remote client to connect to the company\'s internal network. Using VPN requires AAA server authentication.Therefore testing remote VPN requires:
->
-> 1\. Remote users need to access the public network address of the ASA firewall to log in and install the VPN client.
->
-> 2\. The remote client needs to be able to access the FTP server through a VPN connection.
+Remote Virtual Private Network provides employees with a channel to remotely connect to the company\'s internal server. To verify Remote VPN, try to use the Cisco AnyConnect Secure Mobility Client in the remote client to connect to the company\'s internal network. Using VPN requires AAA server authentication. Therefore testing remote VPN requires:
+
+1\. Remote users need to access the public network address of the ASA firewall to log in and install the VPN client.
+
+2\. The remote client needs to be able to access the FTP server through a VPN connection.
 
 -   result
 
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image153.png){width="5.768055555555556in" height="3.953472222222222in"}
->
-> Figure 155 Remote Virtual Private Network Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image154.png){width="5.768055555555556in" height="3.9125in"}
->
-> Figure 156 Remote Virtual Private Network Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image155.png){width="5.768055555555556in" height="3.8604166666666666in"}
->
-> Figure 157 Remote Virtual Private Network Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image156.png){width="5.150446194225721in" height="4.075353237095363in"}
->
-> Figure 158 Remote Virtual Private Network Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image157.png){width="5.125444006999125in" height="2.6252274715660544in"}
->
-> Figure 159 Remote Virtual Private Network Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image158.png){width="5.768055555555556in" height="4.714583333333334in"}
->
-> Figure 160 Remote Virtual Private Network Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image159.png){width="5.768055555555556in" height="4.586111111111111in"}
->
-> Figure 161 Remote Virtual Private Network Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image160.png){width="5.768055555555556in" height="4.595138888888889in"}
->
-> Figure 162 Remote Virtual Private Network Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image141.png){width="5.768055555555556in" height="4.533333333333333in"}
->
-> Figure 163 Remote Virtual Private Network Test
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image153.png){width="5.768055555555556in" height="3.953472222222222in"}
+
+Figure 155 Remote Virtual Private Network Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image154.png){width="5.768055555555556in" height="3.9125in"}
+
+Figure 156 Remote Virtual Private Network Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image155.png){width="5.768055555555556in" height="3.8604166666666666in"}
+
+Figure 157 Remote Virtual Private Network Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image156.png){width="5.150446194225721in" height="4.075353237095363in"}
+
+Figure 158 Remote Virtual Private Network Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image157.png){width="5.125444006999125in" height="2.6252274715660544in"}
+
+Figure 159 Remote Virtual Private Network Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image158.png) 
+
+Figure 160 Remote Virtual Private Network Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image159.png){width="5.768055555555556in" height="4.586111111111111in"}
+
+Figure 161 Remote Virtual Private Network Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image160.png){width="5.768055555555556in" height="4.595138888888889in"}
+
+Figure 162 Remote Virtual Private Network Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image141.png){width="5.768055555555556in" height="4.533333333333333in"}
+
+Figure 163 Remote Virtual Private Network Test
 
 ### Authentication service
 
 -   Methodology
 
-> AAA service is installed on the ASA firewall and used to authenticate remote access users. There are two ways to authenticate AAA server:
->
-> 1\. Test whether users can connect to the intranet through VPN
->
-> 2\. Check whether the AAA server has user access records
+AAA service is installed on the ASA firewall and used to authenticate remote access users. There are two ways to authenticate AAA server:
+
+1\. Test whether users can connect to the intranet through VPN
+
+2\. Check whether the AAA server has user access records
 
 -   result
 
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image161.png){width="5.768055555555556in" height="5.399305555555555in"}
->
-> Figure 164 Authentication service Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image157.png){width="5.125444006999125in" height="2.6252274715660544in"}
->
-> Figure 165 Authentication service Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image159.png){width="5.768055555555556in" height="4.586111111111111in"}
->
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image161.png){width="5.768055555555556in" height="5.399305555555555in"}
+
+Figure 164 Authentication service Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image157.png){width="5.125444006999125in" height="2.6252274715660544in"}
+
+Figure 165 Authentication service Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image159.png){width="5.768055555555556in" height="4.586111111111111in"}
+
 > Figure 166 Authentication service Test
 >
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image162.png){width="5.768055555555556in" height="5.317361111111111in"}
->
-> Figure 167 Authentication service Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image162.png){width="5.768055555555556in" height="5.317361111111111in"}
+
+Figure 167 Authentication service Test
 
 ### Group Policy
 
 -   Methodology
 
-> Group Policy is used to publish Auto CAD software on the internal network to verify the success of the Group Policy. You need to check whether the software installation program from the server can be found in programs and Features in the intranet client.
+Group Policy is used to publish Auto CAD software on the internal network to verify the success of the Group Policy. You need to check whether the software installation program from the server can be found in programs and Features in the intranet client.
 
 -   result
 
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image163.png){width="5.768055555555556in" height="4.247222222222222in"}
->
-> Figure 168 Group Policy Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image164.png){width="5.768055555555556in" height="4.5881944444444445in"}
->
-> Figure 169 Group Policy Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image165.png){width="5.768055555555556in" height="4.516666666666667in"}
->
-> Figure 170 Group Policy Test
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image163.png){width="5.768055555555556in" height="4.247222222222222in"}
+
+Figure 168 Group Policy Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image164.png){width="5.768055555555556in" height="4.5881944444444445in"}
+
+Figure 169 Group Policy Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image165.png){width="5.768055555555556in" height="4.516666666666667in"}
+
+Figure 170 Group Policy Test
 
 ### URL filtering
 
 -   Methodology
 
-> For URL filtering, just open the web page to see if the filtered IP address can be displayed.
+For URL filtering, just open the web page to see if the filtered IP address can be displayed.
 
 -   result
 
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image166.png){width="5.768055555555556in" height="4.570833333333334in"}
->
-> Figure 171 URL filtering Test
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image166.png){width="5.768055555555556in" height="4.570833333333334in"}
+
+Figure 171 URL filtering Test
 
 ### Data Backup
 
 -   Methodology
 
-> The software-based data backup needs to be restored and tested. If the file is deleted after it has been backed up, and the backup service needs to be able to restore the files again.
+The software-based data backup needs to be restored and tested. If the file is deleted after it has been backed up, and the backup service needs to be able to restore the files again.
 
 1.  First, we need to create a test.txt file as a test file
 
@@ -1420,33 +1389,33 @@ Figure 127 Shadow Copies Setting
 
 -   result
 
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image167.png){width="5.768055555555556in" height="4.552777777777778in"}
->
-> Figure 172 Data Backup Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image168.png){width="5.768055555555556in" height="4.520138888888889in"}
->
-> Figure 173 Data Backup Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image169.png){width="5.768055555555556in" height="4.542361111111111in"}
->
-> Figure 174 Data Backup Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image170.png){width="5.768055555555556in" height="2.1104166666666666in"}
->
-> Figure 175 Data Backup Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image171.png){width="5.768055555555556in" height="3.4118055555555555in"}
->
-> Figure 176 Data Backup Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image172.png){width="5.768055555555556in" height="4.506944444444445in"}
->
-> Figure 177 Data Backup Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image173.png){width="5.768055555555556in" height="4.559027777777778in"}
->
-> Figure 178 Data Backup Test
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image167.png){width="5.768055555555556in" height="4.552777777777778in"}
+
+Figure 172 Data Backup Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image168.png){width="5.768055555555556in" height="4.520138888888889in"}
+
+Figure 173 Data Backup Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image169.png){width="5.768055555555556in" height="4.542361111111111in"}
+
+Figure 174 Data Backup Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image170.png){width="5.768055555555556in" height="2.1104166666666666in"}
+
+Figure 175 Data Backup Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image171.png){width="5.768055555555556in" height="3.4118055555555555in"}
+
+Figure 176 Data Backup Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image172.png){width="5.768055555555556in" height="4.506944444444445in"}
+
+Figure 177 Data Backup Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image173.png){width="5.768055555555556in" height="4.559027777777778in"}
+
+Figure 178 Data Backup Test
 
 ## Network Penetration Test
 
@@ -1460,19 +1429,19 @@ Figure 179 Network Penetration Test
 
 -   Methodology
 
-> For the testing of social engineering attacks, we can use the Kali Penetration test Tool -SET. Use SET to create a website similar to the Google login page and publish the website to the intranet for testing. This test can feedback employees\' awareness of social engineering attacks.
+For the testing of social engineering attacks, we can use the Kali Penetration test Tool -SET. Use SET to create a website similar to the Google login page and publish the website to the intranet for testing. This test can feedback employees\' awareness of social engineering attacks.
 
 -   result
 
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image175.png){width="5.768055555555556in" height="3.8493055555555555in"}
->
-> Figure 180 Social Engineering Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image176.png){width="5.768055555555556in" height="3.85625in"}
->
-> Figure 181 Social Engineering Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image177.jpeg){width="5.768055555555556in" height="3.9055555555555554in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image175.png){width="5.768055555555556in" height="3.8493055555555555in"}
+
+Figure 180 Social Engineering Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image176.png){width="5.768055555555556in" height="3.85625in"}
+
+Figure 181 Social Engineering Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image177.jpg){width="5.768055555555556in" height="3.9055555555555554in"}
 
 Figure 182 Social Engineering Test
 
@@ -1480,35 +1449,35 @@ Figure 182 Social Engineering Test
 
 -   Methodology
 
-> The tool we use is kali tool -Hydra. Hydra is a very easy-to-use blasting attack. It supports login tests based on account and password for SSH, FTP, and even Cisco.
+The tool we use is kali tool -Hydra. Hydra is a very easy-to-use blasting attack. It supports login tests based on account and password for SSH, FTP, and even Cisco.
 
 1.  First, you need to verify the connectivity to the target FTP server.
 
-> 2\. Enter the code in the kali terminal for blasting test
+2\. Enter the code in the kali terminal for blasting test
 
 -   result
 
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image178.png){width="5.768055555555556in" height="3.8375in"}
->
-> Figure 183 Brute Force Test
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image179.png){width="5.768055555555556in" height="3.9652777777777777in"}
->
-> Figure 184 Brute Force Test
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image178.png){width="5.768055555555556in" height="3.8375in"}
+
+Figure 183 Brute Force Test
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image179.png){width="5.768055555555556in" height="3.9652777777777777in"}
+
+Figure 184 Brute Force Test
 
 ### Port scan
 
 -   Methodology
 
-> The tool we use is kali tool -Nmap. Nmap is a very powerful information collection tool, able to scan open ports or services of the target
+The tool we use is kali tool -Nmap. Nmap is a very powerful information collection tool, able to scan open ports or services of the target
 
 1.  Enter the code in the kali terminal for blasting test
 
 -   result
 
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image180.png){width="5.768055555555556in" height="5.872222222222222in"}
->
-> Figure 185 Port scan
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image180.png){width="5.768055555555556in" height="5.872222222222222in"}
+
+Figure 185 Port scan
 
 ## Design adjustment
 
@@ -1516,47 +1485,47 @@ From the results of penetration testing, the network system needs to be further 
 
 -   Relieve Brute Force attack
 
-> From the results of penetration testing, the network system needs to be further improved. Suck as, make some more secure settings on the FTP server and the window internal firewall.
->
-> The Brute Force attack has a great impact on the FTP server, although the success rate of the Brute Force attack depends on the dictionary strength. Therefore, if the Brute Force attack is not restricted, it is only a matter of time before the account or password is cracked.
->
-> The FTP server provides the Logon Attempt Restrictions server, which can reduce the possibility of Brute Force attack success by setting the maximum number of failed login attempts.
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image181.png){width="5.768055555555556in" height="3.6868055555555554in"}
->
-> Figure 186 FTP Server Adjustment
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image182.png){width="5.768055555555556in" height="5.334722222222222in"}
+From the results of penetration testing, the network system needs to be further improved. Suck as, make some more secure settings on the FTP server and the window internal firewall.
+
+The Brute Force attack has a great impact on the FTP server, although the success rate of the Brute Force attack depends on the dictionary strength. Therefore, if the Brute Force attack is not restricted, it is only a matter of time before the account or password is cracked.
+
+The FTP server provides the Logon Attempt Restrictions server, which can reduce the possibility of Brute Force attack success by setting the maximum number of failed login attempts.
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image181.png){width="5.768055555555556in" height="3.6868055555555554in"}
+
+Figure 186 FTP Server Adjustment
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image182.png){width="5.768055555555556in" height="5.334722222222222in"}
 
 Figure 187 FTP Server Adjustment
 
 -   Filter unnecessary port traffic
 
-> Unnecessary open ports may also be used by hackers. According to the results of Nmap scanning, a port service such as http is relatively easy to be used by hackers. For the FTP server, only the FTP port needs to be opened.
->
-> Therefore, we can create a New Rule in Windows Firewall with Advanced securiy, and then add the traffic of the port that needs to be filtered out.
->
-> After setting the server, its port will still be scanned by Nmap, but any filtered port traffic will be discarded, so it will not be used by hackers.
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image183.png){width="5.768055555555556in" height="4.648611111111111in"}
->
-> Figure 188 Filter unnecessary port traffic
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image184.png){width="5.768055555555556in" height="3.9972222222222222in"}
->
-> Figure 189 Filter unnecessary port traffic
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image185.png){width="5.768055555555556in" height="3.9972222222222222in"}
->
-> Figure 190 Filter unnecessary port traffic
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image186.png){width="5.768055555555556in" height="3.975in"}
->
-> Figure 191 Filter unnecessary port traffic
->
-> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image187.png){width="5.768055555555556in" height="3.963888888888889in"}
->
-> Figure 192 Filter unnecessary port traffic
+Unnecessary open ports may also be used by hackers. According to the results of Nmap scanning, a port service such as http is relatively easy to be used by hackers. For the FTP server, only the FTP port needs to be opened.
+
+Therefore, we can create a New Rule in Windows Firewall with Advanced securiy, and then add the traffic of the port that needs to be filtered out.
+
+After setting the server, its port will still be scanned by Nmap, but any filtered port traffic will be discarded, so it will not be used by hackers.
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image183.png){width="5.768055555555556in" height="4.648611111111111in"}
+
+Figure 188 Filter unnecessary port traffic
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image184.png){width="5.768055555555556in" height="3.9972222222222222in"}
+
+Figure 189 Filter unnecessary port traffic
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image185.png){width="5.768055555555556in" height="3.9972222222222222in"}
+
+Figure 190 Filter unnecessary port traffic
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image186.png){width="5.768055555555556in" height="3.975in"}
+
+Figure 191 Filter unnecessary port traffic
+
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image187.png){width="5.768055555555556in" height="3.963888888888889in"}
+
+Figure 192 Filter unnecessary port traffic
 
 # Reflection
 
@@ -1564,37 +1533,37 @@ The entire project is very challenging for me, almost all the knowledge required
 
 -   What went well
 
-> Moving the project to GNS3 is not very easy, but we also have a better time schedule, allowing us to freely choose the time to do the project. This is a good guarantee for the quality of our project.It didn\'t take a lot of time to build the server, and the server was built very smoothly. Although it is almost brand new knowledge for me, you can find a lot of related building logs from the Internet.
+Moving the project to GNS3 is not very easy, but we also have a better time schedule, allowing us to freely choose the time to do the project. This is a good guarantee for the quality of our project.It didn\'t take a lot of time to build the server, and the server was built very smoothly. Although it is almost brand new knowledge for me, you can find a lot of related building logs from the Internet.
 
 -   What went wrong
 
-> When the project was switched from physical device operation to use GNS3 simulation, the whole project also added a little difficulty. Of course most of the reason is because I don't know enough about GNS3. Although I have done some GNS3-based projects myself, Some settings are still unfamiliar. This has led to problems such as VMnet allocation problems.
+When the project was switched from physical device operation to use GNS3 simulation, the whole project also added a little difficulty. Of course most of the reason is because I don't know enough about GNS3. Although I have done some GNS3-based projects myself, Some settings are still unfamiliar. This has led to problems such as VMnet allocation problems.
 
 -   Different considerations
 
-> I have made a lot of considerations on the security of the network. For example, when considering the Shared folder, I prefer to use an FTP server because it is more secure than setting up a shared file directly in Windows. FTP has a more convenient authorization method, and FTP can Provide an authentication and authorization service, so it is more secure.
->
-> The second is network maintenance considerations, considering that the number of users is not large, so no redundancy is considered when designing the network topology. And I want a simple network topology map, so that it is easier to maintain, and once a failure occurs, it can be resolved quickly.
+I have made a lot of considerations on the security of the network. For example, when considering the Shared folder, I prefer to use an FTP server because it is more secure than setting up a shared file directly in Windows. FTP has a more convenient authorization method, and FTP can Provide an authentication and authorization service, so it is more secure.
+
+The second is network maintenance considerations, considering that the number of users is not large, so no redundancy is considered when designing the network topology. And I want a simple network topology map, so that it is easier to maintain, and once a failure occurs, it can be resolved quickly.
 
 -   Problems encountered and solutions
 
-> At the beginning of GNS3, virtual machines often reported errors. This causes many virtual machines to fail to start automatically in GNS3. If you perform manual other operations, the virtual machine cannot access the Internet.
->
-> Most of the errors can be solved by reporting errors. I checked the VMnet according to the error prompt and finally found that the problem was caused by a conflict in the Vmnet . If two virtual machines occupy the same Vmnet at the same time, it will cause the virtual machine to fail to start, and at the same time, manual startup will cause network conflicts. Therefore, I assigned the Vmnet to solve the problem.
->
-> GNS3\'s device image also has support problems, and some versions do not support certain functions well. For example, the router version I originally used was 7200. When I use NAT, I find that NAT does not work properly, resulting in virtual access to the network. I always think that there is a problem with the setting of the ASA firewall.
->
-> I was almost troubled by this problem for a month, and finally, when rebuilding the topology map, I found that it may be a router version problem. It causes NAT to not work perfectly. So the 7200 version of the router was replaced by the 3200 version. NAT works fine.
+At the beginning of GNS3, virtual machines often reported errors. This causes many virtual machines to fail to start automatically in GNS3. If you perform manual other operations, the virtual machine cannot access the Internet.
+
+Most of the errors can be solved by reporting errors. I checked the VMnet according to the error prompt and finally found that the problem was caused by a conflict in the Vmnet . If two virtual machines occupy the same Vmnet at the same time, it will cause the virtual machine to fail to start, and at the same time, manual startup will cause network conflicts. Therefore, I assigned the Vmnet to solve the problem.
+
+GNS3\'s device image also has support problems, and some versions do not support certain functions well. For example, the router version I originally used was 7200. When I use NAT, I find that NAT does not work properly, resulting in virtual access to the network. I always think that there is a problem with the setting of the ASA firewall.
+
+I was almost troubled by this problem for a month, and finally, when rebuilding the topology map, I found that it may be a router version problem. It causes NAT to not work perfectly. So the 7200 version of the router was replaced by the 3200 version. NAT works fine.
 
 -   How did you use of technologies change over time
 
-> I changed the use of technologies in most cases because I learned a new knowledge point and found it to help my project.
->
-> When designing the entire network topology, the ASA firewall was adopted as the most important network device. However, the ASA firewall is new knowledge for me. Due to the slow progress of my network security course, I must self-learn the firewall configuration to complete my project before learning the ASA firewall.
->
-> However, due to the self-learning configuration of the ASA, it is not possible to fully learn the wider use of the ASA. Due to the lack of understanding of the ASA firewall, during the design of the network, no more perfect security solutions were considered, such as DMZ technologies in ASA.
->
-> Unlike my initial design topology, the final network topology diagram FTP server is separate from the internal network. After learning the DMZ technology, I imhttps://github.com/AliChenggggg/blog/tree/main/images/Project%20Reporttely modified the project.
+I changed the use of technologies in most cases because I learned a new knowledge point and found it to help my project.
+
+When designing the entire network topology, the ASA firewall was adopted as the most important network device. However, the ASA firewall is new knowledge for me. Due to the slow progress of my network security course, I must self-learn the firewall configuration to complete my project before learning the ASA firewall.
+
+However, due to the self-learning configuration of the ASA, it is not possible to fully learn the wider use of the ASA. Due to the lack of understanding of the ASA firewall, during the design of the network, no more perfect security solutions were considered, such as DMZ technologies in ASA.
+
+Unlike my initial design topology, the final network topology diagram FTP server is separate from the internal network. After learning the DMZ technology, I imhttps://github.com/AliChenggggg/blog/tree/main/images/Project%20Reporttely modified the project.
 
 # Conclusions
 
