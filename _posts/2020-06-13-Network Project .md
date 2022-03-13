@@ -1,3 +1,15 @@
+```
+---
+layout: post
+title: Network Project 
+date: 2020-06-13
+Author: Ali Cheng
+categories: 
+tags: [Network System]
+comments: true
+--- 
+```
+
 # Project overview
 
 > Our project is to design an information technology infrastructure for Optimus Consultants. In the past, Optimus Consultants has suffered a series of IT disasters, which caused the company to lose important information. Delayed project completion and lose of customer. Realizing the importance of information technology infrastructure, the new CEO of Optimus Consultants decided to deploy a reliable and scalable information technology infrastructure to ensure the company\'s efficient operations.
