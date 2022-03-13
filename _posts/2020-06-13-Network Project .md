@@ -1,4 +1,3 @@
-```
 ---
 layout: post
 title: Network Project 
@@ -7,8 +6,7 @@ Author: Ali Cheng
 categories: 
 tags: [Network System]
 comments: true
---- 
-```
+---
 
 # Project overview
 
@@ -110,7 +108,7 @@ Agile is also an excellent methodology, but it is not very helpful for this proj
 
 ## Final network diagram
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image1.jpeg){width="5.768055555555556in" height="3.8819444444444446in"}
+![jpg](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image1.jpeg)
 
 Figure 1 Final network Diagram
 
