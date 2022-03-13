@@ -108,7 +108,7 @@ Agile is also an excellent methodology, but it is not very helpful for this proj
 
 ## Final network diagram
 
-![jpg](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image1.jpeg)
+![jpg](https://github.com/AliChenggggg/blog/tree/main/images/Project Report/image1.jpeg)
 
 Figure 1 Final network Diagram
 
