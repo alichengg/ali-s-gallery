@@ -1,13 +1,3 @@
----
-layout: post
-title: Network Project 
-date: 2020-06-13
-Author: Ali Cheng
-categories: 
-tags: [Network System]
-comments: true
----
-
 # Project overview
 
 > Our project is to design an information technology infrastructure for Optimus Consultants. In the past, Optimus Consultants has suffered a series of IT disasters, which caused the company to lose important information. Delayed project completion and lose of customer. Realizing the importance of information technology infrastructure, the new CEO of Optimus Consultants decided to deploy a reliable and scalable information technology infrastructure to ensure the company\'s efficient operations.
@@ -108,7 +98,7 @@ Agile is also an excellent methodology, but it is not very helpful for this proj
 
 ## Final network diagram
 
-![img](https://github.com/AliChenggggg/blog/tree/main/images/2020-06-13-Project/image001.jpg)
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image001.jpg)
 
 Figure 1 Final network Diagram
 
@@ -192,7 +182,7 @@ Data security is a very important factor, because the company has suffered serio
 
 4.  no shutdown  
 
-5.    
+5.  
 
 6.  interface F1/0  
 
@@ -228,7 +218,7 @@ Data security is a very important factor, because the company has suffered serio
 
 4.  no shutdown  
 
-5.    
+5.  
 
 6.  interface f 0/1  
 
@@ -276,7 +266,7 @@ Data security is a very important factor, because the company has suffered serio
 
 9.  ASA-H(config-if)# security-**level** 100  
 
-10. ASA-H(config-if)# ip **add** 172.15.1.1 255.255.0.0  
+10.  ASA-H(config-if)# ip **add** 172.15.1.1 255.255.0.0  
 
 -   Set the out port ip address, and set Security-level to 0.
 
@@ -342,11 +332,11 @@ Data security is a very important factor, because the company has suffered serio
 
 9.  ASA-A(config-if)# security-**level** 0  
 
-10. ASA-A(config-if)# ip **add** 202.14.63.143 255.255.255.0  
+10.  ASA-A(config-if)# ip **add** 202.14.63.143 255.255.255.0  
 
-11. ASA-A(config-if)# **no** sh  
+11.  ASA-A(config-if)# **no** sh  
 
-12. ASA-A(config)#route outside 0 0 202.14.64.3  
+12.  ASA-A(config)#route outside 0 0 202.14.64.3  
 
 >  
 
@@ -384,11 +374,11 @@ Data security is a very important factor, because the company has suffered serio
 
 9.  ASA-W(config-if)# security-**level** 0  
 
-10. ASA-W(config-if)# ip **add** 202.14.63.144 255.255.255.0  
+10.  ASA-W(config-if)# ip **add** 202.14.63.144 255.255.255.0  
 
-11. ASA-W(config-if)# **no** sh  
+11.  ASA-W(config-if)# **no** sh  
 
-12. ASA-W(config)#route outside 0 0 202.14.64.3  
+12.  ASA-W(config)#route outside 0 0 202.14.64.3  
 
 >  
 
@@ -426,11 +416,11 @@ Data security is a very important factor, because the company has suffered serio
 
 9.  ASA-T(config-if)# security-**level** 0  
 
-10. ASA-T(config-if)# ip **add** 202.14.63.145 255.255.255.0  
+10.  ASA-T(config-if)# ip **add** 202.14.63.145 255.255.255.0  
 
-11. ASA-T(config-if)# **no** sh  
+11.  ASA-T(config-if)# **no** sh  
 
-12. ASA-T(config)#route outside 0 0 202.14.64.3  
+12.  ASA-T(config)#route outside 0 0 202.14.64.3  
 
 >  
 
@@ -454,153 +444,153 @@ Data security is a very important factor, because the company has suffered serio
 
 -   Active Directory is a relatively easy-to-use Directory Services. It will automatically generate a Domain Controller after the AD server is successfully installed. The installation of AD server is very simple, only need to choose to install Active Directory Domain Services in Server Manager.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image2.png){width="5.768055555555556in" height="4.057638888888889in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image002.png){width="5.768055555555556in" height="4.057638888888889in"}
 
 Figure 2 Active Directory Installation
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image3.png){width="5.768055555555556in" height="4.020833333333333in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image003.png){width="5.768055555555556in" height="4.020833333333333in"}
 
 Figure 3 Active Directory Installation
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image4.png){width="5.768055555555556in" height="4.0375in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image004.png){width="5.768055555555556in" height="4.0375in"}
 
 Figure 4 Active Directory Installation
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image5.png){width="5.768055555555556in" height="4.051388888888889in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image005.png){width="5.768055555555556in" height="4.051388888888889in"}
 
 Figure 5 Active Directory Installation
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image6.png){width="5.768055555555556in" height="4.013888888888889in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image006.png){width="5.768055555555556in" height="4.013888888888889in"}
 
 Figure 6 Active Directory Installation
 
 -   After the Active Directory installation is successful, you need to configure it, including the generated Forest settings and Root domain name.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image7.png){width="5.768055555555556in" height="4.034027777777778in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image007.png){width="5.768055555555556in" height="4.034027777777778in"}
 
 Figure 7 Active Directory Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image8.png){width="5.768055555555556in" height="3.890277777777778in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image008.png){width="5.768055555555556in" height="3.890277777777778in"}
 
 Figure 8 Active Directory Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image9.png){width="5.768055555555556in" height="4.2131944444444445in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image009.png){width="5.768055555555556in" height="4.2131944444444445in"}
 
 Figure 9 Active Directory Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image10.png){width="5.768055555555556in" height="4.236805555555556in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image010.png){width="5.768055555555556in" height="4.236805555555556in"}
 
 Figure 10 Active Directory Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image11.png){width="5.768055555555556in" height="4.201388888888889in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image011.png){width="5.768055555555556in" height="4.201388888888889in"}
 
 Figure 11 Active Directory Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image12.png){width="5.768055555555556in" height="4.205555555555556in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image012.png){width="5.768055555555556in" height="4.205555555555556in"}
 
 Figure 12 Active Directory Configuration
 
 -   After the Active Directory configuration is complete, you can start adding domain users and creating management groups, and then classify users by department. Users can be better managed after being classified, including authorization management, login management etc
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image13.png){width="5.768055555555556in" height="3.6902777777777778in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image013.png){width="5.768055555555556in" height="3.6902777777777778in"}
 
 Figure 13 Active Directory user and group setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image14.png){width="5.768055555555556in" height="3.0506944444444444in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image014.png){width="5.768055555555556in" height="3.0506944444444444in"}
 
 Figure 14 Active Directory user setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image15.png){width="5.768055555555556in" height="3.422222222222222in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image015.png){width="5.768055555555556in" height="3.422222222222222in"}
 
 Figure 15 Active Directory user setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image16.png){width="5.768055555555556in" height="3.44375in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image016.png){width="5.768055555555556in" height="3.44375in"}
 
 Figure 16 Active Directory user setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image17.png){width="5.768055555555556in" height="4.538194444444445in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image017.png){width="5.768055555555556in" height="4.538194444444445in"}
 
 Figure 17 Active Directory group setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image18.png){width="5.768055555555556in" height="4.5472222222222225in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image018.png){width="5.768055555555556in" height="4.5472222222222225in"}
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image19.png){width="5.768055555555556in" height="3.6465277777777776in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image019.png){width="5.768055555555556in" height="3.6465277777777776in"}
 
 ###  DHCP 
 
 -   The DHCP server can automatically provide IP address services for clients. Installing DHCP requires selecting and installing the DHCP server in server management.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image20.png){width="5.768055555555556in" height="4.077083333333333in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image020.png){width="5.768055555555556in" height="4.077083333333333in"}
 
 Figure 19 DHCP Installation
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image3.png){width="5.768055555555556in" height="4.020833333333333in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image003.png){width="5.768055555555556in" height="4.020833333333333in"}
 
 Figure 20 DHCP Installation
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image4.png){width="5.768055555555556in" height="4.0375in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image004.png){width="5.768055555555556in" height="4.0375in"}
 
 Figure 21 DHCP Installation
 
-NNN![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image21.png){width="5.768055555555556in" height="4.086805555555555in"}
+NNN![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image021.png){width="5.768055555555556in" height="4.086805555555555in"}
 
 Figure 22 DHCP Installation
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image22.png){width="5.812696850393701in" height="5.528570647419072in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image022.png){width="5.812696850393701in" height="5.528570647419072in"}
 
 Figure 23 DHCP Installation
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image23.png){width="5.768055555555556in" height="4.228472222222222in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image023.png){width="5.768055555555556in" height="4.228472222222222in"}
 
 Figure 24 DHCP Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image24.png){width="5.768055555555556in" height="4.198611111111111in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image024.png){width="5.768055555555556in" height="4.198611111111111in"}
 
 Figure 25 DHCP Configuration
 
 -   After the DHCP installation is complete, you need to configure it. The first step is to create a new scope, set the address range that the server can distribute, the address range that cannot be distributed, and the default gateway.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image25.png){width="5.768055555555556in" height="3.3645833333333335in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image025.png){width="5.768055555555556in" height="3.3645833333333335in"}
 
 Figure 26 DHCP Scope setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image26.png){width="5.768055555555556in" height="3.5902777777777777in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image026.png){width="5.768055555555556in" height="3.5902777777777777in"}
 
 Figure 27 DHCP Scope setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image27.png){width="5.768055555555556in" height="4.270833333333333in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image027.png){width="5.768055555555556in" height="4.270833333333333in"}
 
 Figure 28 DHCP Scope setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image28.png){width="5.768055555555556in" height="4.196527777777778in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image028.png){width="5.768055555555556in" height="4.196527777777778in"}
 
 Figure 29 DHCP Scope setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image29.png){width="5.768055555555556in" height="4.070138888888889in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image029.png){width="5.768055555555556in" height="4.070138888888889in"}
 
 Figure 30 DHCP Scope setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image30.png){width="5.768055555555556in" height="4.156944444444444in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image030.png){width="5.768055555555556in" height="4.156944444444444in"}
 
 Figure 31 DHCP Scope setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image31.png){width="5.768055555555556in" height="4.355555555555555in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image031.png){width="5.768055555555556in" height="4.355555555555555in"}
 
 Figure 32 DHCP Scope setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image32.png){width="5.768055555555556in" height="4.352777777777778in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image032.png){width="5.768055555555556in" height="4.352777777777778in"}
 
 Figure 33 DHCP Scope setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image33.png){width="5.768055555555556in" height="4.315277777777778in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image033.png){width="5.768055555555556in" height="4.315277777777778in"}
 
 Figure 34 DHCP Scope setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image34.png){width="5.768055555555556in" height="4.293055555555555in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image034.png){width="5.768055555555556in" height="4.293055555555555in"}
 
 Figure 35 DHCP Scope setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image35.png){width="5.768055555555556in" height="4.352777777777778in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image035.png){width="5.768055555555556in" height="4.352777777777778in"}
 
 Figure 36 DHCP Scope setting
 
@@ -608,67 +598,67 @@ Figure 36 DHCP Scope setting
 
 -   The main function of DNS is to perform IP address resolution. To install dns, you need to select and install a DNS server from service management.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image36.png){width="5.768055555555556in" height="5.45625in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image036.png){width="5.768055555555556in" height="5.45625in"}
 
 Figure 37 DNS Installation
 
 -   After the installation is complete, basic configuration of the DNS server is required, including the name given to the Zone, and DNS server Forwarders. Forwarders are used to send resolution requests to other DNS servers when the local DNS server cannot resolve the address.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image37.png){width="5.768055555555556in" height="2.9625in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image037.png){width="5.768055555555556in" height="2.9625in"}
 
 Figure 38 DNS Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image38.png){width="5.768055555555556in" height="3.966666666666667in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image038.png){width="5.768055555555556in" height="3.966666666666667in"}
 
 Figure 39 DNS Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image39.png){width="5.768055555555556in" height="4.747222222222222in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image039.png){width="5.768055555555556in" height="4.747222222222222in"}
 
 Figure 40 DNS Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image40.png){width="5.768055555555556in" height="4.750694444444444in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image040.png){width="5.768055555555556in" height="4.750694444444444in"}
 
 Figure 41 DNS Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image41.png){width="5.768055555555556in" height="4.715277777777778in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image041.png){width="5.768055555555556in" height="4.715277777777778in"}
 
 Figure 42 DNS Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image42.png){width="5.768055555555556in" height="4.725694444444445in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image042.png){width="5.768055555555556in" height="4.725694444444445in"}
 
 Figure 43 DNS Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image43.png){width="5.768055555555556in" height="4.710416666666666in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image043.png){width="5.768055555555556in" height="4.710416666666666in"}
 
 Figure 44 DNS Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image44.png){width="5.768055555555556in" height="2.901388888888889in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image044.png){width="5.768055555555556in" height="2.901388888888889in"}
 
 Figure 45 DNS Configuration
 
 -   After the basic configuration of the DNS server is completed, a New Zone needs to be created. This Zone is to add the address to be resolved or forward.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image45.png){width="5.768055555555556in" height="3.716666666666667in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image045.png){width="5.768055555555556in" height="3.716666666666667in"}
 
 Figure 46 DNS Function setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image46.png){width="5.768055555555556in" height="4.745138888888889in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image046.png){width="5.768055555555556in" height="4.745138888888889in"}
 
 Figure 47 DNS Function setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image47.png){width="5.768055555555556in" height="4.741666666666666in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image047.png){width="5.768055555555556in" height="4.741666666666666in"}
 
 Figure 48 DNS Function setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image48.png){width="5.768055555555556in" height="3.7444444444444445in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image048.png){width="5.768055555555556in" height="3.7444444444444445in"}
 
 Figure 49 DNS Function setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image49.png){width="5.768055555555556in" height="4.764583333333333in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image049.png){width="5.768055555555556in" height="4.764583333333333in"}
 
 Figure 50 DNS Function setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image50.png){width="5.768055555555556in" height="4.73125in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image050.png){width="5.768055555555556in" height="4.73125in"}
 
 Figure 51 DNS Function setting
 
@@ -676,53 +666,53 @@ Figure 51 DNS Function setting
 
 -   The WDS server can provide a window system installation channel through the network. To install WDS, you need to choose to install Windows deployment services in Service management, and check Deployment Server and transport server in Role services.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image51.png){width="5.768055555555556in" height="4.096527777777778in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image051.png){width="5.768055555555556in" height="4.096527777777778in"}
 
 Figure 52 WDS Server Installation
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image52.png){width="5.768055555555556in" height="5.461805555555555in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image052.png){width="5.768055555555556in" height="5.461805555555555in"}
 
 Figure 53 WDS Server Installation
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image53.png){width="5.768055555555556in" height="5.468055555555556in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image053.png){width="5.768055555555556in" height="5.468055555555556in"}
 
 Figure 54 WDS Server Installation
 
 -   After the WDS server is installed, you need to create a group, then add the windows install image and boot image.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image54.png){width="5.768055555555556in" height="3.326388888888889in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image054.png){width="5.768055555555556in" height="3.326388888888889in"}
 
 Figure 55 WDS Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image55.png){width="5.768055555555556in" height="5.2125in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image055.png){width="5.768055555555556in" height="5.2125in"}
 
 Figure 56 WDS Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image56.png){width="5.768055555555556in" height="3.290277777777778in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image056.png){width="5.768055555555556in" height="3.290277777777778in"}
 
 Figure 57 WDS Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image57.png){width="5.768055555555556in" height="3.317361111111111in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image057.png){width="5.768055555555556in" height="3.317361111111111in"}
 
 Figure 58 WDS Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image58.png){width="5.768055555555556in" height="4.148611111111111in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image058.png){width="5.768055555555556in" height="4.148611111111111in"}
 
 Figure 59 WDS Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image59.png){width="5.768055555555556in" height="4.151388888888889in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image059.png){width="5.768055555555556in" height="4.151388888888889in"}
 
 Figure 60 WDS Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image60.png){width="5.768055555555556in" height="4.50625in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image060.png){width="5.768055555555556in" height="4.50625in"}
 
 Figure 61WDS Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image61.png){width="5.768055555555556in" height="4.502083333333333in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image061.png){width="5.768055555555556in" height="4.502083333333333in"}
 
 Figure 62 WDS Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image62.png){width="5.768055555555556in" height="4.507638888888889in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image062.png){width="5.768055555555556in" height="4.507638888888889in"}
 
 Figure 63 WDS Configuration
 
@@ -730,15 +720,15 @@ Figure 63 WDS Configuration
 
 -   FTP is a very easy-to-use file sharing system. To install FTP, you first need to install Web server Role (IIS), then select FTP server in Role services.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image63.png){width="5.768055555555556in" height="5.501388888888889in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image063.png){width="5.768055555555556in" height="5.501388888888889in"}
 
 Figure 64 FTP Installation
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image64.png){width="5.768055555555556in" height="5.481944444444444in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image064.png){width="5.768055555555556in" height="5.481944444444444in"}
 
 Figure 65 FTP Installation
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image65.png){width="5.768055555555556in" height="4.0625in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image065.png){width="5.768055555555556in" height="4.0625in"}
 
 Figure 66 FTP Installation
 
@@ -746,39 +736,39 @@ Figure 66 FTP Installation
 
 -   Before creating FTP, you need to create the corresponding certificate, next to start creating the FTP site, you need to give the FTP site name and Content directory, then select the mapped IP address, port, and SSL certificate. Finally, choose Authentication and Authorization information.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image66.png){width="5.768055555555556in" height="2.957638888888889in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image066.png){width="5.768055555555556in" height="2.957638888888889in"}
 
 Figure 67 FTP Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image67.png){width="5.768055555555556in" height="2.9555555555555557in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image067.png){width="5.768055555555556in" height="2.9555555555555557in"}
 
 Figure 68 FTP Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image68.png){width="5.768055555555556in" height="3.2104166666666667in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image068.png){width="5.768055555555556in" height="3.2104166666666667in"}
 
 Figure 69 FTP Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image69.png){width="5.768055555555556in" height="5.061805555555556in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image069.png){width="5.768055555555556in" height="5.061805555555556in"}
 
 Figure 70 FTP Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image70.png){width="5.768055555555556in" height="2.948611111111111in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image070.png){width="5.768055555555556in" height="2.948611111111111in"}
 
 Figure 71 FTP Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image71.png){width="5.768055555555556in" height="4.54375in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image071.png){width="5.768055555555556in" height="4.54375in"}
 
 Figure 72 FTP Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image72.png){width="5.768055555555556in" height="5.080555555555556in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image072.png){width="5.768055555555556in" height="5.080555555555556in"}
 
 Figure 73 FTP Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image73.png){width="5.768055555555556in" height="5.1090277777777775in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image073.png){width="5.768055555555556in" height="5.1090277777777775in"}
 
 Figure 74 FTP Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image74.png){width="5.768055555555556in" height="5.0784722222222225in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image074.png){width="5.768055555555556in" height="5.0784722222222225in"}
 
 Figure 75 FTP Configuration
 
@@ -790,11 +780,11 @@ Figure 75 FTP Configuration
 
 -   "User" folder can only allow employees to access their own folders. However, IT administrators have the authority to modify all folders. Therefore, each User needs to be individually authorized. For example, the Ajay Nash subfolder needs to authorize Ajay Nash read and write permissions, and give the group IT Administrator read and write permissions.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image75.png){width="5.768055555555556in" height="3.9923611111111112in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image075.png){width="5.768055555555556in" height="3.9923611111111112in"}
 
 Figure 76 FTP Privilege setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image76.png){width="5.768055555555556in" height="4.009027777777778in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image076.png){width="5.768055555555556in" height="4.009027777777778in"}
 
 Figure 77 FTP Privilege setting
 
@@ -812,67 +802,67 @@ Figure 77 FTP Privilege setting
 
     -   After the setting is completed, you can download and install ASDM by accessing the asa firewall address through http (ASDM requires java support, so you need to ensure that the system has Java programs when installing ASDM)
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image77.png){width="5.768055555555556in" height="3.56875in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image077.png){width="5.768055555555556in" height="3.56875in"}
 
 Figure 78 ASDM Installation
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image78.png){width="5.768055555555556in" height="4.092361111111111in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image078.png){width="5.768055555555556in" height="4.092361111111111in"}
 
 Figure 79 ASDM Installation
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image79.png){width="5.33379593175853in" height="4.067018810148731in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image079.png){width="5.33379593175853in" height="4.067018810148731in"}
 
 Figure 80 ASDM Installation
 
 -   After the ASDM installation is complete, you can access the ASA firewall through ASDM, and you can use the graphical interface to set up the entire ASA firewall in ASDM.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image80.png){width="5.895472440944882in" height="2.8036034558180227in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image080.png){width="5.895472440944882in" height="2.8036034558180227in"}
 
 Figure 81 Site to site Virtual Private Network Configuration
 
 -   To create a site to site VPN, we first need to add the range of target IP addresses that can be accessed in the Access Rule, so we need to add the internal IP addresses of all sites.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image81.png){width="5.768055555555556in" height="3.591666666666667in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image081.png){width="5.768055555555556in" height="3.591666666666667in"}
 
 Figure 82 Site to site Virtual Private Network Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image82.png){width="5.2004505686789155in" height="2.683566272965879in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image082.png){width="5.2004505686789155in" height="2.683566272965879in"}
 
 Figure 83 Site to site Virtual Private Network Configuration
 
 -   After the Access Rule is added, start to create site to site VPN
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image83.png){width="5.768055555555556in" height="1.6847222222222222in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image083.png){width="5.768055555555556in" height="1.6847222222222222in"}
 
 Figure 84 Site to site Virtual Private Network Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image84.png){width="5.768055555555556in" height="3.157638888888889in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image084.png){width="5.768055555555556in" height="3.157638888888889in"}
 
 Figure 85 Site to site Virtual Private Network Configuration
 
 -   Site to site vpn needs to fill in the peer ip address, which is the external network address of another site. At the same time, you need to fill in the intranet address range of another site.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image85.png){width="5.768055555555556in" height="3.171527777777778in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image085.png){width="5.768055555555556in" height="3.171527777777778in"}
 
 Figure 86 Site to site Virtual Private Network Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image86.png){width="5.768055555555556in" height="3.1930555555555555in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image086.png){width="5.768055555555556in" height="3.1930555555555555in"}
 
 Figure 87 Site to site Virtual Private Network Configuration
 
 -   Add pre-shared key to ensure the security of site to site vpn connection
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image87.png){width="5.768055555555556in" height="3.152083333333333in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image087.png){width="5.768055555555556in" height="3.152083333333333in"}
 
 Figure 88 Site to site Virtual Private Network Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image88.png){width="5.768055555555556in" height="3.1368055555555556in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image088.png){width="5.768055555555556in" height="3.1368055555555556in"}
 
 Figure 89 Site to site Virtual Private Network Configuration
 
 -   Set up other sites in the same way
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image89.png){width="5.768055555555556in" height="3.5520833333333335in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image089.png){width="5.768055555555556in" height="3.5520833333333335in"}
 
 Figure 90 Site to site Virtual Private Network Configuration
 
@@ -880,89 +870,91 @@ Figure 90 Site to site Virtual Private Network Configuration
 
 -   Remote VPN needs to set up anyconnect VPN Wizard in ASDM.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image90.png){width="5.768055555555556in" height="2.512153324584427in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image090.png){width="5.768055555555556in" height="2.512153324584427in"}
 
 Figure 91 Remote Virtual Private Network Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image91.png){width="5.768055555555556in" height="3.5854166666666667in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image091.png){width="5.768055555555556in" height="3.5854166666666667in"}
 
 Figure 92 Remote Virtual Private Network Configuration
 
 -   Set profile name and VPN access interface, and upload client image, this image will be used as a vpn client for remote workers.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image92.png){width="5.768055555555556in" height="3.5590277777777777in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image092.png){width="5.768055555555556in" height="3.5590277777777777in"}
 
 Figure 93 Remote Virtual Private Network Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image93.png){width="5.768055555555556in" height="3.546527777777778in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image093.png){width="5.768055555555556in" height="3.546527777777778in"}
 
 Figure 94 Remote Virtual Private Network Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image94.png){width="5.768055555555556in" height="3.573611111111111in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image094.png){width="5.768055555555556in" height="3.573611111111111in"}
 
 Figure 95 Remote Virtual Private Network Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image95.png){width="5.768055555555556in" height="3.515972222222222in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image095.png){width="5.768055555555556in" height="3.515972222222222in"}
 
 Figure 96 Remote Virtual Private Network Configuration
 
 -   After that, you need to add users who can access the intranet. By default, the AAA server will be used. Then, you need to add an address range that can use VPN
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image96.png){width="5.768055555555556in" height="3.501388888888889in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image096.png){width="5.768055555555556in" height="3.501388888888889in"}
 
 Figure 97 Remote Virtual Private Network Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image97.png){width="5.768055555555556in" height="3.522222222222222in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image097.png){width="5.768055555555556in" height="3.522222222222222in"}
 
 Figure 98 Remote Virtual Private Network Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image98.png){width="5.768055555555556in" height="3.5229166666666667in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image098.png){width="5.768055555555556in" height="3.5229166666666667in"}
 
 Figure 99 Remote Virtual Private Network Configuration
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image99.png){width="5.768055555555556in" height="3.5076388888888888in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image099.png){width="5.768055555555556in" height="3.5076388888888888in"}
 
 Figure 100 Remote Virtual Private Network Configuration
+
+
 
 ### Group Policy
 
 -   Group policy can be used to publish some software that companies need. To set up a software release policy, you need to first create a shared file and put the software in the shared file.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image100.png){width="5.417135826771654in" height="5.3838003062117235in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image100.png){width="5.417135826771654in" height="5.3838003062117235in"}
 
 Figure 101 Group Policy Setting
 
 -   Group policy can be used to publish some software that companies need. To set up a software release policy, you need to first create a shared file and put the software in the shared file.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image101.png){width="5.768055555555556in" height="3.736111111111111in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image101.png){width="5.768055555555556in" height="3.736111111111111in"}
 
 Figure 102 Group Policy Setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image102.png){width="5.768055555555556in" height="3.7708333333333335in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image102.png){width="5.768055555555556in" height="3.7708333333333335in"}
 
 Figure 103 Group Policy Setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image103.png){width="5.768055555555556in" height="4.256944444444445in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image103.png){width="5.768055555555556in" height="4.256944444444445in"}
 
 Figure 104 Group Policy Setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image104.png){width="5.768055555555556in" height="4.166666666666667in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image104.png){width="5.768055555555556in" height="4.166666666666667in"}
 
 Figure 105 Group Policy Setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image105.png){width="5.768055555555556in" height="4.697916666666667in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image105.png){width="5.768055555555556in" height="4.697916666666667in"}
 
 Figure 106 Group Policy Setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image106.png){width="5.768055555555556in" height="4.129166666666666in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image106.png){width="5.768055555555556in" height="4.129166666666666in"}
 
 Figure 107 Group Policy Setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image107.png){width="5.768055555555556in" height="3.640277777777778in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image107.png){width="5.768055555555556in" height="3.640277777777778in"}
 
 Figure 108 Group Policy Setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image108.png){width="4.58373031496063in" height="4.900424321959755in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image108.png){width="4.58373031496063in" height="4.900424321959755in"}
 
 Figure 109 Group Policy Setting
 
@@ -970,17 +962,17 @@ Figure 109 Group Policy Setting
 
 -   ASA firewall also supports URL filtering, first we need to find a URL filtering target.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image109.png){width="5.768055555555556in" height="3.0131944444444443in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image109.png){width="5.768055555555556in" height="3.0131944444444443in"}
 
 Figure 110 URL filtering Setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image110.png){width="5.768055555555556in" height="4.602083333333334in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image110.png){width="5.768055555555556in" height="4.602083333333334in"}
 
 Figure 111 URL filtering Setting
 
 -   After determining the IP address to be filtered, add the URL filtering server in the ASA. After the addition is complete, you need to add a Web page filtering based on Https in Filter Rules.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image111.png){width="5.768055555555556in" height="4.790277777777778in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image111.png){width="5.768055555555556in" height="4.790277777777778in"}
 
 Figure 112 URL filtering Setting
 
@@ -990,63 +982,63 @@ Figure 112 URL filtering Setting
 
 -   First, you need to be in the Open workspace and select the location you want to back up.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image112.png){width="5.768055555555556in" height="3.2645833333333334in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image112.png){width="5.768055555555556in" height="3.2645833333333334in"}
 
 Figure 113 Data Backup Setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image113.png){width="5.768055555555556in" height="4.779166666666667in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image113.png){width="5.768055555555556in" height="4.779166666666667in"}
 
 Figure 114 Data Backup Setting
 
 -   Then right click in the blank space of the software to create New Group
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image114.png){width="4.21875in" height="1.5416666666666667in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image114.png){width="4.21875in" height="1.5416666666666667in"}
 
 Figure 115 Data Backup Setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image115.png){width="5.768055555555556in" height="4.377777777777778in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image115.png){width="5.768055555555556in" height="4.377777777777778in"}
 
 Figure 116 Data Backup Setting
 
 -   After the group is created, you can add a target for backup. Select the target location to be backed up in sources.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image116.png){width="4.708333333333333in" height="1.7083333333333333in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image116.png){width="4.708333333333333in" height="1.7083333333333333in"}
 
 Figure 117 Data Backup Setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image117.png){width="5.768055555555556in" height="4.229166666666667in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image117.png){width="5.768055555555556in" height="4.229166666666667in"}
 
 Figure 118 Data Backup Setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image118.png){width="5.768055555555556in" height="3.8777777777777778in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image118.png){width="5.768055555555556in" height="3.8777777777777778in"}
 
 Figure 119 Data Backup Setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image119.png){width="5.768055555555556in" height="4.006944444444445in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image119.png){width="5.768055555555556in" height="4.006944444444445in"}
 
 Figure 120 Data Backup Setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image120.png){width="5.768055555555556in" height="4.010416666666667in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image120.png){width="5.768055555555556in" height="4.010416666666667in"}
 
 Figure 121 Data Backup Setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image121.png){width="5.768055555555556in" height="4.083333333333333in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image121.png){width="5.768055555555556in" height="4.083333333333333in"}
 
 Figure 122 Data Backup Setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image122.png){width="5.645833333333333in" height="3.0625in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image122.png){width="5.645833333333333in" height="3.0625in"}
 
 Figure 123 Data Backup Setting
 
 -   After completing the backup settings, you can start the first backup.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image123.png){width="5.768055555555556in" height="4.297916666666667in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image123.png){width="5.768055555555556in" height="4.297916666666667in"}
 
 Figure 124 Data Backup Setting
 
 -   In addition, Areca also provides backup script generation and backup strategy creation.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image124.png){width="5.768055555555556in" height="2.275in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image124.png){width="5.768055555555556in" height="2.275in"}
 
 Figure 125 Data Backup Setting
 
@@ -1054,11 +1046,11 @@ Figure 125 Data Backup Setting
 
 -   To open shadow copies, just right-click on the disk that needs to be opened and select Configure Shadow Copies, and select create now in Volume.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image125.png){width="5.768055555555556in" height="4.354166666666667in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image125.png){width="5.768055555555556in" height="4.354166666666667in"}
 
 Figure 126 Shadow Copies Setting
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image126.png){width="5.09375in" height="6.59375in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image126.png){width="5.09375in" height="6.59375in"}
 
 Figure 127 Shadow Copies Setting
 
@@ -1140,19 +1132,19 @@ Figure 127 Shadow Copies Setting
 
 -   result
 
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image127.png){width="5.768055555555556in" height="4.021527777777778in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image127.png)
 >
 > Figure 128 Active Directory Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image128.png){width="5.768055555555556in" height="4.5569444444444445in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image128.png){width="5.768055555555556in" height="4.5569444444444445in"}
 >
 > Figure 129 Active Directory Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image129.png){width="5.768055555555556in" height="4.529166666666667in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image129.png){width="5.768055555555556in" height="4.529166666666667in"}
 >
 > Figure 130 Active Directory Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image130.png){width="5.768055555555556in" height="4.550694444444445in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image130.png){width="5.768055555555556in" height="4.550694444444445in"}
 >
 > Figure 131 Active Directory Test
 
@@ -1166,15 +1158,15 @@ Figure 127 Shadow Copies Setting
 
 -   result
 
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image131.png){width="5.768055555555556in" height="3.988888888888889in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image131.png){width="5.768055555555556in" height="3.988888888888889in"}
 >
 > Figure 132 DHCP Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image132.png){width="5.768055555555556in" height="4.554861111111111in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image132.png){width="5.768055555555556in" height="4.554861111111111in"}
 >
 > Figure 133 DHCP Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image133.png){width="5.768055555555556in" height="4.579166666666667in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image133.png){width="5.768055555555556in" height="4.579166666666667in"}
 >
 > Figure 134 DHCP Test
 
@@ -1192,15 +1184,15 @@ Figure 127 Shadow Copies Setting
 
 -   result
 
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image134.png){width="5.768055555555556in" height="3.3256944444444443in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image134.png){width="5.768055555555556in" height="3.3256944444444443in"}
 >
 > Figure 135 DNS Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image135.png){width="5.768055555555556in" height="4.313194444444444in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image135.png){width="5.768055555555556in" height="4.313194444444444in"}
 >
 > Figure 136 DNS Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image136.png){width="5.768055555555556in" height="4.543055555555555in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image136.png){width="5.768055555555556in" height="4.543055555555555in"}
 >
 > Figure 137 DNS Test
 
@@ -1214,19 +1206,19 @@ Figure 127 Shadow Copies Setting
 
 -   result
 
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image137.png){width="5.768055555555556in" height="4.050694444444445in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image137.png){width="5.768055555555556in" height="4.050694444444445in"}
 >
 > Figure 138 WDS Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image138.png){width="5.768055555555556in" height="3.829861111111111in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image138.png){width="5.768055555555556in" height="3.829861111111111in"}
 >
 > Figure 139 WDS Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image139.png){width="5.768055555555556in" height="4.5375in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image139.png){width="5.768055555555556in" height="4.5375in"}
 >
 > Figure 140 WDS Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image140.png){width="5.768055555555556in" height="4.388888888888889in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image140.png){width="5.768055555555556in" height="4.388888888888889in"}
 >
 > Figure 141 WDS Test
 
@@ -1242,39 +1234,39 @@ Figure 127 Shadow Copies Setting
 
 -   result
 
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image141.png){width="5.768055555555556in" height="4.533333333333333in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image141.png){width="5.768055555555556in" height="4.533333333333333in"}
 >
 > Figure 142 File System Privilege Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image142.png){width="5.768055555555556in" height="4.685416666666667in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image142.png){width="5.768055555555556in" height="4.685416666666667in"}
 >
 > Figure 143 File System Privilege Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image143.png){width="5.768055555555556in" height="4.49375in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image143.png){width="5.768055555555556in" height="4.49375in"}
 >
 > Figure 144 File System Privilege Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image144.png){width="5.768055555555556in" height="4.560416666666667in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image144.png){width="5.768055555555556in" height="4.560416666666667in"}
 >
 > Figure 145 File System Privilege Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image145.png){width="5.768055555555556in" height="4.501388888888889in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image145.png){width="5.768055555555556in" height="4.501388888888889in"}
 >
 > Figure 146 File System Privilege Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image146.png){width="5.768055555555556in" height="4.503472222222222in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image146.png){width="5.768055555555556in" height="4.503472222222222in"}
 >
 > Figure 147 File System Privilege Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image147.png){width="5.768055555555556in" height="4.500694444444444in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image147.png){width="5.768055555555556in" height="4.500694444444444in"}
 >
 > Figure 148 File System Privilege Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image148.png){width="5.768055555555556in" height="4.561111111111111in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image148.png){width="5.768055555555556in" height="4.561111111111111in"}
 >
 > Figure 149 File System Privilege Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image149.png){width="5.768055555555556in" height="4.533333333333333in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image149.png){width="5.768055555555556in" height="4.533333333333333in"}
 >
 > Figure 150 File System Privilege Test
 
@@ -1290,19 +1282,19 @@ Figure 127 Shadow Copies Setting
 
 -   result
 
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image150.png){width="5.768055555555556in" height="4.570833333333334in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image150.png){width="5.768055555555556in" height="4.570833333333334in"}
 >
 > Figure 151 Site to site Virtual Private Network Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image142.png){width="5.768055555555556in" height="4.685416666666667in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image142.png){width="5.768055555555556in" height="4.685416666666667in"}
 >
 > Figure 152 Site to site Virtual Private Network Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image151.png){width="5.768055555555556in" height="4.557638888888889in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image151.png){width="5.768055555555556in" height="4.557638888888889in"}
 >
 > Figure 153 Site to site Virtual Private Network Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image152.png){width="5.768055555555556in" height="4.555555555555555in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image152.png){width="5.768055555555556in" height="4.555555555555555in"}
 >
 > Figure 154 Site to site Virtual Private Network Test
 
@@ -1318,39 +1310,39 @@ Figure 127 Shadow Copies Setting
 
 -   result
 
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image153.png){width="5.768055555555556in" height="3.953472222222222in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image153.png){width="5.768055555555556in" height="3.953472222222222in"}
 >
 > Figure 155 Remote Virtual Private Network Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image154.png){width="5.768055555555556in" height="3.9125in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image154.png){width="5.768055555555556in" height="3.9125in"}
 >
 > Figure 156 Remote Virtual Private Network Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image155.png){width="5.768055555555556in" height="3.8604166666666666in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image155.png){width="5.768055555555556in" height="3.8604166666666666in"}
 >
 > Figure 157 Remote Virtual Private Network Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image156.png){width="5.150446194225721in" height="4.075353237095363in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image156.png){width="5.150446194225721in" height="4.075353237095363in"}
 >
 > Figure 158 Remote Virtual Private Network Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image157.png){width="5.125444006999125in" height="2.6252274715660544in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image157.png){width="5.125444006999125in" height="2.6252274715660544in"}
 >
 > Figure 159 Remote Virtual Private Network Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image158.png){width="5.768055555555556in" height="4.714583333333334in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image158.png){width="5.768055555555556in" height="4.714583333333334in"}
 >
 > Figure 160 Remote Virtual Private Network Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image159.png){width="5.768055555555556in" height="4.586111111111111in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image159.png){width="5.768055555555556in" height="4.586111111111111in"}
 >
 > Figure 161 Remote Virtual Private Network Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image160.png){width="5.768055555555556in" height="4.595138888888889in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image160.png){width="5.768055555555556in" height="4.595138888888889in"}
 >
 > Figure 162 Remote Virtual Private Network Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image141.png){width="5.768055555555556in" height="4.533333333333333in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image141.png){width="5.768055555555556in" height="4.533333333333333in"}
 >
 > Figure 163 Remote Virtual Private Network Test
 
@@ -1366,19 +1358,19 @@ Figure 127 Shadow Copies Setting
 
 -   result
 
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image161.png){width="5.768055555555556in" height="5.399305555555555in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image161.png){width="5.768055555555556in" height="5.399305555555555in"}
 >
 > Figure 164 Authentication service Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image157.png){width="5.125444006999125in" height="2.6252274715660544in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image157.png){width="5.125444006999125in" height="2.6252274715660544in"}
 >
 > Figure 165 Authentication service Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image159.png){width="5.768055555555556in" height="4.586111111111111in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image159.png){width="5.768055555555556in" height="4.586111111111111in"}
 >
 > Figure 166 Authentication service Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image162.png){width="5.768055555555556in" height="5.317361111111111in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image162.png){width="5.768055555555556in" height="5.317361111111111in"}
 >
 > Figure 167 Authentication service Test
 
@@ -1390,15 +1382,15 @@ Figure 127 Shadow Copies Setting
 
 -   result
 
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image163.png){width="5.768055555555556in" height="4.247222222222222in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image163.png){width="5.768055555555556in" height="4.247222222222222in"}
 >
 > Figure 168 Group Policy Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image164.png){width="5.768055555555556in" height="4.5881944444444445in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image164.png){width="5.768055555555556in" height="4.5881944444444445in"}
 >
 > Figure 169 Group Policy Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image165.png){width="5.768055555555556in" height="4.516666666666667in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image165.png){width="5.768055555555556in" height="4.516666666666667in"}
 >
 > Figure 170 Group Policy Test
 
@@ -1410,7 +1402,7 @@ Figure 127 Shadow Copies Setting
 
 -   result
 
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image166.png){width="5.768055555555556in" height="4.570833333333334in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image166.png){width="5.768055555555556in" height="4.570833333333334in"}
 >
 > Figure 171 URL filtering Test
 
@@ -1430,31 +1422,31 @@ Figure 127 Shadow Copies Setting
 
 -   result
 
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image167.png){width="5.768055555555556in" height="4.552777777777778in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image167.png){width="5.768055555555556in" height="4.552777777777778in"}
 >
 > Figure 172 Data Backup Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image168.png){width="5.768055555555556in" height="4.520138888888889in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image168.png){width="5.768055555555556in" height="4.520138888888889in"}
 >
 > Figure 173 Data Backup Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image169.png){width="5.768055555555556in" height="4.542361111111111in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image169.png){width="5.768055555555556in" height="4.542361111111111in"}
 >
 > Figure 174 Data Backup Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image170.png){width="5.768055555555556in" height="2.1104166666666666in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image170.png){width="5.768055555555556in" height="2.1104166666666666in"}
 >
 > Figure 175 Data Backup Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image171.png){width="5.768055555555556in" height="3.4118055555555555in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image171.png){width="5.768055555555556in" height="3.4118055555555555in"}
 >
 > Figure 176 Data Backup Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image172.png){width="5.768055555555556in" height="4.506944444444445in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image172.png){width="5.768055555555556in" height="4.506944444444445in"}
 >
 > Figure 177 Data Backup Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image173.png){width="5.768055555555556in" height="4.559027777777778in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image173.png){width="5.768055555555556in" height="4.559027777777778in"}
 >
 > Figure 178 Data Backup Test
 
@@ -1462,7 +1454,7 @@ Figure 127 Shadow Copies Setting
 
 In order to prevent the test from negatively affecting the server, we set up an identical test environment.
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image174.png){width="5.768055555555556in" height="4.068260061242345in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image174.png){width="5.768055555555556in" height="4.068260061242345in"}
 
 Figure 179 Network Penetration Test
 
@@ -1474,15 +1466,15 @@ Figure 179 Network Penetration Test
 
 -   result
 
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image175.png){width="5.768055555555556in" height="3.8493055555555555in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image175.png){width="5.768055555555556in" height="3.8493055555555555in"}
 >
 > Figure 180 Social Engineering Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image176.png){width="5.768055555555556in" height="3.85625in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image176.png){width="5.768055555555556in" height="3.85625in"}
 >
 > Figure 181 Social Engineering Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image177.jpeg){width="5.768055555555556in" height="3.9055555555555554in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image177.jpeg){width="5.768055555555556in" height="3.9055555555555554in"}
 
 Figure 182 Social Engineering Test
 
@@ -1498,11 +1490,11 @@ Figure 182 Social Engineering Test
 
 -   result
 
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image178.png){width="5.768055555555556in" height="3.8375in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image178.png){width="5.768055555555556in" height="3.8375in"}
 >
 > Figure 183 Brute Force Test
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image179.png){width="5.768055555555556in" height="3.9652777777777777in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image179.png){width="5.768055555555556in" height="3.9652777777777777in"}
 >
 > Figure 184 Brute Force Test
 
@@ -1516,7 +1508,7 @@ Figure 182 Social Engineering Test
 
 -   result
 
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image180.png){width="5.768055555555556in" height="5.872222222222222in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image180.png){width="5.768055555555556in" height="5.872222222222222in"}
 >
 > Figure 185 Port scan
 
@@ -1532,11 +1524,11 @@ From the results of penetration testing, the network system needs to be further 
 >
 > The FTP server provides the Logon Attempt Restrictions server, which can reduce the possibility of Brute Force attack success by setting the maximum number of failed login attempts.
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image181.png){width="5.768055555555556in" height="3.6868055555555554in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image181.png){width="5.768055555555556in" height="3.6868055555555554in"}
 >
 > Figure 186 FTP Server Adjustment
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image182.png){width="5.768055555555556in" height="5.334722222222222in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image182.png){width="5.768055555555556in" height="5.334722222222222in"}
 
 Figure 187 FTP Server Adjustment
 
@@ -1548,23 +1540,23 @@ Figure 187 FTP Server Adjustment
 >
 > After setting the server, its port will still be scanned by Nmap, but any filtered port traffic will be discarded, so it will not be used by hackers.
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image183.png){width="5.768055555555556in" height="4.648611111111111in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image183.png){width="5.768055555555556in" height="4.648611111111111in"}
 >
 > Figure 188 Filter unnecessary port traffic
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image184.png){width="5.768055555555556in" height="3.9972222222222222in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image184.png){width="5.768055555555556in" height="3.9972222222222222in"}
 >
 > Figure 189 Filter unnecessary port traffic
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image185.png){width="5.768055555555556in" height="3.9972222222222222in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image185.png){width="5.768055555555556in" height="3.9972222222222222in"}
 >
 > Figure 190 Filter unnecessary port traffic
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image186.png){width="5.768055555555556in" height="3.975in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image186.png){width="5.768055555555556in" height="3.975in"}
 >
 > Figure 191 Filter unnecessary port traffic
 >
-> ![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image187.png){width="5.768055555555556in" height="3.963888888888889in"}
+> ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image187.png){width="5.768055555555556in" height="3.963888888888889in"}
 >
 > Figure 192 Filter unnecessary port traffic
 
@@ -1624,7 +1616,7 @@ As far as the entire project is concerned, more bugs come from GNS3 itself, but 
 
 ## Time log
 
-![](https://github.com/AliChenggggg/blog/tree/main/images/Project%20Report/image188.jpeg){width="6.058333333333334in" height="1.0763888888888888in"}
+![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image188.jpg)
 
 Figure 193 Final Time log
 
