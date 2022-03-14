@@ -242,9 +242,9 @@ vim /etc/apache2/sites-available/xxxxxx(anyname).conf
 
  
 
-​		Alias /static/ /cy/website/cy/static/                  
+​		Alias /search/ /cy/website/cy/search/                  
 
-​		<Directory /cy/website/cy/static>         
+​		<Directory /cy/website/cy/search>         
 
  	   Require all granted
 
@@ -360,7 +360,7 @@ Release the occupancy of port 8000：lsof -t -i tcp:8000 \| xargs kill -9
 
 ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/jinqianbao/image022.jpg)
 
-- #### Downloaded those js or css files from the website and put them into static folder.
+- #### Downloaded those js or css files from the website and put them into search folder.
 
 ​			docker cp xxxxxxx
 
@@ -374,13 +374,13 @@ Release the occupancy of port 8000：lsof -t -i tcp:8000 \| xargs kill -9
 
 ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/jinqianbao/image020.jpg)
 
-- #### Change the file path, if you put the localization files in the static folder like me and there are no other secondary directories, you can write it like this:
+- #### Change the file path, if you put the localization files in the search folder like me and there are no other secondary directories, you can write it like this:
 
 
 
-​			css：**\<link href=\"{% static \'bootstrap.min.css\'%}\" rel=\"stylesheet\"\>**
+​			css：**\<link href=\"{% search \'bootstrap.min.css\'%}\" rel=\"stylesheet\"\>**
 
-​			js：**\<script src=\"{% static \'bootstrap.min.js\'%}\"\>\</script\>**
+​			js：**\<script src=\"{% search \'bootstrap.min.js\'%}\"\>\</script\>**
 
 
 
