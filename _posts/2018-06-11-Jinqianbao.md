@@ -235,61 +235,66 @@ Tip：when you restart apache2 it may report **ServerName error**,you need to ad
 
 vim /etc/apache2/sites-available/xxxxxx(anyname).conf
 
-> \<VirtualHost \*:8000\>
->
-> 
->
-> ​		Alias /static/ /cy/website/cy/static/
->
-> ​		\<Directory /cy/website/cy/static\>
->
-> ​		Require all granted
->
-> ​		\</Directory\>
->
-> WSGIScriptAlias / /cy/website/cy/cy/wsgi.py
->
-> ​		\<Directory /cy/website/cy/cy\>
->
-> ​	\<Files wsgi.py\>
->
-> ​		Require all granted
->
-> ​	\</Files\>
->
-> ​	\</Directory\>
->
-> \</VirtualHost\>
+
+
+```
+<VirtualHost *:8000>
+
+ 
+
+​		Alias /static/ /cy/website/cy/static/                  
+
+​		<Directory /cy/website/cy/static>         
+
+ 	   Require all granted
+
+​	  </Directory>
+
+WSGIScriptAlias / /cy/website/cy/cy/wsgi.py       
+
+​		<Directory /cy/website/cy/cy>          
+
+  <Files wsgi.py>
+
+​    Require all granted
+
+  </Files>
+
+  </Directory>
+
+</VirtualHost>
+```
+
+
 
 -   #### set the listening port to port 8000 in \"/etc/apache2/ports.conf\"
 
 -   #### Modify the cy/website/cy/cy/wsgi.py file as follows
 
+> ```
 > import os
->
+> 
 > from os.path import join,dirname,abspath
->
 > 
->
+> 
 > PROJECT_DIR = dirname(dirname(abspath(\_\_file\_\_)))
->
 > 
->
+> 
 > import sys
->
+> 
 > sys.path.insert(0,PROJECT_DIR)
->
 > 
->
+> 
 > from django.core.wsgi import get_wsgi_application
->
 > 
->
+> 
 > os.environ.setdefault(\"DJANGO_SETTINGS_MODULE\", \"cy.settings\")
+> 
+> 
+> application = get_wsgi_application()
+> ```
 >
 > 
->
-> application = get_wsgi_application()
 
 -   #### Execute permission settings for website directory scripts under Apache
 
