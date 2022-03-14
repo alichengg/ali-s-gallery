@@ -376,13 +376,9 @@ Release the occupancy of port 8000：lsof -t -i tcp:8000 \| xargs kill -9
 
 - #### Change the file path, if you put the localization files in the static folder like me and there are no other secondary directories, you can write it like this:
 
-​		<!-- 
+​		<!--    <link href="{% static 'bootstrap.min.css'%}" rel="stylesheet">      -->
 
-​			css：**\<link href=\"{% static \'bootstriiiiiap.min.css\'%}\" rel=\"stylesheet\"\>**
-
-​			js：**\<script src=\"{% static  \'bootstrap.min.js\'%}\"\>\</script\>**
-
-​		-->
+​		<!--    <script src="{% static 'bootstrap.min.js'%}"></script>              -->
 
 - #### Also pay attention to commenting out some useless code. Like in ./templates/base.html:
 
