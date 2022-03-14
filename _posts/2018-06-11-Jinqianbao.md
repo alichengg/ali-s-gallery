@@ -360,7 +360,7 @@ Release the occupancy of port 8000：lsof -t -i tcp:8000 \| xargs kill -9
 
 ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/jinqianbao/image022.jpg)
 
-- #### Downloaded those js or css files from the website and put them into  “static”   folder.
+- #### Downloaded those js or css files from the website and put them into static folder.
 
 ​			docker cp xxxxxxx
 
@@ -374,7 +374,7 @@ Release the occupancy of port 8000：lsof -t -i tcp:8000 \| xargs kill -9
 
 ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/jinqianbao/image020.jpg)
 
-- #### Change the file path, if you put the localization files in the \"static\" folder like me and there are no other secondary directories, you can write it like this:
+- #### Change the file path, if you put the localization files in the static folder like me and there are no other secondary directories, you can write it like this:
 
 
 
