@@ -364,7 +364,7 @@ Release the occupancy of port 8000：lsof -t -i tcp:8000 \| xargs kill -9
 
 ​			docker cp xxxxxxx
 
-​			chmod 777 static
+​			chmod 777 XXXXX
 
 - #### Search for these tags in local files on the web server
 
