@@ -1,3 +1,13 @@
+---
+layout: post
+title: Network  project
+date: 2020-06-13
+Author: Ali
+categories: 
+tags: [system, Network]
+comments: true
+---
+
 This project is to design an information technology infrastructure for Optimus Consultants. In the past, Optimus Consultants has suffered a series of IT disasters, which caused the company to **lose important information**. Delayed project completion and lose of customer. Realizing the importance of information technology infrastructure, the new CEO of Optimus Consultants decided to deploy a reliable and scalable information technology infrastructure to ensure the company\'s efficient operations.
 
 Optimus Consultants will have **multiple branches** in Auckland, Whangarei, Thames, Tauranga, Rotorua, Palmerston North, and New Plymouth, and the company\'s headquarters will be located in Hamilton. The company will employ about 100 employees and their roles will be structural engineer, civil engineer, technician, management, accounting, payroll, marketing and office manager / receptionist. At the same time, the new information technology infrastructure can support employees to work from home.
