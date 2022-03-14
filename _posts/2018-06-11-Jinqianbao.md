@@ -360,11 +360,15 @@ Release the occupancy of port 8000：lsof -t -i tcp:8000 \| xargs kill -9
 
 ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/jinqianbao/image022.jpg)
 
-- #### Downloaded those js or css files from the website and put them into static folder.
+
+
+- #### create a new folder under website/cy
+
+- #### Downloaded those js or css files from the website and put them into jscss folder.
 
 ​			docker cp xxxxxxx
 
-​			chmod 777 static 
+​			chmod 777 jscss
 
 - #### Search for these tags in local files on the web server
 
@@ -374,9 +378,9 @@ Release the occupancy of port 8000：lsof -t -i tcp:8000 \| xargs kill -9
 
 ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/jinqianbao/image020.jpg)
 
-- #### Change the file path, if you put the localization files in the static folder like me and there are no other secondary directories, you can write it like this:
+- #### Change the file path, if you put the localization files in the jscss folder like me and there are no other secondary directories, you can write it like this:
 
-​			  ="% static 'bootstrap.min.css'%" rel="stylesheet"
+​			  ="% jscss 'bootstrap.min.css'%" rel="stylesheet"
 
 
 
