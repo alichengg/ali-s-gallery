@@ -24,7 +24,6 @@ favicon: https://raw.githubusercontent.com/AliChenggggg/blog/main/images/favicon
 navigation:
   - name: Home
     url: /
-
   - name: Archive
     url: /archive
   - name: Tags
