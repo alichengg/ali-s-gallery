@@ -7,7 +7,7 @@
 # 井号后面的文字是说明文档，不会被程序读取。
 name: Ali
 # 描述/签名
-description: HELLO
+description: 
 
 #
 # 下面的设定都是可选的
