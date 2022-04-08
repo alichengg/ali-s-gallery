@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Network  project
+title: A small business network design
 date: 2020-06-13
 Author: Ali
 categories: 
@@ -23,60 +23,6 @@ Optimus Consultants\' business is to provide specific designs for the constructi
 ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image001.jpg)
 
 Figure 1 Final network Diagram
-
-
-
-## Technology Analysis
-
--   **Directory services**
-
-***Active Directory*** is a popular Directory service that can centrally manage users, computers, and other objects on the network. Its main function is to authenticate and authorize users and computers in the Windows domain (Rackspace Support ,2016, p.1). It is supported on both Linux and Windows. Compared with Linux, Windows Active Directory provides a good interface interaction.
-
-***OpenDJ*** is a directory server written based on JAVA, supporting access control and function expansion. This software supports Linux and Windows. OpenDJ provides a high-performance Vertical Scalability directory server (vharseko,2020, p.1). it is known for the simplest and fastest directory to deploy and manage (p.1).
-
-Windows Active Directory provides a good interface interaction.
-
--   **Domain controller**
-
-***Microsoft Domain controllers*** are used to control or manage all computers in the domain. You can create and delete user accounts from it, and grant or revoke access. It can provide a safe management mode. ***Active Directory*** can be used as a Domain controller.
-
-***Zentyal*** is a Domain controller server based on Ubuntu system. Zentyal integrates many open source components, and it also has the Microsoft Exchange Server protocol (Wikipedia, 2020, p.1). Therefore, it supports the native compatibility of the Microsoft Outlook client.
-
--   **DHCP and DNS**
-
-By setting the IP address pool, ***DHCP*** can automatically assign IP addresses to devices on the network without manually configuring IP addresses, and can also avoid IP conflicts. ***DNS*** is used to connect to a specific network computer or the Internet. It can resolve domain names by IP address or IP by domain name. Both DNS and DHCP can create services on ***Windows***.
-
-***ASA* *firewall* *and* *Router*** can also quickly set up DNS and DHCP servers, it usually only needs a few codes to achieve. It is a very fast and efficient deployment method.
-
--   **Deployment/imaging Services**
-
-***Windows Deployment Services*** supports the deployment of Windows operating systems. Users can use WDS to implement network-based installation to set up the client, so other users can directly install related systems through the network without relying on USB or CD for installation.
-
-***Microsoft Deployment Toolkit*** is a tool for automating desktop and server deployment. It can reduce deployment time and standardize desktop and server images (Microsoft, n.d., p.1). MDT also enables you to manage security and ongoing configuration more easily (p.1). It can effectively reduce the complexity and time of deployment in an enterprise environment (p.1).
-
--   **Data Storage**
-
-As a ***shared file***, because of the need to consider permissions, ***FTP*** server seems to be a very good choice. The authorization of FTP is clearer, and each file can be authorized intuitively.
-
-In addition, setting a ***shared folder*** directly on the network is also an option, but it is more complicated than FTP in setting permissions.
-
--   **Virtual Private Network**
-
-There are many popular ***VPN*** servers nowadays, and there are remote connections based on PPPoE, which can be easily created under Windows.
-
-***ASA firewall*** provides an SSL VPN which is more secure. SSL is a popular remote VPN mode. It can provide Web-based connections and can automatically guide users to install related VPN clients via the Web (F5 GLOSSARY, n.d., p.1).
-
--   **Authentication server**
-
-***Network Policy Server*** in Windows can provide an Authentication server. When a remote user connects, the Network Policy Server will start the authentication service.
-
-In addition, the ASA firewall has the ***AAA*** authentication protocol. Compared to creating a RADIUS server on Windows, the AAA server is easier to configure.
-
--   **Data backup**
-
-***Shadow Copy*** is usually required for a file transfer server. It is very easy to open in Windows. Shadow Copy can be used to restore the functionality of earlier versions of files.
-
-If we are concerned about data security, we can rely on some open source backup software, such as ***Areca Backup***.
 
 
 
@@ -137,6 +83,8 @@ VPN is a popular remote access technology. ASA provides any connect VPN that all
 -   **Data security**
 
 Data security is a very important factor, because the company has suffered serious losses due to data loss. Therefore, when considering data, I consider using both methods of data protection. The first is Shadow Copy, which is used to retrieve older version of documents. The second is data backup by using Areca Backup, which is an open source software with high security, and the second is that it generates backup scripts. We only need to run periodically, such as adding a backup task to the windows task scheduler, to let the system automatically run scripts periodically.
+
+
 
 # Implementation
 
@@ -1435,25 +1383,7 @@ In order to prevent the test from negatively affecting the server, we set up an 
 
 Figure 179 Network Penetration Test
 
-### Social Engineering
 
--   Methodology
-
-For the testing of social engineering attacks, we can use the Kali Penetration test Tool -SET. Use SET to create a website similar to the Google login page and publish the website to the intranet for testing. This test can feedback employees\' awareness of social engineering attacks.
-
--   result
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image175.png){width="5.768055555555556in" height="3.8493055555555555in"}
-
-Figure 180 Social Engineering Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image176.png){width="5.768055555555556in" height="3.85625in"}
-
-Figure 181 Social Engineering Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image177.jpg){width="5.768055555555556in" height="3.9055555555555554in"}
-
-Figure 182 Social Engineering Test
 
 ### Brute Force
 
@@ -1473,21 +1403,7 @@ Figure 183 Brute Force Test
 
 ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image179.png){width="5.768055555555556in" height="3.9652777777777777in"}
 
-Figure 184 Brute Force Test
 
-### Port scan
-
--   Methodology
-
-The tool we use is kali tool -Nmap. Nmap is a very powerful information collection tool, able to scan open ports or services of the target
-
-1.  Enter the code in the kali terminal for blasting test
-
--   result
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image180.png){width="5.768055555555556in" height="5.872222222222222in"}
-
-Figure 185 Port scan
 
 ## Design adjustment
 
