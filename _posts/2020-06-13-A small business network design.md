@@ -86,7 +86,7 @@ Data security is a very important factor, because the company has suffered serio
 
 
 
-# Implementation
+# Implementation   
 
 ## Basic network configuration
 
@@ -322,381 +322,47 @@ Areas with high security levels can directly access areas with low security leve
 
 18. ASA-W(config)#access-**group** outside in interface outside   
 
-####  Thames
+## Site Server Configuration   
 
-1.  ASA-T# conf t 
-
-2.  ASA-T(config)# **int** g0/0  
-
-3.  ASA-T(config-if)# nameif inside  
-
-4.  ASA-T(config-if)# security-**level** 100  
-
-5.  ASA-T(config-if)# ip **add** 172.17.2.1 255.255.0.0  
-
-6.  ASA-T(config-if)# **no** sh  
-
-7.  ASA-T(config)# **int** mgt0/0  
-
-8.  ASA-T(config-if)# nameif outside  
-
-9.  ASA-T(config-if)# security-**level** 0  
-
-10.  ASA-T(config-if)# ip **add** 202.14.63.145 255.255.255.0  
-
-11.  ASA-T(config-if)# **no** sh  
-
-12.  ASA-T(config)#route outside 0 0 202.14.64.3  
-
->  
-
-13. ASA-T(config)#object network INSIDE-NET  
-
-14. ASA-T(config-network-object)#subnet 172.19.0.0 255.255.0.0  
-
-15. ASA-T(config-network-object)#nat （inside,outside）**dynamic** interface  
-
-16. ASA-T(config-network-object)#**end**  
-
->  
-
-17. ASA-T(config)#access-list outside extended permit icmp any any   
-
-18. ASA-T(config)#access-**group** outside in interface outside   
-
-## Site Server Configuration
+**The specific steps have been deleted, you can view the specific steps in other file in my blog！**
 
 ###  Directory Services and Domain Controller
 
 -   Active Directory is a relatively easy-to-use Directory Services. It will automatically generate a Domain Controller after the AD server is successfully installed. The installation of AD server is very simple, only need to choose to install Active Directory Domain Services in Server Manager.
 
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image002.png){width="5.768055555555556in" height="4.057638888888889in"}
-
-Figure 2 Active Directory Installation
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image003.png){width="5.768055555555556in" height="4.020833333333333in"}
-
-Figure 3 Active Directory Installation
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image004.png){width="5.768055555555556in" height="4.0375in"}
-
-Figure 4 Active Directory Installation
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image005.png){width="5.768055555555556in" height="4.051388888888889in"}
-
-Figure 5 Active Directory Installation
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image006.png){width="5.768055555555556in" height="4.013888888888889in"}
-
-Figure 6 Active Directory Installation
-
 -   After the Active Directory installation is successful, you need to configure it, including the generated Forest settings and Root domain name.
 
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image007.png){width="5.768055555555556in" height="4.034027777777778in"}
-
-Figure 7 Active Directory Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image008.png){width="5.768055555555556in" height="3.890277777777778in"}
-
-Figure 8 Active Directory Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image009.png){width="5.768055555555556in" height="4.2131944444444445in"}
-
-Figure 9 Active Directory Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image010.png){width="5.768055555555556in" height="4.236805555555556in"}
-
-Figure 10 Active Directory Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image011.png){width="5.768055555555556in" height="4.201388888888889in"}
-
-Figure 11 Active Directory Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image012.png){width="5.768055555555556in" height="4.205555555555556in"}
-
-Figure 12 Active Directory Configuration
-
 -   After the Active Directory configuration is complete, you can start adding domain users and creating management groups, and then classify users by department. Users can be better managed after being classified, including authorization management, login management etc
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image013.png){width="5.768055555555556in" height="3.6902777777777778in"}
-
-Figure 13 Active Directory user and group setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image014.png){width="5.768055555555556in" height="3.0506944444444444in"}
-
-Figure 14 Active Directory user setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image015.png){width="5.768055555555556in" height="3.422222222222222in"}
-
-Figure 15 Active Directory user setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image016.png){width="5.768055555555556in" height="3.44375in"}
-
-Figure 16 Active Directory user setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image017.png){width="5.768055555555556in" height="4.538194444444445in"}
-
-Figure 17 Active Directory group setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image018.png){width="5.768055555555556in" height="4.5472222222222225in"}
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image019.png){width="5.768055555555556in" height="3.6465277777777776in"}
 
 ###  DHCP 
 
 -   The DHCP server can automatically provide IP address services for clients. Installing DHCP requires selecting and installing the DHCP server in server management.
 
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image020.png){width="5.768055555555556in" height="4.077083333333333in"}
-
-Figure 19 DHCP Installation
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image003.png){width="5.768055555555556in" height="4.020833333333333in"}
-
-Figure 20 DHCP Installation
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image004.png){width="5.768055555555556in" height="4.0375in"}
-
-Figure 21 DHCP Installation
-
-NNN![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image021.png){width="5.768055555555556in" height="4.086805555555555in"}
-
-Figure 22 DHCP Installation
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image022.png){width="5.812696850393701in" height="5.528570647419072in"}
-
-Figure 23 DHCP Installation
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image023.png){width="5.768055555555556in" height="4.228472222222222in"}
-
-Figure 24 DHCP Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image024.png){width="5.768055555555556in" height="4.198611111111111in"}
-
-Figure 25 DHCP Configuration
-
 -   After the DHCP installation is complete, you need to configure it. The first step is to create a new scope, set the address range that the server can distribute, the address range that cannot be distributed, and the default gateway.
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image025.png){width="5.768055555555556in" height="3.3645833333333335in"}
-
-Figure 26 DHCP Scope setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image026.png){width="5.768055555555556in" height="3.5902777777777777in"}
-
-Figure 27 DHCP Scope setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image027.png){width="5.768055555555556in" height="4.270833333333333in"}
-
-Figure 28 DHCP Scope setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image028.png){width="5.768055555555556in" height="4.196527777777778in"}
-
-Figure 29 DHCP Scope setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image029.png){width="5.768055555555556in" height="4.070138888888889in"}
-
-Figure 30 DHCP Scope setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image030.png){width="5.768055555555556in" height="4.156944444444444in"}
-
-Figure 31 DHCP Scope setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image031.png){width="5.768055555555556in" height="4.355555555555555in"}
-
-Figure 32 DHCP Scope setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image032.png){width="5.768055555555556in" height="4.352777777777778in"}
-
-Figure 33 DHCP Scope setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image033.png){width="5.768055555555556in" height="4.315277777777778in"}
-
-Figure 34 DHCP Scope setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image034.png){width="5.768055555555556in" height="4.293055555555555in"}
-
-Figure 35 DHCP Scope setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image035.png){width="5.768055555555556in" height="4.352777777777778in"}
-
-Figure 36 DHCP Scope setting
 
 ###  DNS
 
 -   The main function of DNS is to perform IP address resolution. To install dns, you need to select and install a DNS server from service management.
 
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image036.png){width="5.768055555555556in" height="5.45625in"}
-
-Figure 37 DNS Installation
-
 -   After the installation is complete, basic configuration of the DNS server is required, including the name given to the Zone, and DNS server Forwarders. Forwarders are used to send resolution requests to other DNS servers when the local DNS server cannot resolve the address.
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image037.png){width="5.768055555555556in" height="2.9625in"}
-
-Figure 38 DNS Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image038.png){width="5.768055555555556in" height="3.966666666666667in"}
-
-Figure 39 DNS Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image039.png){width="5.768055555555556in" height="4.747222222222222in"}
-
-Figure 40 DNS Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image040.png){width="5.768055555555556in" height="4.750694444444444in"}
-
-Figure 41 DNS Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image041.png){width="5.768055555555556in" height="4.715277777777778in"}
-
-Figure 42 DNS Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image042.png){width="5.768055555555556in" height="4.725694444444445in"}
-
-Figure 43 DNS Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image043.png){width="5.768055555555556in" height="4.710416666666666in"}
-
-Figure 44 DNS Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image044.png){width="5.768055555555556in" height="2.901388888888889in"}
-
-Figure 45 DNS Configuration
 
 -   After the basic configuration of the DNS server is completed, a New Zone needs to be created. This Zone is to add the address to be resolved or forward.
 
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image045.png){width="5.768055555555556in" height="3.716666666666667in"}
 
-Figure 46 DNS Function setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image046.png){width="5.768055555555556in" height="4.745138888888889in"}
-
-Figure 47 DNS Function setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image047.png){width="5.768055555555556in" height="4.741666666666666in"}
-
-Figure 48 DNS Function setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image048.png){width="5.768055555555556in" height="3.7444444444444445in"}
-
-Figure 49 DNS Function setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image049.png){width="5.768055555555556in" height="4.764583333333333in"}
-
-Figure 50 DNS Function setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image050.png){width="5.768055555555556in" height="4.73125in"}
-
-Figure 51 DNS Function setting
 
 ###  Deployment/Imaging Services
 
 -   The WDS server can provide a window system installation channel through the network. To install WDS, you need to choose to install Windows deployment services in Service management, and check Deployment Server and transport server in Role services.
 
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image051.png){width="5.768055555555556in" height="4.096527777777778in"}
 
-Figure 52 WDS Server Installation
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image052.png){width="5.768055555555556in" height="5.461805555555555in"}
-
-Figure 53 WDS Server Installation
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image053.png){width="5.768055555555556in" height="5.468055555555556in"}
-
-Figure 54 WDS Server Installation
-
--   After the WDS server is installed, you need to create a group, then add the windows install image and boot image.
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image054.png){width="5.768055555555556in" height="3.326388888888889in"}
-
-Figure 55 WDS Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image055.png){width="5.768055555555556in" height="5.2125in"}
-
-Figure 56 WDS Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image056.png){width="5.768055555555556in" height="3.290277777777778in"}
-
-Figure 57 WDS Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image057.png){width="5.768055555555556in" height="3.317361111111111in"}
-
-Figure 58 WDS Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image058.png){width="5.768055555555556in" height="4.148611111111111in"}
-
-Figure 59 WDS Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image059.png){width="5.768055555555556in" height="4.151388888888889in"}
-
-Figure 60 WDS Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image060.png){width="5.768055555555556in" height="4.50625in"}
-
-Figure 61WDS Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image061.png){width="5.768055555555556in" height="4.502083333333333in"}
-
-Figure 62 WDS Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image062.png){width="5.768055555555556in" height="4.507638888888889in"}
-
-Figure 63 WDS Configuration
 
 ###  Storage Server
 
 -   FTP is a very easy-to-use file sharing system. To install FTP, you first need to install Web server Role (IIS), then select FTP server in Role services.
 
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image063.png){width="5.768055555555556in" height="5.501388888888889in"}
-
-Figure 64 FTP Installation
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image064.png){width="5.768055555555556in" height="5.481944444444444in"}
-
-Figure 65 FTP Installation
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image065.png){width="5.768055555555556in" height="4.0625in"}
-
-Figure 66 FTP Installation
-
 -   After the Web server Role (IIS) is created, a new FTP server needs to be created in the internet information services manager.
 
 -   Before creating FTP, you need to create the corresponding certificate, next to start creating the FTP site, you need to give the FTP site name and Content directory, then select the mapped IP address, port, and SSL certificate. Finally, choose Authentication and Authorization information.
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image066.png){width="5.768055555555556in" height="2.957638888888889in"}
-
-Figure 67 FTP Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image067.png){width="5.768055555555556in" height="2.9555555555555557in"}
-
-Figure 68 FTP Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image068.png){width="5.768055555555556in" height="3.2104166666666667in"}
-
-Figure 69 FTP Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image069.png){width="5.768055555555556in" height="5.061805555555556in"}
-
-Figure 70 FTP Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image070.png){width="5.768055555555556in" height="2.948611111111111in"}
-
-Figure 71 FTP Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image071.png){width="5.768055555555556in" height="4.54375in"}
-
-Figure 72 FTP Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image072.png){width="5.768055555555556in" height="5.080555555555556in"}
-
-Figure 73 FTP Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image073.png){width="5.768055555555556in" height="5.1090277777777775in"}
-
-Figure 74 FTP Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image074.png){width="5.768055555555556in" height="5.0784722222222225in"}
-
-Figure 75 FTP Configuration
 
 -   After the FTP is created, you need to set the privilege. According to the requirements, three folders need to be created, Department, Project, and user.
 
@@ -705,14 +371,6 @@ Figure 75 FTP Configuration
 -   "Pproject" can only be accessed by the project manager and related employees. Of course, Accounting needs to have the right to read. Therefore, you need to create a separate subfolder for each Project manager and give the permissions corresponding to each project. For example, under the Ajay Nash file, you need to allow Ajay Nash to read and write permissions, and give the group Accounting permission to read.
 
 -   "User" folder can only allow employees to access their own folders. However, IT administrators have the authority to modify all folders. Therefore, each User needs to be individually authorized. For example, the Ajay Nash subfolder needs to authorize Ajay Nash read and write permissions, and give the group IT Administrator read and write permissions.
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image075.png){width="5.768055555555556in" height="3.9923611111111112in"}
-
-Figure 76 FTP Privilege setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image076.png){width="5.768055555555556in" height="4.009027777777778in"}
-
-Figure 77 FTP Privilege setting
 
 ## Security
 
@@ -728,179 +386,43 @@ Figure 77 FTP Privilege setting
 
     -   After the setting is completed, you can download and install ASDM by accessing the asa firewall address through http (ASDM requires java support, so you need to ensure that the system has Java programs when installing ASDM)
 
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image077.png){width="5.768055555555556in" height="3.56875in"}
-
-Figure 78 ASDM Installation
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image078.png){width="5.768055555555556in" height="4.092361111111111in"}
-
-Figure 79 ASDM Installation
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image079.png){width="5.33379593175853in" height="4.067018810148731in"}
-
 Figure 80 ASDM Installation
 
 -   After the ASDM installation is complete, you can access the ASA firewall through ASDM, and you can use the graphical interface to set up the entire ASA firewall in ASDM.
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image080.png){width="5.895472440944882in" height="2.8036034558180227in"}
 
 Figure 81 Site to site Virtual Private Network Configuration
 
 -   To create a site to site VPN, we first need to add the range of target IP addresses that can be accessed in the Access Rule, so we need to add the internal IP addresses of all sites.
 
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image081.png){width="5.768055555555556in" height="3.591666666666667in"}
-
-Figure 82 Site to site Virtual Private Network Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image082.png){width="5.2004505686789155in" height="2.683566272965879in"}
-
-Figure 83 Site to site Virtual Private Network Configuration
-
 -   After the Access Rule is added, start to create site to site VPN
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image083.png){width="5.768055555555556in" height="1.6847222222222222in"}
-
-Figure 84 Site to site Virtual Private Network Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image084.png){width="5.768055555555556in" height="3.157638888888889in"}
-
-Figure 85 Site to site Virtual Private Network Configuration
 
 -   Site to site vpn needs to fill in the peer ip address, which is the external network address of another site. At the same time, you need to fill in the intranet address range of another site.
 
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image085.png){width="5.768055555555556in" height="3.171527777777778in"}
-
-Figure 86 Site to site Virtual Private Network Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image086.png){width="5.768055555555556in" height="3.1930555555555555in"}
-
-Figure 87 Site to site Virtual Private Network Configuration
-
--   Add pre-shared key to ensure the security of site to site vpn connection
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image087.png){width="5.768055555555556in" height="3.152083333333333in"}
-
-Figure 88 Site to site Virtual Private Network Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image088.png){width="5.768055555555556in" height="3.1368055555555556in"}
-
-Figure 89 Site to site Virtual Private Network Configuration
-
 -   Set up other sites in the same way
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image089.png){width="5.768055555555556in" height="3.5520833333333335in"}
-
-Figure 90 Site to site Virtual Private Network Configuration
 
 ### Remote Virtual Private Network and Authentication Service
 
 -   Remote VPN needs to set up anyconnect VPN Wizard in ASDM.
 
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image090.png){width="5.768055555555556in" height="2.512153324584427in"}
-
-Figure 91 Remote Virtual Private Network Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image091.png){width="5.768055555555556in" height="3.5854166666666667in"}
-
-Figure 92 Remote Virtual Private Network Configuration
-
 -   Set profile name and VPN access interface, and upload client image, this image will be used as a vpn client for remote workers.
 
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image092.png){width="5.768055555555556in" height="3.5590277777777777in"}
-
-Figure 93 Remote Virtual Private Network Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image093.png){width="5.768055555555556in" height="3.546527777777778in"}
-
-Figure 94 Remote Virtual Private Network Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image094.png){width="5.768055555555556in" height="3.573611111111111in"}
-
-Figure 95 Remote Virtual Private Network Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image095.png){width="5.768055555555556in" height="3.515972222222222in"}
-
-Figure 96 Remote Virtual Private Network Configuration
-
 -   After that, you need to add users who can access the intranet. By default, the AAA server will be used. Then, you need to add an address range that can use VPN
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image096.png){width="5.768055555555556in" height="3.501388888888889in"}
-
-Figure 97 Remote Virtual Private Network Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image097.png){width="5.768055555555556in" height="3.522222222222222in"}
-
-Figure 98 Remote Virtual Private Network Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image098.png){width="5.768055555555556in" height="3.5229166666666667in"}
-
-Figure 99 Remote Virtual Private Network Configuration
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image099.png){width="5.768055555555556in" height="3.5076388888888888in"}
-
-Figure 100 Remote Virtual Private Network Configuration
-
-
 
 ### Group Policy
 
 -   Group policy can be used to publish some software that companies need. To set up a software release policy, you need to first create a shared file and put the software in the shared file.
 
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image100.png){width="5.417135826771654in" height="5.3838003062117235in"}
-
 Figure 101 Group Policy Setting
 
 -   Group policy can be used to publish some software that companies need. To set up a software release policy, you need to first create a shared file and put the software in the shared file.
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image101.png){width="5.768055555555556in" height="3.736111111111111in"}
-
-Figure 102 Group Policy Setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image102.png){width="5.768055555555556in" height="3.7708333333333335in"}
-
-Figure 103 Group Policy Setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image103.png){width="5.768055555555556in" height="4.256944444444445in"}
-
-Figure 104 Group Policy Setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image104.png){width="5.768055555555556in" height="4.166666666666667in"}
-
-Figure 105 Group Policy Setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image105.png){width="5.768055555555556in" height="4.697916666666667in"}
-
-Figure 106 Group Policy Setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image106.png){width="5.768055555555556in" height="4.129166666666666in"}
-
-Figure 107 Group Policy Setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image107.png){width="5.768055555555556in" height="3.640277777777778in"}
-
-Figure 108 Group Policy Setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image108.png){width="4.58373031496063in" height="4.900424321959755in"}
-
-Figure 109 Group Policy Setting
 
 ### URL filtering
 
 -   ASA firewall also supports URL filtering, first we need to find a URL filtering target.
 
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image109.png){width="5.768055555555556in" height="3.0131944444444443in"}
-
-Figure 110 URL filtering Setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image110.png){width="5.768055555555556in" height="4.602083333333334in"}
-
-Figure 111 URL filtering Setting
-
 -   After determining the IP address to be filtered, add the URL filtering server in the ASA. After the addition is complete, you need to add a Web page filtering based on Https in Filter Rules.
 
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image111.png){width="5.768055555555556in" height="4.790277777777778in"}
 
-Figure 112 URL filtering Setting
 
 ### Data Backup
 
@@ -908,77 +430,7 @@ Figure 112 URL filtering Setting
 
 -   First, you need to be in the Open workspace and select the location you want to back up.
 
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image112.png){width="5.768055555555556in" height="3.2645833333333334in"}
 
-Figure 113 Data Backup Setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image113.png){width="5.768055555555556in" height="4.779166666666667in"}
-
-Figure 114 Data Backup Setting
-
--   Then right click in the blank space of the software to create New Group
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image114.png){width="4.21875in" height="1.5416666666666667in"}
-
-Figure 115 Data Backup Setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image115.png){width="5.768055555555556in" height="4.377777777777778in"}
-
-Figure 116 Data Backup Setting
-
--   After the group is created, you can add a target for backup. Select the target location to be backed up in sources.
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image116.png){width="4.708333333333333in" height="1.7083333333333333in"}
-
-Figure 117 Data Backup Setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image117.png){width="5.768055555555556in" height="4.229166666666667in"}
-
-Figure 118 Data Backup Setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image118.png){width="5.768055555555556in" height="3.8777777777777778in"}
-
-Figure 119 Data Backup Setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image119.png){width="5.768055555555556in" height="4.006944444444445in"}
-
-Figure 120 Data Backup Setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image120.png){width="5.768055555555556in" height="4.010416666666667in"}
-
-Figure 121 Data Backup Setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image121.png){width="5.768055555555556in" height="4.083333333333333in"}
-
-Figure 122 Data Backup Setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image122.png){width="5.645833333333333in" height="3.0625in"}
-
-Figure 123 Data Backup Setting
-
--   After completing the backup settings, you can start the first backup.
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image123.png){width="5.768055555555556in" height="4.297916666666667in"}
-
-Figure 124 Data Backup Setting
-
--   In addition, Areca also provides backup script generation and backup strategy creation.
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image124.png){width="5.768055555555556in" height="2.275in"}
-
-Figure 125 Data Backup Setting
-
--   Shadow Copies is an almost necessary service in a shared file server. It can create a mirror history file and allow folders to be reverted at any time.
-
--   To open shadow copies, just right-click on the disk that needs to be opened and select Configure Shadow Copies, and select create now in Volume.
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image125.png){width="5.768055555555556in" height="4.354166666666667in"}
-
-Figure 126 Shadow Copies Setting
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image126.png){width="5.09375in" height="6.59375in"}
-
-Figure 127 Shadow Copies Setting
 
 ### Security policy
 
@@ -1054,24 +506,6 @@ Active Directory Domain Services is a combination of Directoty services and Doma
 
 2.  Test whether the user created in AD server can log in to the client
 
--   result
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image127.png)
-
-Figure 128 Active Directory Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image128.png){width="5.768055555555556in" height="4.5569444444444445in"}
-
-Figure 129 Active Directory Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image129.png){width="5.768055555555556in" height="4.529166666666667in"}
-
-Figure 130 Active Directory Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image130.png){width="5.768055555555556in" height="4.550694444444445in"}
-
-Figure 131 Active Directory Test
-
 ### DHCP
 
 -   Methodology
@@ -1079,20 +513,6 @@ Figure 131 Active Directory Test
 The DHCP server should be able to automatically give the client an ip address. DHCP requires the client to be set to DHCP mode, so you need to verify that DHCP requires:
 
 1.  Test whether the client can obtain the correct IP address in the automatic address acquisition mode
-
--   result
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image131.png){width="5.768055555555556in" height="3.988888888888889in"}
-
-Figure 132 DHCP Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image132.png){width="5.768055555555556in" height="4.554861111111111in"}
-
-Figure 133 DHCP Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image133.png){width="5.768055555555556in" height="4.579166666666667in"}
-
-Figure 134 DHCP Test
 
 ### DNS
 
@@ -1106,20 +526,6 @@ DNS can provide an address resolution service. In this project, DNS is set up to
 
 3\. Test whether the client can access the local website through the domain name.
 
--   result
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image134.png){width="5.768055555555556in" height="3.3256944444444443in"}
-
-Figure 135 DNS Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image135.png){width="5.768055555555556in" height="4.313194444444444in"}
-
-Figure 136 DNS Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image136.png){width="5.768055555555556in" height="4.543055555555555in"}
-
-Figure 137 DNS Test
-
 ### Deployment/Imaging service
 
 -   Methodology
@@ -1127,24 +533,6 @@ Figure 137 DNS Test
 Windows Deployment Services is a network-based installation server for window systems. For clients joining the domain, you need to be able to select the network through the bios interface to install the window system：
 
 1\. Test whether the client can install windows from the network option in the BIOS.
-
--   result
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image137.png){width="5.768055555555556in" height="4.050694444444445in"}
-
-Figure 138 WDS Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image138.png){width="5.768055555555556in" height="3.829861111111111in"}
-
-Figure 139 WDS Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image139.png){width="5.768055555555556in" height="4.5375in"}
-
-Figure 140 WDS Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image140.png){width="5.768055555555556in" height="4.388888888888889in"}
-
-Figure 141 WDS Test
 
 ## File System Privilege Test
 
@@ -1156,44 +544,6 @@ The FTP server is an open server of the entire company network, and its security
 
 2\. The user can only access the folder where the department is located and personal folders. Cannot access other user or department folders.
 
--   result
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image141.png){width="5.768055555555556in" height="4.533333333333333in"}
-
-Figure 142 File System Privilege Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image142.png){width="5.768055555555556in" height="4.685416666666667in"}
-
-Figure 143 File System Privilege Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image143.png){width="5.768055555555556in" height="4.49375in"}
-
-Figure 144 File System Privilege Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image144.png){width="5.768055555555556in" height="4.560416666666667in"}
-
-Figure 145 File System Privilege Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image145.png){width="5.768055555555556in" height="4.501388888888889in"}
-
-Figure 146 File System Privilege Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image146.png){width="5.768055555555556in" height="4.503472222222222in"}
-
-Figure 147 File System Privilege Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image147.png){width="5.768055555555556in" height="4.500694444444444in"}
-
-Figure 148 File System Privilege Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image148.png){width="5.768055555555556in" height="4.561111111111111in"}
-
-Figure 149 File System Privilege Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image149.png){width="5.768055555555556in" height="4.533333333333333in"}
-
-Figure 150 File System Privilege Test
-
 ## Server Security Test
 
 ### Site to Site Virtual Private Network
@@ -1203,24 +553,6 @@ Figure 150 File System Privilege Test
 The purpose of site to site VPN is to allow other branches to access the FTP server. Therefore testing Site to site VPN requires:
 
 1\. All branches internal clients can access the FTP server
-
--   result
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image150.png){width="5.768055555555556in" height="4.570833333333334in"}
-
-Figure 151 Site to site Virtual Private Network Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image142.png){width="5.768055555555556in" height="4.685416666666667in"}
-
-Figure 152 Site to site Virtual Private Network Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image151.png){width="5.768055555555556in" height="4.557638888888889in"}
-
-Figure 153 Site to site Virtual Private Network Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image152.png){width="5.768055555555556in" height="4.555555555555555in"}
-
-Figure 154 Site to site Virtual Private Network Test
 
 ### Remote Virtual Private Network
 
@@ -1232,44 +564,6 @@ Remote Virtual Private Network provides employees with a channel to remotely con
 
 2\. The remote client needs to be able to access the FTP server through a VPN connection.
 
--   result
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image153.png){width="5.768055555555556in" height="3.953472222222222in"}
-
-Figure 155 Remote Virtual Private Network Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image154.png){width="5.768055555555556in" height="3.9125in"}
-
-Figure 156 Remote Virtual Private Network Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image155.png){width="5.768055555555556in" height="3.8604166666666666in"}
-
-Figure 157 Remote Virtual Private Network Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image156.png){width="5.150446194225721in" height="4.075353237095363in"}
-
-Figure 158 Remote Virtual Private Network Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image157.png){width="5.125444006999125in" height="2.6252274715660544in"}
-
-Figure 159 Remote Virtual Private Network Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image158.png) 
-
-Figure 160 Remote Virtual Private Network Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image159.png){width="5.768055555555556in" height="4.586111111111111in"}
-
-Figure 161 Remote Virtual Private Network Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image160.png){width="5.768055555555556in" height="4.595138888888889in"}
-
-Figure 162 Remote Virtual Private Network Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image141.png){width="5.768055555555556in" height="4.533333333333333in"}
-
-Figure 163 Remote Virtual Private Network Test
-
 ### Authentication service
 
 -   Methodology
@@ -1280,44 +574,11 @@ AAA service is installed on the ASA firewall and used to authenticate remote acc
 
 2\. Check whether the AAA server has user access records
 
--   result
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image161.png){width="5.768055555555556in" height="5.399305555555555in"}
-
-Figure 164 Authentication service Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image157.png){width="5.125444006999125in" height="2.6252274715660544in"}
-
-Figure 165 Authentication service Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image159.png){width="5.768055555555556in" height="4.586111111111111in"}
-
-> Figure 166 Authentication service Test
->
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image162.png){width="5.768055555555556in" height="5.317361111111111in"}
-
-Figure 167 Authentication service Test
-
 ### Group Policy
 
 -   Methodology
 
 Group Policy is used to publish Auto CAD software on the internal network to verify the success of the Group Policy. You need to check whether the software installation program from the server can be found in programs and Features in the intranet client.
-
--   result
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image163.png){width="5.768055555555556in" height="4.247222222222222in"}
-
-Figure 168 Group Policy Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image164.png){width="5.768055555555556in" height="4.5881944444444445in"}
-
-Figure 169 Group Policy Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image165.png){width="5.768055555555556in" height="4.516666666666667in"}
-
-Figure 170 Group Policy Test
 
 ### URL filtering
 
@@ -1326,10 +587,6 @@ Figure 170 Group Policy Test
 For URL filtering, just open the web page to see if the filtered IP address can be displayed.
 
 -   result
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image166.png){width="5.768055555555556in" height="4.570833333333334in"}
-
-Figure 171 URL filtering Test
 
 ### Data Backup
 
@@ -1345,35 +602,9 @@ The software-based data backup needs to be restored and tested. If the file is d
 
 4.  Finally, use the software to restore the file
 
--   result
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image167.png){width="5.768055555555556in" height="4.552777777777778in"}
-
-Figure 172 Data Backup Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image168.png){width="5.768055555555556in" height="4.520138888888889in"}
-
-Figure 173 Data Backup Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image169.png){width="5.768055555555556in" height="4.542361111111111in"}
-
-Figure 174 Data Backup Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image170.png){width="5.768055555555556in" height="2.1104166666666666in"}
-
-Figure 175 Data Backup Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image171.png){width="5.768055555555556in" height="3.4118055555555555in"}
-
-Figure 176 Data Backup Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image172.png){width="5.768055555555556in" height="4.506944444444445in"}
-
-Figure 177 Data Backup Test
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image173.png){width="5.768055555555556in" height="4.559027777777778in"}
-
 Figure 178 Data Backup Test
+
+
 
 ## Network Penetration Test
 
@@ -1530,6 +761,8 @@ Finally, on 11 June 2020, I will start working on presentation preparation.
 Judging from the steps. There are no special changes in the steps of the entire project. The only difference is that I started writing the report in advance, because I realized that there are a lot of contents in the report that need to explain the steps. So at the end of the implementation of prototype, the project started to collect step information and used this information in the report.
 
 In terms of time, the progress of the project has been delayed. It occurred when the implementation of the prototype task was completed. Due to many problems, it was not particularly smooth, so I spent a longer time to complete this task.
+
+
 
 # References
 
