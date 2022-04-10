@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A small business network design
+title: Information technology infrastructure design  for Optimus Consultants
 date: 2020-06-13
 Author: Ali
 categories: 
@@ -23,6 +23,60 @@ Optimus Consultants\' business is to provide specific designs for the constructi
 ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image001.jpg)
 
 Figure 1 Final network Diagram
+
+
+
+
+
+
+
+# AD Serve 
+
+## Hamilton     
+
+
+
+
+
+
+
+| **Apartment**             | **Username**      | **Password** |
+| ------------------------- | ----------------- | ------------ |
+| Managing  Director        | Michael  O’Neill  | N/A          |
+| Senior Engineers          | Nico Hassan       | N/A          |
+| Senior Engineers          | Ruben  Flynn      | N/A          |
+| Senior Engineers          | Ashley  Osborne   | N/A          |
+| Project Managers          | Allison Singleton | N/A          |
+| Project Managers          | Robert  Flanigan  | N/A          |
+| Project Managers          | Piers  McCulloch  | N/A          |
+| Structural  Engineers     | Tiffany Lin       | N/A          |
+| Structural  Engineers     | Kaci Durham       | N/A          |
+| Structural  Engineers     | Aliyah Casey      | N/A          |
+| Structural  Engineers     | Lauryn McCartney  | N/A          |
+| Structural  Engineers     | Siobhan Morales   | N/A          |
+| Structural  Engineers     | Christian Kumar   | N/A          |
+| Structural  Engineers     | Rhys Guevara      | N/A          |
+| Structural  Engineers     | Pierce Buckley    | N/A          |
+| Structural  Engineers     | Barney Barnett    | N/A          |
+| Civil  Engineers          | Jemima Tillman    | N/A          |
+| Civil  Engineers          | Hudson Dudley     | N/A          |
+| Civil  Engineers          | Jessie French     | N/A          |
+| Civil  Engineers          | Olivia Armstrong  | N/A          |
+| Civil  Engineers          | Rowan Little      | N/A          |
+| Civil  Engineers          | Gareth Rodriquez  | N/A          |
+| Civil  Engineers          | Rick Mendez       | N/A          |
+| Civil  Engineers          | Dylan Rodrigues   | N/A          |
+| Civil  Engineers          | Dean Cross        | N/A          |
+| Civil  Engineers          | Gordon Downes     | N/A          |
+| Geotechnical  Technicians | Jeremy Murphy     | N/A          |
+| Geotechnical  Technicians | Ashley Greenwood  | N/A          |
+| Accounting                | Mark Solis        | N/A          |
+| Accounting                | Eilish Lindsey    | N/A          |
+| Payroll                   | Hollie Wilder     | N/A          |
+| Marketing                 | Leonard Hayward   | N/A          |
+| Marketing                 | Debbie Keenan     | N/A          |
+| Reception                 | Luke O'Connor     | N/A          |
+| IT  Administrator         | Ali               | N/A          |
 
 
 
@@ -324,7 +378,7 @@ Areas with high security levels can directly access areas with low security leve
 
 ## Site Server Configuration   
 
-**The specific steps have been deleted, you can view the specific steps in other file in my blog！**
+##### **<u>Review the specific steps</u>**: https://alichenggggg.github.io/blog/Deploy-Active-Directory,DHCP,DNS,Windows-Deployment-Services/
 
 ###  Directory Services and Domain Controller
 
@@ -348,8 +402,6 @@ Areas with high security levels can directly access areas with low security leve
 
 -   After the basic configuration of the DNS server is completed, a New Zone needs to be created. This Zone is to add the address to be resolved or forward.
 
-
-
 ###  Deployment/Imaging Services
 
 -   The WDS server can provide a window system installation channel through the network. To install WDS, you need to choose to install Windows deployment services in Service management, and check Deployment Server and transport server in Role services.
@@ -357,6 +409,8 @@ Areas with high security levels can directly access areas with low security leve
 
 
 ###  Storage Server
+
+##### **<u>Review the specific steps</u>**:https://alichenggggg.github.io/blog/FTP-server-deployment-with-Privilege-Setting-and-Data-backup/
 
 -   FTP is a very easy-to-use file sharing system. To install FTP, you first need to install Web server Role (IIS), then select FTP server in Role services.
 
@@ -373,6 +427,8 @@ Areas with high security levels can directly access areas with low security leve
 -   "User" folder can only allow employees to access their own folders. However, IT administrators have the authority to modify all folders. Therefore, each User needs to be individually authorized. For example, the Ajay Nash subfolder needs to authorize Ajay Nash read and write permissions, and give the group IT Administrator read and write permissions.
 
 ## Security
+
+**<u>Review the specific steps</u>**:https://alichenggggg.github.io/blog/Deploy-ASA-Firewall-VPN/
 
 ### Site to site Virtual Private Network
 
