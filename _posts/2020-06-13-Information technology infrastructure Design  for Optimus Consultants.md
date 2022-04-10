@@ -22,23 +22,13 @@ Optimus Consultants\' business is to provide specific designs for the constructi
 
 ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image001.jpg)
 
-Figure 1 Final network Diagram
+## Active Directory Server  
 
+### Hamilton 
 
+As Hamilton an example, other branches were designed in the same way and with a same Active Directory server structure. 
 
-
-
-
-
-## Active Directory Server 
-
-### Hamilton     
-
-![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image100.jpg)
-
-
-
-
+<img src="https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image200.jpg" alt="img" style="zoom: 67%;" />
 
 | **Apartment**             | **Username**      | **Password** |
 | ------------------------- | ----------------- | ------------ |
@@ -81,50 +71,6 @@ Figure 1 Final network Diagram
 
 
 
-
-### Security policy design
-
-⚫ **Identification and authentication policies**
-
--   The company\'s internal FTP is developed for all employees, and the FTP server has specific authorization settings.
-
--   All users need to log in to the FTP server using the account and password.
-
-Password policies
-
-⚫ **Password policies**
-
--   Please modify your account password every month.
-
--   Your password should not be shorter than 7 characters.
-
--   The password for logging into the FTP server and the intranet should not be the same.
-
-⚫ **Acceptable use policies**
-
--   Any malicious attack on the server will be investigated.
-
--   Don't share your password.
-
--   Don't try to log in with someone else's account.
-
-⚫ **Remote access policies**
-
--   All users can access the company\'s internal resources by installing the vpn client, the most
-
--   It requires employees to carry out account and password to authorize access.
-
-⚫ **Network maintenance policies**
-
--   Please do not install or update related software by yourself. The network management is responsible for updating together.
-
--   We will release a new version of the software to the client through the server and update it uniformly.
-
-⚫ **Incident handling policies**
-
-- When a network failure occurs, please contact the network administrator in time for troubleshooting, please do not make changes to the settings yourself.
-
-  
 
 ## Technologies used
 
