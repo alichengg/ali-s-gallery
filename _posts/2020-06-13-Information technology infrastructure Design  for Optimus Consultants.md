@@ -18,6 +18,18 @@ Optimus Consultants\' business is to provide specific designs for the constructi
 
 # Design
 
+## Design considerations
+
+Network design needs to consider many factors, such as **cost and complexity**.
+
+The overall network structure will be considered in a very simple way. In the early days, I did not need to consider redundant settings. Considering that the **whole company has only about 110 employees**, and **Hamilton, which has the most employees, also has only 35 employees**, so I do n't think the network topology should be very complicated. Based on the analysis of Hamilton with the largest number of employees, 35 employees will not be a heavy burden on the server. I think it is **unnecessary to build redundant servers**.
+
+There are many aspects of cost. In addition to the cost of equipment, there are also heat dissipation, maintenance, and space settings for the equipment. If there are more equipment in the area, the required fan heating and maintenance costs will also increase. Therefore, in order to comprehensively consider the cost aspect and the security aspect, a firewall and a main switch can support a network structure with certain security and lower cost.
+
+Physical design is also an important part of network design. If the network structure is complex and there are many devices, companies often consider setting up a data centre separately. This often adds a lot of cost. For the network structure I designed, the company only needs to consider buying a network equipment cabinet, which is large enough to fit into a firewall, two switches, and a server.
+
+The difficulty of maintenance is also an important consideration. Considering that the entire company has only one IT staff, if the network structure and server are complex, the work will be very difficult. Although I gave up the consideration of redundancy, the entire network structure looks unreliable. However, the simple network structure is often easier to maintain. When a fault occurs, IT staff can quickly eliminate the problem and restore the network at a very fast rate.
+
 ## Final network diagram
 
 ![img](https://raw.githubusercontent.com/AliChenggggg/blog/main/images/2020-06-13-Project/image001.jpg)
@@ -82,7 +94,7 @@ Active Directory is a popular Directory service that can centrally manage users,
 
 -   **DNS and DHCP**
 
-Both DNS and DHCP can create services on Windows。By setting the IP address pool, DHCP can automatically assign IP addresses to devices on the network without manually configuring IP addresses, and can also avoid IP conflicts. DNS is used to connect to a specific network computer or the Internet. It can resolve domain names by IP address or IP by the domain name.
+Both DNS and DHCP can create services on Windows. By setting the IP address pool, DHCP can automatically assign IP addresses to devices on the network without manually configuring IP addresses, and can also avoid IP conflicts. DNS is used to connect to a specific network computer or the Internet. It can resolve domain names by IP address or IP by the domain name.
 
 -   **FTP**
 
@@ -100,17 +112,7 @@ Network Policy Server in Windows can provide an Authentication server. When a re
 
 Shadow Copy is usually required for a file transfer server. It is very easy to open in Windows. Shadow Copy can be used to restore the functionality of earlier versions of files. To further increase data security, I used Areca Backup, an open-source backup software. It can provide good backup service and can generate a one-click backup script, and back up the data after appropriate.
 
-## Design considerations
 
-Network design needs to consider many factors, such as cost and complexity.
-
-The overall network structure will be considered in a very simple way. In the early days, I did not need to consider redundant settings. Considering that the whole company has only about 110 employees, and Hamilton, which has the most employees, also has only 35 employees, so I do n't think the network topology should be very complicated. Based on the analysis of Hamilton with the largest number of employees, 35 employees will not be a heavy burden on the server. I think it is unnecessary to build redundant servers.
-
-There are many aspects of cost. In addition to the cost of equipment, there are also heat dissipation, maintenance, and space settings for the equipment. If there are more equipment in the area, the required fan heating and maintenance costs will also increase. Therefore, in order to comprehensively consider the cost aspect and the security aspect, a firewall and a main switch can support a network structure with certain security and lower cost.
-
-Physical design is also an important part of network design. If the network structure is complex and there are many devices, companies often consider setting up a data centre separately. This often adds a lot of cost. For the network structure I designed, the company only needs to consider buying a network equipment cabinet, which is large enough to fit into a firewall, two switches, and a server.
-
-The difficulty of maintenance is also an important consideration. Considering that the entire company has only one IT staff, if the network structure and server are complex, the work will be very difficult. Although I gave up the consideration of redundancy, the entire network structure looks unreliable. However, the simple network structure is often easier to maintain. When a fault occurs, IT staff can quickly eliminate the problem and restore the network at a very fast rate.
 
 ## Meet/enhance the user requirements
 

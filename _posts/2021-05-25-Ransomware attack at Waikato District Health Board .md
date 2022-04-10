@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ransomware attack at Waikato District Health Board
-date: 2021-05-25
+date: 2021-05-29
 Author: Ali
 categories: 
 tags: [cyber security]
@@ -101,9 +101,9 @@ After the recovery is complete you need to consider a few questions:
 
 ### Reference
 
-1. RNZ (2021). *Cyber attack at Waikato hospitals: Patients anxiously wait for updates*. https://www.rnz.co.nz/news/national/442850/cyber-attack-at-waikato-hospitals-patients-anxiously-wait-for-updates
+RNZ (2021). *Cyber attack at Waikato hospitals: Patients anxiously wait for updates*. https://www.rnz.co.nz/news/national/442850/cyber-attack-at-waikato-hospitals-patients-anxiously-wait-for-updates
 
-2. VIPRE Labs (2021).*How Conti Ransomware Works and Our Analysis.* https://labs.vipre.com/how-conti-ransomware-works-and-our-analysis/
+VIPRE Labs (2021).*How Conti Ransomware Works and Our Analysis.* https://labs.vipre.com/how-conti-ransomware-works-and-our-analysis/
 
 
 
