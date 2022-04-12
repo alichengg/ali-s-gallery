@@ -87,16 +87,13 @@ Because the BVP47 toolkit and attack console have been leaked, it is likely that
 
 You can use the following information to detect whether it has compromised your server.
 
-| file name   | initserial or other              |
+|             |                                  |
 | ----------- | -------------------------------- |
+| file name   | initserial or other              |
 | Hash（MD5） | 58b6696496450f254b1423ea018716dc |
 | size        | 299,148 bytes                    |
 | file path   | /usr/bin/modload                 |
 | platform    | Linux                            |
-
-
-
-
 
 ### Reference 
 
