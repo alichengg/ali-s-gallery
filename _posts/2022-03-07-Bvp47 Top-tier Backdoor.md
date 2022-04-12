@@ -49,7 +49,7 @@ Bvp47 is a backdoor with a remote console. This backdoor is entirely for **linux
 
 For a detailed introduction to the functions of each component, it is recommended that you read the official documentation:
 
-https://www.pangulab.cn/files/The_Bvp47_a_top-tier_backdoor_of_us_nsa_equation_group.en.pdf
+https://www.pangulab.cn/en/post/the_bvp47_a_top-tier_backdoor_of_us_nsa_equation_group/
 
 
 
@@ -96,3 +96,10 @@ You can use the following information to detect whether it has compromised your 
 | file path   | /usr/bin/modload                 |
 | platform    | Linux                            |
 
+
+
+
+
+### Reference 
+
+Pangu Lab(2022). The Bvp47 - a Top-tier Backdoor of US NSA Equation Group. https://www.pangulab.cn/en/post/the_bvp47_a_top-tier_backdoor_of_us_nsa_equation_group/
