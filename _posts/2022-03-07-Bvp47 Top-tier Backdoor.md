@@ -8,8 +8,6 @@ tags: [cyber security]
 comments: true
 ---
 
-# Bvp47 - a Top-tier  API Backdoor 
-
 
 This cyber attack has been covertly attacking 287 targets in 45 countries for 10 years. And most of the targets are government departments or schools.
 
