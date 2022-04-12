@@ -1,6 +1,6 @@
 ---
 layout: post
-title:Bvp47 Top-tier Backdoor
+title: Bvp47 Top-tier Backdoor
 date: 2022-03-07
 Author: Ali
 categories: This article is only used for cyber security research, please do not use it for improper purposes.
