@@ -2,7 +2,7 @@
 layout: post
 title: 2020 Digital Painting
 Author: Ali
-categories: 
+categories: 2020 Digital Painting
 tags: [Digital Painting]
 comments: true
 ---
