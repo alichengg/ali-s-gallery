@@ -28,7 +28,8 @@ navigation:
     url: /archive
   - name: Tags
     url: /tags
-
+  - name: Nothing
+    url: /About
 # 每页的文章数
 paginate: 20
 
