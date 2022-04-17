@@ -1,18 +1,17 @@
 ---
 layout: post
-title: Python Self-study Daily log ---updating...
+title: Python Self-Study Daily log ---updating...
 date: 2022-04-16
 Author: Ali
 categories: 
 tags: [Python]
 comments: true
----
+title: Python Self-study Daily log ---updating...
+This page is used to urge myself to learn Python, and it will continue to be updated.....
 
+This study plan may continuously for more than one month...
 
-
-This page is used to urge myself to learn Python, and it will continue to be updated. .
-
-
+It is worthful...
 
 
 
@@ -92,6 +91,8 @@ secrite.close()
 print('Can you tell me the relut of 991238*123123?','\n',991238*123123,)
 print(991238*123123)
 ```
+
+
 
 
 
@@ -215,6 +216,12 @@ b14=False
 print(bool(s14),bool(f14),bool(i14),b14)
 #string转成Bool时，只有为空才会转成false，其他任何内容都会转换城Ture
 ```
+
+
+
+
+
+
 
 
 
