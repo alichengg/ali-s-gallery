@@ -1,13 +1,12 @@
 ---
 layout: post
-title: Python Self-Study Daily log ---updating...
+title: Python Self-Study log. Updating....
 date: 2022-04-16
 Author: Ali
-categories: 
+categories:
 tags: [Python]
 comments: true
 ---
-
 
 
 I realize that my IT skill may hit a plateau so here I make a plan for me to learn Python.
