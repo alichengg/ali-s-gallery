@@ -3,10 +3,12 @@ layout: post
 title: Python Self-Study log. Updating....
 date: 2022-04-16
 Author: Ali
-categories:
+categories: 
 tags: [Python]
 comments: true
----
+
+
+
 
 
 I realize that my IT skill may hit a plateau so here I make a plan for me to learn Python.
@@ -15,9 +17,11 @@ This page I use to push me to study and will continue to be updated for more tha
 
 
 
+
+
 ### 16.April.2022     Chapter one
 
-```
+```python
 #输入数字
 print(111)
 #输出字符
@@ -102,7 +106,7 @@ print(991238*123123)
 
 ### 17.April.2022     Chapter Two
 
-```
+```python
 #coding：gbk
 
 
@@ -229,7 +233,7 @@ print(bool(s14),bool(f14),bool(i14),b14)
 
 ### 18.April.2022     Chapter Three
 
-```
+```python
 #coding UTF-8
 
 #输出函数input ，输入的value默认为str
