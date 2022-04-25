@@ -19,7 +19,7 @@ This page I use to push me to study and will continue to be updated for more tha
 
 
 
-### 16.April.2022     Chapter one
+### 16.April.2022     Chapter one----- \n   \t    \t   \r  \b
 
 ```python
 #输入数字
@@ -104,7 +104,7 @@ print(991238*123123)
 
 
 
-### 17.April.2022     Chapter Two
+### 17.April.2022     Chapter Two-----int ，float，bool, str 
 
 ```python
 #coding：gbk
@@ -231,7 +231,7 @@ print(bool(s14),bool(f14),bool(i14),b14)
 
 
 
-### 18.April.2022     Chapter Three
+### 18.April.2022     Chapter Three-----运算符
 
 ```python
 #coding UTF-8
@@ -425,14 +425,13 @@ print(99//2**4)  #0001 0110      0000 0001
 
 
 
-### 19.April.2022     Chapter Four
+### 19.April.2022     Chapter Four-----顺序结构
 
 ```python
 #coding utf-8
 
-
 #程序组织的击结构
-'''''
+
 #顺序结构
 print('open computer')
 print('open pycharm')
@@ -449,10 +448,9 @@ print(bool(""))
 print(bool((list())))
 print(bool([]))
 print(bool(set(())))
-'''''
+
 import sys
 
-'''''
 #选择结构
 #单分支结构
 print('entry how much money u want to take')
@@ -463,8 +461,7 @@ if money >= s:
     print('sucess！you have',money,'left')
 else:
     print('sorry,you dont have enogh money in ur account')
-'''''
-'''''
+
 
 #多分枝结构
 
@@ -478,9 +475,9 @@ elif 100 >= money >= 10:
     print('you are poor')
 elif money <= 10:
     print('really? Are u kindding me')
-'''''
 
-'''''
+
+
 print('A Are you good at fight?')
 a=input(str())
 d='yes'
@@ -514,7 +511,6 @@ else:
     print('Are u kidding? you are',age,'years old?')
 
 
-'''''
 
 
 #Practice
@@ -594,7 +590,7 @@ else:
 
 
 
-### 20.April.2022     Chapter Five
+### 20.April.2022     Chapter Five------list
 
 ```python
 #UTP-8
@@ -766,4 +762,320 @@ print(listi)
 
 listi=[i*2 for i in range(1,10)]
 print(listi)
+```
+
+
+
+
+
+
+
+### 21.April.2022     Chapter Six------dict
+
+```python
+#
+
+#字典  通常一对存在 ：键+值
+
+#字典是无序的
+#键会先经过Hash计算，来确定顺序
+
+#python的字典 是根据key 查找 value所在的位置
+
+#创建字典
+scores={'Ali':20,'Alii':99,'Allllli':98}
+print(scores)
+#or
+name1=dict(name='ali',age=20)
+print(name1)
+#空字典
+scores={}
+print(scores)
+
+#获取字典中的value
+scores={'Ali':20,'Alii':99,'Allllli':98}
+print(scores['Ali'])
+#print(scores['Aliasdasd'])    #会报错
+#or
+#get 只能通过key查询value
+print(scores.get('Ali'))
+print(scores.get('Aliasdasd')) #使用get不会保持，不存在时会直接回馈一个 None
+print(scores.get('aliiie',99))     #如果用99查找‘aliiie’所对应的value不存在时，就输出99
+
+#键的判断      可以用key 查询value，也可以用value 查询key
+scores={'Ali':20,'Alii':99,'Allllli':98}
+print('Ali' in  scores)
+print('Ali' not in  scores)
+print(20 not in  scores)
+
+
+#删除 字典中的key-value pair
+del scores['Allllli']
+print(scores)
+#清空字典
+scores.clear()
+print(scores)
+
+#增加一个key-value pair
+scores['alic']=1100
+print(scores)
+
+#修改一个key-value pair  用key去修改value ，不能用Value 去修改key
+scores['alic']=11
+print(scores)
+
+
+#视图操作
+scores={'Ali':20,'Alii':99,'Allllli':98}
+#获取所有key
+key1=scores.keys()
+print(key1)
+print(list(key1))
+
+#获取所有value
+value1=scores.values()
+print(value1)
+print(list(value1))
+
+##获取所有key-value pair
+items=scores.items()
+print(items)
+print(list(items))   #转换后的列表元素由元组组成
+
+#字典元素的遍历
+scores={'Ali':20,'Alii':99,'Allllli':98}
+for item in scores:
+    print(item,scores[item])
+
+for item in scores:
+    print(scores.get(item))   #
+
+#字典里的key-value pair ，key不容许重复，但是value可以重复
+#如果Key相同，后面的代替前面的
+dicc={'math':10,'PE':99,'IT':11,'IT':12}
+print(dicc)
+#value可以重复
+dicc={'math':10,'PE':99,'IIT':12,'IT':12}
+print(dicc)
+
+#字典对内存的浪费比较大
+#字典生成式 zip
+bankaccout1=['Ali','Bill','Cerry','Deinal']
+moneyinaccout1=[100,200,300,400]
+
+#A1=['A','B','C','D']
+#B1=[1,2,3,4]
+#  X={A:B for A,B in zip(A1,B1)}
+
+dicccc={bankaccout:moneyinaccout for bankaccout,moneyinaccout in zip(bankaccout1,moneyinaccout1)}
+print(dicccc)
+
+#生成字典会按照顺序逐一配对，多余的会被忽略
+```
+
+
+
+
+
+
+
+### 22.April.2022     Chapter Serve------Tuple
+
+```python
+#元组
+
+#不可变序列  没有增加 删除 改写的操作
+
+#可变序列  列表，字典
+list1=[1,2,3]
+print(list1)
+#不可变序列
+s='hello'
+s=s+'\tworld'
+print(s)
+
+#列表  l=[]
+#字典  d={}
+#元组  t=()
+
+t=('hello',"my name",'Ali',199)
+print(t)
+print(type(t))
+#or
+t1=tuple(('hello','my name','Ali',12))
+print(t1)
+print(type(t1))
+#or
+t2='hello','my name','Ali',123
+print(t2)
+print(type(t2))
+
+t3=tuple('Hello')
+print(type(t3))
+
+#如果元组里 只有一个元素 ，需要在加，用于辨别
+t4='hello'
+print(type(t4))
+
+t5='hello',
+print(type(t5))
+#空元组
+#空列表
+list3=[]
+dico={}
+
+t6=(tuple())
+print(t6)
+
+#a 元组储存的都是不可变对象
+t7=(1,[2,3],4,5)
+print(t7)
+#当您尝试像访问函数一样访问列表时，请确保使用方括号而不是大括号来访问或更改列表中的值。
+print(t7[0],type(t7[0]),id(t7[0]))
+print(t7[1],type(t7[1]),id(t7[1]))
+
+#t7[1]=100
+#print(t7)
+#can add 元素 到元组的列表中
+t7[1].append(6)
+print(t7)
+
+#元组遍历
+t8=(1,2,4,3,5)
+print(t8[0])
+print(t8[2])
+print()
+#元组循环语句遍历
+bl=-1
+for _ in t8:
+    bl = bl + 1
+    if bl ==0:
+        print(t8[bl])
+    else:
+        print(t8[bl])
+#or
+for _ in t8:
+    print(_)
+        
+```
+
+
+
+
+
+### 23.April.2022     Chapter Eight------Set
+
+```python
+#集合
+
+#集合与字典一样，不过集合只有key 没有value
+
+s={1,1,2,3,4,5,6}  #集合里的元素不能重复
+print(s)
+#or
+s1=set(range(6))
+print(s1)
+#or 数列转集合
+s2=set([1,2,3,4,5,6,7,7,7,7,7])
+print(s2)
+#or 元组转集合
+s3=set((1,1,2,3,3,4,5,0))
+print(s3)
+#or 字典转集合
+s5=set({1,2,3,4,4,4,5})
+print(s5)
+
+s4=set('I love python')
+print(s4)
+#空集合
+s6=set()
+print(s6)
+
+
+####集合的相关操作
+#集合里的元素判断  in or not in
+s7={1,2,3,4,5}
+print(1 in s7)
+print(1 not in s7)
+#集合元素增加  add+1     update+多个
+s7.add(80)
+print(s7)
+
+s7.update({777,77723,222})
+print(s7)
+
+s7.update([74,7333,212])
+print(s7)
+
+s7.update((7772,123,778,1123))
+print(s7)
+
+#集合元素删除      remove 删除不存在的元素时会报错，但是discard 不会
+s7.remove(74)
+print(s7)
+
+s7.discard(111)
+print(s7)
+
+#pop 随机删除一个元素，pop里不能赋予任何参数
+s7.pop()
+print(s7)
+#pop 删除全部
+s7.clear()
+print(s7)
+
+
+#-------------集合之间的关系-------------
+s8={1,2,3,4,5}
+s9={1,2,3,4,5}
+s10={2,3,4,5,6}
+s11={3,4,5,6}
+s12={3,4,5,6}
+
+print(s8==s9)
+print(s10!=s9)
+
+#子集     s11在不在s10中
+print(s11.issubset(s10))
+print(s12.issubset(s11))    #如果两个集合相同，那他们互为子集和超集
+#超集     s10包含s11吗
+print(s10.issuperset(s11))
+print(s12.issuperset(s11))
+
+#交集     isdisjoint意思没有交集    语句的意思是 s8和s11是否没有交集
+#isdisjoint 返回false为有交集   返回True表示没有交集
+print(s8.isdisjoint(s11))
+
+
+#----------------集合的数学操作--------------------
+#交集
+s8={1,2,3,4,5}
+s11={3,4,5,6}
+
+
+print(s8.intersection(s11))
+#or
+print(s8 & s11)
+
+# 并集
+print(s8.union(s11))
+#or
+print(s8|s11)
+
+# 差集
+print(s8.difference(s11))
+#or
+print(s8-s11)
+
+print(s11.difference(s8))
+
+# 对称差集   排除都有的，剩下的就是对称差集
+print(s8.symmetric_difference(s11))
+#or
+print(s8^s11)
+
+#----------------集合生成公式--------------------
+
+s20={i*i for i in range(6)}
+print(s20)
 ```
