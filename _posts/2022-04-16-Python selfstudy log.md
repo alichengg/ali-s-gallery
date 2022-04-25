@@ -8,12 +8,13 @@ tags: [Python]
 comments: true
 ---
 
-
-
-
-I realize that my IT skill may hit a plateau so here I make a plan for me to learn Python.
-
 This page I use to push me to study and will continue to be updated for more than one month. 
+
+
+
+
+
+
 
 
 
@@ -419,6 +420,22 @@ print(99//2**4)  #0001 0110      0000 0001
 # < > == >= <= !=
 # and or 布尔运算 
 # = 赋值
+
+
+#range()的三个创建方式
+#只有一个参数 默认从0开始 步长为一
+r=range(10)
+print(list(r))
+#两个个参数 第一个数字为起始  步长默认为一
+rr=range(1,10)
+print(list(rr))
+#三个个参数 第一个数字为起始  第三个数字为步长
+rrr=range(1,10,2)
+print(list(rrr))
+#判断一个数字是否在序列中
+print(11 in rrr)
+print(1 in rrr)
+print(11 not in rrr)
 ```
 
 
@@ -451,8 +468,8 @@ print(bool(set(())))
 
 import sys
 
-#选择结构
-#单分支结构
+#---------------------------------选择结构---------------------
+#----------单分支结构-----------
 print('entry how much money u want to take')
 money=100
 s=int(input())
@@ -463,7 +480,7 @@ else:
     print('sorry,you dont have enogh money in ur account')
 
 
-#多分枝结构
+#-----------多分枝结构----------
 
 print('Entry how much money left in ur accout')
 money=int(input())
@@ -510,9 +527,61 @@ if age:
 else:
     print('Are u kidding? you are',age,'years old?')
 
+    
+
+#-------------------------循环结构 while----------------
+a=1
+while a<10:
+    print(a)
+    a+=1
+
+#初始化变量
+#条件判断
+#条件执行模块
+#改变变量
+
+sum=0
+a=0
+while a<5:
+    sum+=a
+    a+=1
+print(sum)
+
+#1- 100的偶数合
+sum=0
+a=0
+while a<=100:
+    sum+=a
+    a+=2
+print(sum)
+
+
+#--------------------------For in 循环-----------------
+for item in  'Python':
+    print(item)
+
+
+for item1 in range(10):
+    print(item1)
+
+
+#for 可以在 执行循环中不需要变量，可以写作_
+for _ in range(10):
+    print("Python nuberone")
+
+```
 
 
 
+
+
+
+
+
+
+### 20.April.2022    Practice-----bank ATM System
+
+```python
 #Practice
 m=moneyinbank=int(1000)
 passwordinbank='123'
@@ -581,7 +650,6 @@ if a==cardid:
 else:
     print('Wrong card!plz using Acard')
 
-
 ```
 
 
@@ -590,7 +658,11 @@ else:
 
 
 
-### 20.April.2022     Chapter Five------list
+
+
+
+
+### 21.April.2022     Chapter Five------list
 
 ```python
 #UTP-8
@@ -770,7 +842,7 @@ print(listi)
 
 
 
-### 21.April.2022     Chapter Six------dict
+### 22.April.2022     Chapter Six------dict
 
 ```python
 #
@@ -879,7 +951,7 @@ print(dicccc)
 
 
 
-### 22.April.2022     Chapter Serve------Tuple
+### 23.April.2022     Chapter Serve------Tuple
 
 ```python
 #元组
@@ -963,7 +1035,7 @@ for _ in t8:
 
 
 
-### 23.April.2022     Chapter Eight------Set
+### 24.April.2022     Chapter Eight------Set
 
 ```python
 #集合
