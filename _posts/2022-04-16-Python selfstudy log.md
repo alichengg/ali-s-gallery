@@ -1151,3 +1151,235 @@ print(s8^s11)
 s20={i*i for i in range(6)}
 print(s20)
 ```
+
+
+
+
+
+### 30.April.2022     Chapter nine------字符串操作
+
+```python
+#------------字符串的驻留机制-------------
+#优点：优化内存
+a='python'
+b="python"
+c='''python'''
+print(a,id(a))
+print(b,id(b))
+print(c,id(c))
+
+#------------字符串查询操作-------------
+#index()    查找字符串第一次出现的位置         查不到   value error
+#rindex()   查找字符串最后一次出现的位置       查不到   value error
+#find（）    查找字符串第一次出现的位置         查不到    返回-1
+#rfind（）   查找字符串最后一次出现的位置       查不到    返回-1
+
+
+d='hello,my name is Ali，hello'
+
+print(d.index('hello'))
+print(d.rindex('hello'))
+print(d.rindex('my'))
+print(d.find('name'))
+print(d.rfind('Ali'))
+
+#------------字符大小写转换-------------
+#upper()        把所有字符串转成大写字母
+#lower()        把所有字符串转成小写字母
+#swapcase()     把字符串所有的大写字母转成小写字母，把所有的小写字母转成大写字母
+#capitalize()   把第一个字符转换成大写，把其余字符转换成小写
+#title()        把每个单词的第一个字符转换成大写，剩余的转成小写
+
+e='hello,my name is Ali'
+print(e,id(e))
+
+f=e.upper()
+print(f,id(f))
+
+g=e.lower()
+print(g,id(g))
+
+i=e.swapcase()
+print(i,id(i))
+
+j=e.capitalize()
+print(j,id(j))
+
+k=e.title()
+print(k,id(k))
+#字符串转换后 id改变，产生了新的字符串对象
+
+#------------字符串对齐-------------
+#center(x,'y')       居中对其      Center函数中需要给与参数，x代表空间，表示字符在多大的空间中居中。‘y’用来填补居中后剩余的空间，默认为空格
+#ljust(x,'y')        居左对其      ljust函数中需要给与参数，x代表空间，表示字符在多大的空间中居中。‘y’用来填补居中后剩余的空间，默认为空格
+#rjust(x,'y')        居右对其      rjust函数中需要给与参数，x代表空间，表示字符在多大的空间中居中。‘y’用来填补居中后剩余的空间，默认为空格
+#zfill(x)            居右对其      zfill函数会使用0进行填充，只能指定空间大小
+
+e='hello,my name is Ali'
+
+print(e.center(30,'!'))
+print(e.center(30))     #默认为空格
+print(e.center(5,'!'))  #当设定的空间小于字符串的长度时，会直接返回原字符
+
+print(e.ljust(30,'!'))
+
+print(e.rjust(30,'!'))
+
+print(e.zfill(30))
+
+#zfill函数会把 字符串首位的+和- 提到第一位，其余运算符都不会。
+l='+a123sdds454'
+print(l.zfill(30))
+
+#------------字符串分割-------------
+#split                          从字符串左开始分割，默认的 分割识别符 是空格，返回值为一个字符串列表
+#split（sep='x'）                通过参数sep来指定 分割识别符,x可以为任意字符
+#split（sep='x',maxsplit=y）     追加maxsplit来定义最大分割次数y，分割了y次后，剩余字符全部为一个部分
+
+#rsplit                         定义用法都与split一样，只不过是从右边开始
+#rsplit（sep='x'）
+#rsplit（sep='x',maxsplit=y）
+
+e='hello my name is Ali'
+ee='hello,my,name,is,Ali'
+
+print(e.split())
+#or
+list1=e.split()
+print(list1)
+print(ee.split(sep=','))
+print(ee.split(sep=',',maxsplit=1))
+
+print(e.rsplit())
+print(ee.rsplit(sep=','))
+print(ee.rsplit(sep=',',maxsplit=1))
+
+#------------字符串的判断-------------
+#isidentifier()                 判断指定的字符串是不是合法的标识符 （数字，字母和下划线）
+#isspace()                      判断指定的字符串是不是全部右空白字符组队（回车，换行，水平制表符）
+#isalpha()                      判断指定的字符是不是全部由字母组成
+#isdecimal()                    判断指定的字符串是不是全部由十进制的数字组成
+#isnumeric()                    判断指定的字符串是不是全部由数字组成
+#isalnum()                      判断指定的字符串是不是由数字和字母组成
+
+m='hello,my,name,is,Ali'
+
+print('1.',m.isidentifier())
+print('2.','ali_1'.isidentifier())
+print('3.','ali_1'.isidentifier())
+print('4.','Ⅰ'.isnumeric())     #罗马数字也是数字
+print('4.','一'.isnumeric())     #中文数字也是数字
+
+#------------字符串的替换合并-------------
+#repale('x','y',z)                replace可以替换参数,'x'为被替换的参数，‘y’为替换参数，z定义换几次
+#'x'.join()                       join将列表或元组合并，'x'为连接符
+
+m='hello,my name is Ali'
+print(m.replace('is','is not'))
+
+mm='hello,hello,hello,my name is Ali'
+print(mm.replace('hello','',2))
+
+list1=['hello', 'my', 'name','is', 'Ali']
+print('\t'.join(list1))
+
+t=('hello', 'my', 'name','is', 'Ali')
+print(' '.join(t))
+
+print(' '.join('ALI'))
+
+#------------字符串的比较-------------
+#   >   >=     <    <=     ==  !=
+#规则：逐一比较
+#原理：比较 ordinal value(原始值)
+
+#ord 查询字符的对应的原始值
+print(ord('a'),ord('b'),ord('c'),ord('d'),ord('e'),ord('f'),ord('g'),ord('h'))
+print(ord('1'),ord('2'),ord('3'),ord('4'),ord('5'),ord('6'),ord('7'),ord('8'))
+print(ord('Ⅰ'),ord('Ⅱ'),ord('Ⅲ'),ord('Ⅳ'),ord('Ⅴ'))
+print(ord('我'),ord('是'),ord('谁'),ord('啊'))
+print(ord('の'))
+
+#chr利用ordinal value查询对应的字符
+print(chr(97),chr(98),chr(99),chr(100),chr(101),chr(102),chr(103))
+
+#== 与 is 的区别
+#   == 比较的是value
+#   is 比较的是id
+
+
+#------------字符串切片-------------
+#字符串切片不具备增 删 改 操作
+#切片后产生新的对象(id  改变)
+# X[start:end:step]
+
+
+m='hello,my,name,is,Ali'
+s=m[:6]      #没有设定开始值
+print(s)
+
+t=m[6:]
+print(t)
+
+newone =s+t
+print(newone)
+
+u=m[1:11:2]
+print(u)
+
+v=m[-3::1]
+print(v)
+
+
+#------------字符串格式化-------------
+#作用在格式文件， 按照一个模板来修改内容的情况下使用
+
+#两种方式：
+# 1.%作占位符
+#       %s--字符串      %d---整数      %f---浮点数
+#       'xxxxx:{0}，xxxx{1}'.%(x,y)
+name='Ali'
+age=11
+print('Hello,My name is %s, I am %s years old'%(name,age))
+
+
+# 2.{}作占位符
+#       'xxxxx:{0}，xxxx{1}'.format(x,y)
+
+print('Hello,My name is {0}, I am {1} years old'.format(name,age))
+
+# 3.f-string
+#       f'xxxxx:{x}，xxxx{y}'
+
+print(f'Hello,My name is {name}, I am {age} years old')
+
+#------------整数格式化-------------
+# 整数：'%xd' %y          x为空间大小，y为内容，如果空间小于输入内容，则直接打印结果
+print('%11d' %11123123)
+
+# 浮点数：'%xf' %z                          x为空间大小，z为内容，默认浮点数最大会保留8位，多了四舍五入，少了用0补齐
+# 浮点数：'%.yf' %z                         .y为保留小数点后的位数
+# 浮点数：'%x.yf' %z                        x为空间大小，.y为保留小数点后的位数，z为内容
+print('%11f' %1.11)
+print('%.1f' %1.1123123)
+print('%20.9f' %1.11231212312388232123763)
+#or
+# 浮点数：'{start:x.yf}'.format(z)        x为空间大小，.y为保留小数点后的位数，z为内容
+print('{0:20.9f}'.format(1.11231212312388232123763))
+
+
+
+#------------字符串编码转换------------
+#计算直接传输时，需要把string转换位Unicode
+#方法：
+#       编码：将string转换位二进制（bytes）
+#       解码：将（bytes）类型的数据转换位string
+
+#在使用编码解码时，要确保编码方式和解码方式一致
+#编码
+w='你好，我叫Ali'    #Hello,my name is Ali
+byte=w.encode(encoding='UTF-8')
+print(byte)
+# 解码
+print(byte.decode(encoding='UTF-8'))
+```
