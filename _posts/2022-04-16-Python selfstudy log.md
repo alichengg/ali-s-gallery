@@ -1383,3 +1383,169 @@ print(byte)
 # 解码
 print(byte.decode(encoding='UTF-8'))
 ```
+
+
+
+### 1.May.2022     Chapter Ten------Function
+
+```python
+#函数
+
+#函数指的是 具有一个特定功能的一段代码
+#为什么用函数
+#重复的功能可以用函数来代替
+#可以隐藏实现的细节
+#可以提高可维护性，因为是调用，所以修改函数就可以全局更改
+#便于调试
+
+#---------------------函数的创建---------------------
+def sum(a,b):           #a，b都是形式上的参数，它被用于定于
+    c=a+b
+    return c
+#---------------------函数的调用---------------------
+sumab=sum(1,2)          #1，2是实际上的参数，它被用于调用
+print(sumab)
+
+#---------------------函数的参数传递-------------------
+def sum(a,b):
+    c=a+b
+    return c
+
+sumab=sum(1,2)          #基于位置
+print(sumab)
+#or
+def sum(a,b):
+    c=a+b
+    return c
+
+sumab=sum(b=1,a=2)      #基于关键字
+print(sumab)
+
+#可变对象和不可变对象在参数传递后的变化规则
+
+def fun1(a,b):
+    a=100
+    b.append(11)
+
+numb1=11                #可变对象
+numb2=[1,2,3]           #不可变对象
+
+result=fun1(numb1,numb2)
+print(numb1,numb2)
+
+#why result is 11 [1, 2, 3, 11]？
+#不可变对象不会受到传递参数的影响，在numb1=11传递到函数时，numb1只在函数内发生了变化，并不会受到实际的影响
+#可变对象会受到函数的影响，
+
+
+#---------------------函数的返回值-------------------
+#区分奇数偶数
+def re_odneven(num):
+    odd=[]
+    even=[]
+    for i in num:
+        if i%2:
+            odd.append(i)
+        else:
+            even.append(i)
+    return odd,even
+
+print(re_odneven(range(1,20)))
+
+#函数的返回值
+#   1.如果函数没有返回值（函数执行完成后，不需要给调用处提供数据） return可以省略
+def fun1():
+    print('Hello, I am Ali')
+    #return
+print(fun1())
+
+#   2.函数的返回值如果1个，直接返回原类型
+def fun2():
+    return 'Hello, I am Ali'
+print(fun2())
+
+#   3.函数的返回值如果多个，则返回一个元组
+def fun3():
+    return 'Hello','I','am','Ali'
+print(fun3())
+
+#是否需要写return 需要视情况而定
+
+
+#---------------------函数的参数定义-------------------
+#默认值参数
+def func(a,b=11):      #b在函数数时，被赋予了一个值，这就意味着b的默认值为100
+    c=a+b
+    return c
+
+print(func(90))         #a会被90代替，但由于没有第二数字，b就会使用函数里的默认值
+print(func(90,70))
+
+#-------------个数可变的位置参数     在函数定义中，只能定义一个个数可变的位置参数
+#不确定 位置 实际参数的个数
+#采用*定义
+#返回结果会为一个元组
+def funca(*args):
+    print(args)
+
+funca(1)
+funca(1,2,3,4)
+#------------个数可变的关键字形参     在函数定义中，只能定义一个个数可变的关键字形参
+#不确定 关键字 实际参数的个数
+#采用**定义
+#返回结果会为一个字典
+def funca(**args):
+    print(args)
+
+funca(a=1)
+funca(a=1,b=2,c=3,d=4)
+
+''''
+#在函数定义中，只能定义一个个数可变的位置或关键字参数
+def funca(*args,*a):
+    print(args)
+
+funca(1,2)
+'''
+#but 可变的位置和关键字参数 可以同时使用,但必须遵从顺序， 位置可变参数在前， 可变关键字参数在后，否则会报错
+print()
+def funca(*a,**b):
+    print(a)
+    print(b)
+funca(1,b=2)
+
+#---------------------函数的参数传递转化-------------------
+def sum(a,b,c):
+    d=a+b+c
+    return d
+
+list1=[1,2,3]
+print(sum(*list1))      #*将列表里的每个元素都转换为位置实际参数
+
+#or
+def sum(a,b,c):
+    d=a+b+c
+    return d
+
+dic1={'a':1,'b':2,'c':3}
+print(sum(**dic1))      #*将字典里的每个key值对都转换为关键字实际参数
+
+
+#函数定义形参时，可以同时采用位置和关键字参数，使用时用*号分割，但必须遵从顺序， 位置可变参数在前， 可变关键字参数在后，否则会报错
+def sum(a,b,*,c):
+    d=a+b+c
+    return d
+
+print(sum(1,2,c=99))
+
+#组合方式
+
+def sum(a,b,*c,**d):
+    pass
+
+def sum(*c,**d):
+    pass
+
+def sum(a,b=1,*c,**d):
+    pass
+```
