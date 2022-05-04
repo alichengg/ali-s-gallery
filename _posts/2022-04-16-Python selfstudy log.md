@@ -1548,4 +1548,123 @@ def sum(*c,**d):
 
 def sum(a,b=1,*c,**d):
     pass
+
+
+
+#------------------变量-----------------
+#------局部变量  指在函数体内的变量---
+#eg
+def fun(a,b):
+    c=a+b           #c 是局部变量
+    print(c)
+
+#-----全局变量  指在函数体内外都能使用的变量---
+#eg
+name='Ali'
+print(name)
+
+def fun1():
+    print(name)
+fun1()
+
+#-----让局部变量变为全局变量---
+def fun2():
+    global name1    #在函数体内的局部变量，如果使用Golbal声明，就会变成全局变量
+    name1='Ali'
+    print(name1)
+fun2()
+print(name1)
+
+
+
+#------------------递归函数-----------------
+#在一个函数的函数体内调用了该函数本身，就成为递归函数 （套娃？）
+#递归函数组成部分：递归调用 与 递归终止条件
+#优点思路简单，代码简单，缺点是占内存多，效率低
+
+
+def fac(n):
+    if n==1:
+        return 1
+    else:
+        return n*fac(n-1)
+
+print(fac(6))
+
+#------------斐波那契数列----------
+def fib(n):
+    if n==1:
+        return 1
+    elif n==2:
+        return 1
+    else:
+        return fib(n-1)+fib(n-2)
+
+print(fib(6))
+
+for i in range(1,7):
+    print(fib(i),end='\t')
+
+```
+
+
+
+### 4.May.2022     Chapter Eleven------BUG
+
+```python
+#-----------------bug-----------------
+#------常见的bug类型
+#语法错误 syntaxError
+'''
+age=input('age?'))
+if age >=18:
+    print('you are an adult')
+else:
+    print('you still yong')
+'''
+'''''
+i=int(input())
+while i<10:
+    print(i)
+'''''
+
+list1=[
+    {'Department':'IT','room':'123','job_title':'program developer','Team_meber':['Ali','Bill','Cindy','Devid']},
+    {'Department':'Finance','room':'456','job_title':'Accountting','Team_meber':['Ethon','Flank','Geogie','Hellen']},
+    {'Department':'Human Resource','room':'789','job_title':'HR','Team_meber':['Isla,Jack,Kyn,Lyin']},
+    ]
+
+name=input('--Please entry the name to get more information--\n')
+for item in list1:                      #遍历整个list1列表    3个字典
+    T_M=item['Team_meber']              #定义list1中列表 Team_meber 列表
+    if name in T_M:                     #如果发现输入在 Team_meber列表中
+        print(name, 'is belong to', item['Department'],',', 'working as', item['job_title'],',','work in Room', item['room'])
+
+print('------------------')
+
+try:
+    a=int(input('give me the first number'))
+    b=int(input('give me the second number'))
+    result=a/b
+    print('the result is ',result)
+except ZeroDivisionError:
+    print('please entry a correct number')
+except ValueError:
+    print('dont input any string')
+
+
+print('------------------')
+
+
+
+try:
+    a=int(input('give me the first number'))
+    b=int(input('give me the second number'))
+    result=a/b
+    print('the result is ',result)
+
+except BaseException as e:
+    print('Error',e)
+else:
+    print('result is ',result)
 ```
