@@ -1609,11 +1609,21 @@ for i in range(1,7):
 
 
 
-### 4.May.2022     Chapter Eleven------BUG
+### 4.May.2022     Chapter Eleven------DeBUG
 
 ```python
+
+
 #-----------------bug-----------------
 #------常见的bug类型
+#----Python常见的异常类型----
+#ZeroDivisionError          除零
+#indexError                 列表里没有这个索引
+#KeyError                   没有对应的映射 key
+#NameError                  没有声明对象
+#SyntaxError                语法错误
+#ValueError                 参数无效
+
 #语法错误 syntaxError
 '''
 age=input('age?'))
@@ -1621,12 +1631,11 @@ if age >=18:
     print('you are an adult')
 else:
     print('you still yong')
-'''
-'''''
+
 i=int(input())
 while i<10:
     print(i)
-'''''
+'''
 
 list1=[
     {'Department':'IT','room':'123','job_title':'program developer','Team_meber':['Ali','Bill','Cindy','Devid']},
@@ -1642,6 +1651,7 @@ for item in list1:                      #遍历整个list1列表    3个字典
 
 print('------------------')
 
+#----------try....except....except
 try:
     a=int(input('give me the first number'))
     b=int(input('give me the second number'))
@@ -1652,11 +1662,9 @@ except ZeroDivisionError:
 except ValueError:
     print('dont input any string')
 
-
 print('------------------')
 
-
-
+#----------try....except....else
 try:
     a=int(input('give me the first number'))
     b=int(input('give me the second number'))
@@ -1667,4 +1675,256 @@ except BaseException as e:
     print('Error',e)
 else:
     print('result is ',result)
+
+#----------try....except....else....finally
+#finally 可以用来释放内存
+#不出错则执行 else finally，出错了则执行 except finally
+try:
+    a=int(input('give me the first number'))
+    b=int(input('give me the second number'))
+    result=a/b
+    print('the result is ',result)
+
+except BaseException as e:
+    print('Error',e)
+else:
+    print('result is ',result)
+finally:
+    print('program finish')
+
+
+import traceback
+try:
+    print('-----------')
+    print(1/0)
+except BaseException as e:
+    traceback.print_exc()
+```
+
+
+
+### 5.May.2022     Chapter 12------类
+
+```python
+
+
+#----------------------类---------------------------------
+#----------------创建类----------------
+#在类内def定义的是方法，在类外的def定义的是函数
+''''
+class Student:
+    pass
+
+print(id(Student))
+print(type(Student))
+'''
+class Staff:                            #Staff为类的名称，可以有一个或多个单词组成，每个字母开头大写
+    type='IT department Staff'          #直接卸载类里的变量，既类属性
+
+    #--------初始化方法--------
+    def __init__(self,name):
+        self.name=name                  #self.name 成为实体属性，进行了一个赋值的操作，将局部变量的name的值赋给实体属性
+    #--------实例方法--------
+    def favorite_lanauge(self):
+        print(self.name,'like Python')
+
+    #--------静态方法--------
+    @staticmethod
+    def menthod():
+        print('I am using staticmethod')
+
+    #--------类方法--------
+    @classmethod
+    def cm(cls):
+        print('I am using classmethod')
+
+#----------------------根据类创建出来的实例对象----------------------
+
+#--------创建基于Staff类的实列对象Staff1--------
+staff1=Staff('Ali')
+
+#--------调用Staff类中的（favorite_lanauge）方法--------
+staff1.favorite_lanauge()
+#or
+Staff.favorite_lanauge(staff1)
+
+print(staff1)
+print(staff1.name)
+
+
+#--------调用类属性----------
+print(Staff.type)
+
+staff2=Staff('Bill')
+staff3=Staff('Cindy')
+print(staff2.type)
+print(staff3.type)
+Staff.type='Marketing Department Staff'
+print(staff2.type)
+print(staff3.type)
+
+#---------调用类方法-----------
+Staff.cm()
+Staff.menthod()
+
+#---------动态属性绑定-----------
+#动态属性指的是 class里没有的类，单独赋予一个方法给对象，其他的对象都不受影响
+staff3=Staff('Cindy')
+staff3.gender='gril'
+print(staff3.name,staff3.gender)
+print(staff2.name)
+
+#---------动态方法绑定-----------
+def favorite_food():                            #他现在是函数
+    print('Ali like eat apple')
+
+staff1.favorite_food=favorite_food              #绑定到了对象后，他就是方法了
+staff1.favorite_food()
+
+```
+
+
+
+
+
+
+
+### 7.May.2022     Chapter 12------面向对象
+
+```python
+#-----------------------面向对象的三大特征-------------------------
+
+print('------------------------------封装----------------------------------------------')
+# 提高程序安全性。 封装会将属性（type）和方法（def）放置在类对象中，然后外部可以调用类对象中的属性
+class Staff:
+    def __init__(self,name,age):
+        self.name=name
+        self.__age=age                      # __可以限制age在类的外部被使用
+
+staff1=Staff('Ali',22)
+print(staff1.name)
+#print(staff1.__age)                        # 采用__age不能被调用
+
+#print(dir(staff1))                         #但是因为python的程序是开源的，可以采用别的办法进行调用
+print(staff1.name,staff1._Staff__age)
+
+
+
+print('------------------------------继承----------------------------------------------')
+# 提高代码复用性
+#创建一个父类
+#class Staff(object):
+#or
+class Staff:                                #创建一个父类,
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+#创建一个子类，并且继承父类的属性
+class Cisocompany(Staff):
+    def __init__(self, name, age,experence):
+        super().__init__(name,age)          #使用super将父类里的__init__(self,name,age)继承过来
+        self.experence=experence
+
+class Googlecompany(Staff):
+    def __init__(self, name, age,tecnology):
+        super().__init__(name,age)          #使用super将父类里的__init__(self,name,age)继承过来
+        self.tecnology=tecnology
+
+#因为Department继承父类的属性，虽然Department里没有任何方法，但是我们依旧可以从Department中调用其父类的方法
+staff2=Cisocompany('Bill',20,5)
+print(staff2.name,staff2.age,staff2.experence)
+
+staff3=Googlecompany('Candy',20,'Python')
+print(staff2.name,staff2.age,staff3.tecnology)
+
+
+print('---------多继承--------')
+class A:
+    pass
+
+class B:
+    pass
+
+class C(A,B):
+    pass
+
+print('---------方法重写--------')
+#方法重写是在 不满意 父类的方法时，在子类里重写编写。
+class Bussiness():                                          #创建一个父类,
+    Whatever='New Zealand legal business'                   #随便定义一个属性
+    def __init__(self,Storename,StoreStaff):
+        self.Storename=Storename
+        self.StoreStaff=StoreStaff
+
+    def info(self):                                         #这是父类里一个 待重写 的方法
+        print('Store income quite good')
+
+class Store(Bussiness):                                     #创建一个子类,
+    def __init__(self, Storename, StoreStaff,income):
+        super().__init__(Storename,StoreStaff)              #从父类继承方法
+        self.income=income                                  #为新添加的对象定义
+    def info(self):                                         #重写父类里的 info
+        #super().info()                                     #可以根据情况调用父类里的info，
+        print('{0} have {1} Staffs and Earn more than {2} this year'.format(self.Storename,self.StoreStaff,self.income))
+
+Store1=Store('Kmart',100,100000000)
+Store1.info()
+
+
+print('------Object里有什么-----')
+
+#class XXXX(Object): or class XXXX:   那Object里到底有什么
+print(Store1.__str__())                                     #__str__方法的初始值会显示内存地址
+
+class Winne():
+    def __init__(self, name, years):
+        self.name = name
+        self.years = years
+    def __str__(self):
+        return 'This {0} be made in {1} years before'.format(self.name,self.years)
+
+Winne1=Winne('laf',99)
+#print(dir(xx))                                             #使用dir查看Object所有的 能用def声明的方法
+print(Winne1)
+
+
+#当 没有定义 __str__的方法是，使用print打印对象，会显示内存地址       <__main__.Winne object at 0x000001D44DDDDE80>
+#当 定义了 __str__的方法是，使用print打印对象，会显示__str__的值     This laf be made in 99 years before
+
+
+
+print('------------------------------多态----------------------------------------------')
+#提高代码的可扩展性和可维护性
+#多态性指的时，无论 class类是什么， 如果他们都具有 相同的 def方法， 那就可以进行动态调用
+class Animal():
+    def eat(self):                                           #定义一个def eat方法
+        print('Animal needs eating food')
+
+class Cat(Animal):
+    def eat(self):                                           #定义一个def eat方法
+        print('Cat likes eating Fish')
+class Dog(Animal):
+    def eat(self):                                           #定义一个def eat方法
+        print('Dog likes eating bone')
+
+class Human:
+    def eat(self):                                           #定义一个def eat方法
+        print('Human like eating everthing')
+
+class Computer:
+    def electic(self):                                       #定义不一样的def electic
+        print('computer needs electic')
+
+#写一个可以调用eat的函数
+def fun(_):
+    _.eat()
+
+fun(Animal())
+fun(Cat())
+fun(Dog())
+fun(Human())
+#fun(computer())                                              #'computer' object has no attribute 'eat'
+
+computer1=Computer
+computer1.electic(0)
 ```
