@@ -16,7 +16,7 @@ This page I use to push me to study and will continue to be updated for more tha
 
 
 
-
+[TOC]
 
 
 
@@ -1792,6 +1792,7 @@ staff1.favorite_food()
 ### 7.May.2022     Chapter 12------面向对象
 
 ```python
+
 #-----------------------面向对象的三大特征-------------------------
 
 print('------------------------------封装----------------------------------------------')
@@ -1927,4 +1928,273 @@ fun(Human())
 
 computer1=Computer
 computer1.electic(0)
+
+
+
+print('-------------------------特殊方法 和 特殊属性---------------------------------------')
+
+#--------------特殊属性-------------
+class A:
+    pass
+
+class B:
+    pass
+    def info(self):
+        print('class B')
+
+class C(A,B):
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+
+x=C('Ali',12)
+
+#获取类对象或实例对象所绑定的属性或方法  它会是一个字典的形式呈现
+print(C.__dict__)
+print(x.__dict__)
+
+
+print('------------')
+print(x.__class__)              #输出对象的类
+print(C.__bases__)              #因为C继承了多个父类，所以bases会显示A和B的属性
+print(C.__base__)               #输出C继承的第一个父类
+print(C.__mro__)                #查看类的层次结构
+print(A.__subclasses__())       #查看父类中继承的子类
+
+
+#--------------特殊方法--------------
+
+#   __add__    用于两个对象属性相加   string会一起输出，int会相加运算
+f,g=(12,23)
+h=f+g
+print(h)
+#or
+i=f.__add__(g)
+print(i)
+
+#  __len__     用于计算长度
+list1=[1,2,3,4]
+print(len(list1))
+#or
+print(list1.__len__())
+
+
+class Staff:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+    def __add__(self, other):                              #   __add__    用于两个对象属性相加   string会一起输出，int会相加运算
+        return self.name+other.name,self.age+other.age
+    def __len__(self):                                     #   __len__     用于计算长度
+        return len(self.name)
+
+staff1=Staff('Ali',20)
+staff2=Staff('Bill',30)
+
+staffs=staff1+staff2
+print(staffs)
+
+staffs=staff1.__add__(staff2)
+print(staffs)
+
+print(len(staff1))
+
+class Person:
+    def __new__(cls, *args, **kwargs):              #创建对象
+        print('I am using__new__,cls的id值为{0}'.format(id(cls)))
+        obj=super().__new__(cls)
+        print('创建的对象的id为：{0}'.format(id(obj)))
+        return obj
+
+    def __init__(self,name,age):                    #初始化方法中参数
+        print('__init__被调用了，self的id值为：{0}'.format(id(self)))
+        self.name=name
+        self.age=age
+
+print('object这个类对象的id为：{0}'.format(id(object)))
+print('Person这个类对象的id为：{0}'.format(id(Person)))
+
+person1=Person('Ali',20)
+print('person1这个Person类的实例对象的id为：{0}'.format(id(person1)))
+
+print('--------------------------------------')
+person2=Person('Bill',210)
+print('person1这个Person类的实例对象的id为：{0}'.format(id(person2)))
+#print(Person.__new__(person1))
+
+
+
+#----------------对象的直接赋值、浅拷贝和深度拷贝----------------
+
+import copy
+class IT:
+    pass
+class Account:
+    pass
+class Company:
+    def __init__(self,it,account):
+        self.it=it
+        self.account = account
+#------赋值
+IT1=IT()
+IT2=IT1
+print(IT1,id(IT1))
+print(IT2,id(IT2))
+
+#------浅拷贝
+IT1=IT()                                    #调用类创建一个对象
+Account1=Account()                          #调用类创建一个对象
+goole=Company(IT1,Account1)                 #调用由两个对象构成的对象
+
+# 浅拷贝对象
+Mic=copy.copy(goole)
+print('google',goole,goole.it,goole.account)
+print('Mic',Mic,Mic.it,Mic.account)
+#浅拷贝后的Mic和goole对象属性会发生改变，但是Mic不复制google里的子对象it和account。而是直接传递。因此他们的Oject一样，Mic.it=google.it
+
+#----深拷贝对象
+goole2=copy.deepcopy(goole)
+print('google',goole,goole.it,goole.account)
+print('goole2',goole2,goole2.it,goole2.account)
+#浅拷贝后的goole1和goole对象属性会发生改变，goole2复制了goole中的子对象it和account，父对象和子对象都变成了全新的对象。因此他们的Oject也会完全不一样
+
+print('-------------------------------------------------------------')
+import copy
+
+a = [1, 2, 3, 4, ['a', 'b']]                            # 原始对象
+
+b = a                                                   # 赋值，传对象的引用
+c = copy.copy(a)                                        # 对象拷贝，浅拷贝
+d = copy.deepcopy(a)                                    # 对象拷贝，深拷贝
+
+a.append(5)                                             # 修改对象a
+a[4].append('c')                                        # 修改对象a中的['a', 'b']数组对象
+
+print('a = ', a)
+print('b = ', b)
+print('c = ', c)
+print('d = ', d)
+
+
+```
+
+
+
+### 9.May.2022     Chapter 13------Modules
+
+```python
+#------------------------------------Modules------------------------------------
+#数的关系：一个模块中可以包含很多函数
+# 一个.py的文件就是一个模块
+#模块化编程的好处：
+#       1.方便团队协作，便于分工
+#       2.避免函数名和变量名的冲突
+#       3.提高代码可维护性
+#       4.提高代码可复用性
+
+#python程序就多个模块的构成
+#模块：函数+类+语句
+#modules (defs,classes,sentenses)
+
+#----------------导入模块----------------
+
+import math                         #导入模块中的所有方法
+#math数学运算模块
+print(math)
+#print(dir(math))
+
+#--------使用模块中的方法--------
+print(math.pow(2,3))
+print(math.ceil(123.11))
+print(math.floor(123.11))
+
+
+from math import pow                #指定导入一个模块中的一个方法
+print(pow(2,3))                     #指定导入后的方法必须省略 math.
+#print(math.pow(2,3))
+#print(floor(123.11))               #因为导入一个方法，因此其他在math里的方法都不能使用
+```
+
+
+
+```python
+#----------------导入自定义模块----------------
+
+#creat Modules <calc.py>
+
+def add(a,b):
+    return a+b
+def div(a,b):
+    return a|b
+```
+
+```python
+#creat <main.py>
+
+import sys                          #improt sys可以使用添加路径来定位被调用的模块，不一定要用
+sys.path.append('.')
+
+import calc
+print(calc.add(10,20))
+#--------or 调用单个--------
+from calc import add
+print(add(10,20))
+```
+
+
+
+```python
+#----------------以主程序形式运行----------------
+#如果模块自身有输出数据，那么调用模块的py文件中也会跟着输出，因此我们可以采用以主程序形式运行来限制模块py的输出
+
+# Modules:<calc.py>
+def add(a,b):
+    return a+b
+#print(add(10,20))
+
+if __name__=='__main__':			#以主程序形式运行,
+    print(add(10,20))
+```
+
+```python
+# <main.py>
+#这模块里限制以主程序形式运行后，main.py就不会执行打印操作了
+
+import sys
+sys.path.append('.')
+
+import calc
+print(calc.add(1,20))
+```
+
+
+
+```python
+#----------------Python包----------------
+#Python_pragram(python_pages(module(def,class,sentense)))
+
+#python包是一个层次目录结构，它通常将一组功能相近的模块打包在一个python包目录下
+#各个python包之间可以避免代码冲突和模块名字冲突
+#和目录不同的是，目录是空文件夹，但是python包会包含一个__init__.py的文件
+
+#creat python page:python_import
+#python_import including :<__init__.py>,<calc.py>,<main.py>
+
+#----------导入包--------
+import sys
+sys.path.append('..')
+
+import python_import.calc as a                  #import方式导入包，as后定义 别名
+                                                #import方式导入时，只能跟包名或模块名
+print(a.add(1,20))
+
+#or
+
+import sys
+sys.path.append('..')
+
+#from python_import import calc                 #from方式可以导入包，模块，函数，变量
+from python_import.calc import add as a         #from导入包中模块里的函数方法，as后定义 别名
+
+print(a(1,20))
 ```
