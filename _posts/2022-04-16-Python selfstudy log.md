@@ -5,22 +5,15 @@ date: 2022-04-16
 Author: Ali
 categories: 
 tags: [Python]
+
 comments: true
 ---
-
-This page I use to push me to study and will continue to be updated for more than one month. 
-
-
-
-
 
 
 
 [TOC]
 
-
-
-### 16.April.2022     Chapter one----- \n   \t    \t   \r  \b
+### 16.April.2022							Chapter one----- \n   \t    \t   \r  \b						
 
 ```python
 #输入数字
@@ -105,7 +98,7 @@ print(991238*123123)
 
 
 
-### 17.April.2022     Chapter Two-----int ，float，bool, str 
+### 17.April.2022							Chapter Two-----int ，float，bool, str 
 
 ```python
 #coding：gbk
@@ -232,7 +225,7 @@ print(bool(s14),bool(f14),bool(i14),b14)
 
 
 
-### 18.April.2022     Chapter Three-----运算符
+### 18.April.2022							Chapter Three-----Operator
 
 ```python
 #coding UTF-8
@@ -442,7 +435,7 @@ print(11 not in rrr)
 
 
 
-### 19.April.2022     Chapter Four-----顺序结构
+### 19.April.2022							Chapter Four-----Structure
 
 ```python
 #coding utf-8
@@ -579,7 +572,7 @@ for _ in range(10):
 
 
 
-### 20.April.2022    Practice-----bank ATM System
+### 20.April.2022							Practice-----bank ATM System
 
 ```python
 #Practice
@@ -662,7 +655,7 @@ else:
 
 
 
-### 21.April.2022     Chapter Five------list
+### 21.April.2022							Chapter Five------list
 
 ```python
 #UTP-8
@@ -842,7 +835,7 @@ print(listi)
 
 
 
-### 22.April.2022     Chapter Six------dict
+### 22.April.2022							Chapter Six------dict
 
 ```python
 #
@@ -951,7 +944,7 @@ print(dicccc)
 
 
 
-### 23.April.2022     Chapter Serve------Tuple
+### 23.April.2022							Chapter Serve------Tuple
 
 ```python
 #元组
@@ -1035,7 +1028,7 @@ for _ in t8:
 
 
 
-### 24.April.2022     Chapter Eight------Set
+### 24.April.2022							Chapter Eight------Set
 
 ```python
 #集合
@@ -1156,7 +1149,7 @@ print(s20)
 
 
 
-### 30.April.2022     Chapter nine------字符串操作
+### 30.April.2022							Chapter nine------String
 
 ```python
 #------------字符串的驻留机制-------------
@@ -1386,7 +1379,7 @@ print(byte.decode(encoding='UTF-8'))
 
 
 
-### 1.May.2022     Chapter Ten------Function
+### 01.May.2022								Chapter Ten------Function
 
 ```python
 #函数
@@ -1609,7 +1602,7 @@ for i in range(1,7):
 
 
 
-### 4.May.2022     Chapter Eleven------DeBUG
+### 04.May.2022								Chapter Eleven------DeBUG
 
 ```python
 
@@ -1703,7 +1696,7 @@ except BaseException as e:
 
 
 
-### 5.May.2022     Chapter 12------类
+### 05.May.2022								Chapter 12------Class
 
 ```python
 
@@ -1789,7 +1782,7 @@ staff1.favorite_food()
 
 
 
-### 7.May.2022     Chapter 12------面向对象
+### 07.May.2022								Chapter 12------Object Oriented
 
 ```python
 
@@ -2080,7 +2073,7 @@ print('d = ', d)
 
 
 
-### 9.May.2022     Chapter 13------Modules
+### 09.May.2022								Chapter 13------Modules
 
 ```python
 #------------------------------------Modules------------------------------------
@@ -2198,3 +2191,244 @@ from python_import.calc import add as a         #from导入包中模块里的函
 
 print(a(1,20))
 ```
+
+```python
+#----------------Python常用的内置模块----------------
+import sys                      #Python解释器和python环境操作
+import time                     #与时间相关的函数
+import os                       #访问操作系统服务功能的标准库
+import calendar                 #提供日期相关的各种函数库
+import urllib                   #用于读取来自网上的数据（爬虫经常用）
+import json                     #使用JSON序列化和反序列化对象
+import re                       #在字符串中执行正则表达式匹配和替换
+import math                     #算术运算函数
+import decimal                  #精确控制运算精度，有效位数和四舍五入的十进制运算
+import logging                  #提供灵活的事件/错误/警告/调试信息等日志信息
+
+
+print(sys.getsizeof(24))
+print(sys.getsizeof('Ali'))
+print(time.time())
+print(time.localtime((time.time())))
+
+import urllib.request
+print(urllib.request.urlopen('https://www.google.com').read())
+```
+
+```python
+#----------------第三方模块的安装和使用----------------
+
+#调用第三方schedule模块，创建一个定时任务
+import schedule
+import time
+
+def job():
+    print('Hello')
+
+schedule.every(1).seconds.do(job)           #每一秒执行一次 job
+
+while True:                                 #执行一个loop 死循环
+    schedule.run_pending()                  #生成一个休眠时间
+    time.sleep(1)                           #休眠时间为1秒
+```
+
+
+
+### 11.May.2022								Chapter 14------File Operations
+
+```python
+
+#---------------编码-------------
+#encoding=编码
+#编码:ASCII ISO8859-1 GB2312 GBK GB18030 UTF-8 Unicode
+
+#python文件在系统磁盘的默认格式是UTF-8
+
+
+#---------------文件读写-------------
+#文件读写被俗称 ‘IO操作’    input output
+#file = open(filename[mode,encoding])
+
+
+#   r       只读
+#   w       只写，指针始终在开头，二次编辑会覆盖，不读取
+#   a       追加，指针始终在末尾，不读取
+#   b       二进制方式打开，用与需要使用专门软件打开的文件。比如,mp3,jpg,doc
+#   +       读写，不能单独使用
+
+#    rt     只读，自动把\r\n转换成\n
+#    r+     读写，不会创建文件，文件不存在会报错
+#    a+     追加写，创建文件
+#    w+     覆盖写，创建文件
+#    rb     二进制方式只读
+#    wb     二进制方式只写
+
+
+file=open('C:\\Users\ALI\Desktop\\a.txt','r')
+print(file.readlines())
+file.close()
+
+file=open('C:\\Users\ALI\Desktop\\a.txt','w+')
+print(file.write('Today is good day'))
+file.close()
+
+file=open('C:\\Users\ALI\Desktop\\a.txt','a+')
+print(file.write('Yes'))
+file.close()
+
+file1=open('C:\\Users\ALI\Desktop\\2021\\未标题-7.png','rb')
+print(file.readlines())
+file1.close()
+
+
+file=open('C:\\Users\ALI\Desktop\\a.txt','a')
+print(file.write('Yes'))
+file.close()
+
+file2=open('C:\\Users\ALI\Desktop\\2021\\MEIDUO.jpg','rb')
+target_file=open('C:\\Users\ALI\Desktop\\2021\\copyMEIDUO.jpg','wb')        #创建一个copy的文件，无内容
+target_file.write(file2.read())                                             #将从file2读取的内容写入copy文件
+
+file2.close()
+target_file.close()
+
+#---------------文件对象的常用方法-------------
+file=open('C:\\Users\ALI\Desktop\\a.txt','a+')
+list1=['Hello!','here']
+#print(file.read(2))            #read(x)                    读取前x位内容
+#print(file.readline())         #readline(x)                读取第一行
+#print(file.readlines())        #readlines(x)               读取全部
+#file.writelines(list1)         #writelines(list)           将str的列表内容写入file
+#file.seek(2)                   #seek(x)                    移动指针到第二个字符后
+#file.tell(2)                   #tell()                     显示指针目前所在位置
+#file.flush()                   #flush()                    将缓冲区内容写入文件，不关闭文件
+#file.close()                   #close()                    关闭文件，close之后不能在使用flush
+
+file.writelines(list1)
+file.flush()
+file.write('I need close now')
+file.close()
+
+
+#---------------with上下文管理-------------
+#with as 语句会自动调用 close()语句
+with open('C:\\Users\ALI\Desktop\\b.txt','w+') as file1:
+    file1.write('Ali')
+    print(file1.readline())
+
+
+    
+
+#-------------------------os 模块-----------------------
+#os模块与操作系统相关
+
+import os
+#os.system('calc.exe')
+
+#直接调用可执行文件
+#os.startfile('E:\\bolg\\Typora\\Typora.exe')
+
+#显示当前工作目录
+print(os.getcwd())
+
+#列出指定路径下的文件
+print(os.listdir('C:\\Users\ALI\\Desktop\\2021'))
+
+#创建一个路径
+os.mkdir('C:\\Users\ALI\\Desktop\\2022')
+
+#创建一个多级路径
+os.mkdir('C:\\Users\ALI\\Desktop\\2022\\gift')
+
+#删除一个目录
+os.rmdir('C:\\Users\ALI\\Desktop\\2022')                #如果文件里有东西就无法删除
+
+#删除一个多级目录
+os.removedirs('C:\\Users\ALI\\Desktop\\2022\\gift')
+
+os.removedirs('C:\\Users\ALI\\Desktop\\2022\\gift\\b.txt')
+#os.chdir('C:\\Users\ALI\\Desktop\\2022')
+
+#---------------os.path模块-------------
+import os
+
+#获取文件或的目录
+print(os.path.abspath('test17.py'))
+print(os.path.abspath('E:\\python\\python project'))
+
+#判断文件或目录是否存在
+print(os.path.exists('test17.py'))
+print(os.path.exists('E:\\python\\python project'))
+
+#组合路径与文件
+print(os.path.join('C:\\Users\ALI\\Desktop\\2022\\gift','test17.py'))
+
+#拆分路径与文件
+print(os.path.split('E:\\python\\python project\\test17.py'))
+
+#拆分文件与格式
+print(os.path.splitext('test17.py'))
+
+#提取文件名
+print(os.path.basename('E:\\python\\python project\\test17.py'))
+
+#提取路径
+print(os.path.dirname('E:\\python\\python project\\test17.py'))
+
+#判断是否为路径
+print(os.path.isdir('E:\\python\\python project'))
+
+
+#查找指定路径下，指定格式的文件
+import os
+path=os.getcwd()
+list=os.listdir('C:\\Users\\ALI\\Desktop')
+for filename in list:
+    if filename.endswith('.docx'):
+        print(filename)
+
+
+#遍历指定路径所有文件，包含该路径下的子目录，
+path=os.getcwd()
+list1=os.walk('C:\\Users\\ALI\\Desktop')
+
+for dirpath,dirname,filename in list1:
+    print(dirpath)
+    print(dirname)
+    print(filename)
+    print('-------------------------')
+    
+
+#逐级遍历指定路径所有文件
+path=os.getcwd()
+list1=os.walk('C:\\Users\\ALI\\Desktop')
+
+for dirpath,dirname,filename in list1:
+    for dir in dirname:
+        print(os.path.join(dirpath,dir))
+
+
+    for file in filename:
+        print(os.path.join(dirpath,file))
+    print('-------------------------')
+
+#or
+
+def Seachallfile(i):
+    path=os.getcwd()
+    list2=os.walk(i)
+    for dirpath,dirname,filename in list2:
+        for dir in dirname:
+            print(os.path.join(dirpath,dir))
+        for  file in filename:
+            print(os.path.join(dirpath,file))
+
+i=input('Please enter the path you want to search\n')
+Seachallfile(i)
+
+```
+
+
+
+
+
