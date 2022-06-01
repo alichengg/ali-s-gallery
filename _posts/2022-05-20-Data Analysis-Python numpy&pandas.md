@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data Analysis--Python numpy&pandas
+title: Python Numpy
 date: 2022-05-20
 Author: Ali
 categories: 
@@ -189,7 +189,7 @@ ar5=np.array([1,0],dtype='bool')
 print(ar5)
 print(ar5.dtype)
 
-#adjust data type
+#调整数组类型
 ar6=ar5.astype('int8')
 print(ar6)
 print(ar6.dtype)
@@ -206,7 +206,17 @@ print(ar8)
 
 
 
-##### 2.1	数组的维度
+##### 2.2	结构化数据类型
+
+
+
+
+
+
+
+
+
+##### 2.3	数组的维度
 
 ```python
 #----------------------------------data shape 数组维度--------------------------------
@@ -216,14 +226,21 @@ print(ar8)
 ar9=np.array([1,2,3,4])
 print(ar9.shape)
 
+
+
 #2d data,shape will show the number of list and line
 #(y,z)  			y个数组，每组里z个元素
 
 ar10=np.array([[1,2,3],('a','b','c')])
 print(ar10.shape)
 
+
+
 #3d
 #(x,y,z)  			x组数据块，每块y个数组，每组里z个元素
+
+
+
 
 ar11=np.array([[[1,2,3],[3,4,5],[5,2,1]],[[7,8,9],[10,11,12],[5,2,1]]])
 ar111=np.array([[[1,2,3],[3,4,5],[5,2,1]],[[1,2,3],[3,4,5],[5,2,1]],[[7,8,9],[10,11,12],[5,2,1]]])
@@ -233,6 +250,9 @@ print(ar11.shape)
 
 print(ar111)
 print(ar111.shape)  
+
+
+
 
 #------------------change data shape 数组维度---------------
 print('--'*10)
@@ -255,8 +275,6 @@ ar16=ar11.reshape(2,9)
 print(ar16)
 print(ar11)
 ```
-
-
 
 
 
@@ -350,7 +368,7 @@ print('-------'*10)
 
 
 
-### Chapter Four--------------------------数据读取和操作
+### Chapter Four	-------------------------	外部数据操作
 
 ##### 4.1	读取外部数据
 
@@ -426,6 +444,9 @@ print(data1[1:,:])
 print(data1[[0,2,4],:])
 
 
+
+
+
 #------取列
 print(data1[:,0])
 
@@ -436,13 +457,19 @@ print(data1[:,1:])
 print(data1[:,[0,2,4]])
 print('**'*20)
 
+
+
+
+
 #------取特定位置的一个值
 print(data1[2,3])
 
-#------取多个连续的行，多个连续的列
 
+
+#------取多个连续的行，多个连续的列
 #例子：取CSV中 第2行到第4行，第2列到第4列
 print(data1[1:4,1:4])
+
 
 
 #------取多个不连续的值
@@ -470,7 +497,7 @@ print(data1)
 data1[1:4,1:4]=0
 print(data1)
 
-#------bool 索引
+#------bool 索引 修改特定范围的值
 #chang all data less than 1 to 2
 data1[data1<1]=2
 data1[data1>=3]=0
@@ -482,21 +509,28 @@ d=np.where(data1<=0,1,3)
 print(d)
 
 #------numpy clip函数
-#clip(x,y)    	Date value less than 21 change to 21, over than 43 change to 43
+#clip(x,y)    	数据值小于x，则改成 x, 超出y, 则修改为y
 
 print(data2)
 d2=data2.clip(21,43)
 print(d2)
 
 
-#------数组转换
+#------数组内特定的数值转换
+
 print(data2)
 #data2[0,0]=np.nan
 
 data2=data2.astype(float)
 data2[0,0]=np.nan
 print(data2)
+```
 
+
+
+##### 4.4	数组的拼接
+
+```python
 #------数组拼接
 
 data3=np.arange(0,20).reshape(4,5)
@@ -510,14 +544,19 @@ print(data34)
 data34=np.hstack((data3,data4))
 print(data34)
 
+
+
 #------水平分割
 
+
 #------竖直分隔
+
+
 ```
 
 
 
-##### 4.4	数组行列交换
+##### 4.5	数组行列交换
 
 ```python
 #------数组行列交换
@@ -540,7 +579,7 @@ print(data3)
 
 
 
-### Chapter Five	-------------------------------	数组统计
+### Chapter Five	--------------------------------	数组统计
 
 ##### 5.1	平均值 
 
@@ -669,3 +708,9 @@ weight=(0.1,0.4,0.2,0.2,0.2,0.8)
 quanpingjun=np.average(ar5,weights=weight)
 print(quanpingjun)
 ```
+
+
+
+### Chapter Six	---------------------------------	其他函数
+
+##### 6.1	resize
