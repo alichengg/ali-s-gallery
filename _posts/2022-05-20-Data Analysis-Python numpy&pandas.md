@@ -8,6 +8,16 @@ tags: [Python]
 comments: true
 ---
 
+[TOC]
+
+
+
+### Chapter One	-------------------------------------	数组
+
+
+
+##### 1.1	创建数组
+
 ```python
 import random
 import numpy as np
@@ -49,6 +59,99 @@ print('--'*20)
 ```
 
 
+
+##### 1.2	等差数列
+
+```python
+#linspace  		等差数列
+
+#np.linspace(start,stop,num=50,endpoint=True,retstep=False,dtype=None)
+#start             	起始值
+#stop               终止值
+#num               	生成数量  defult is 50
+#endpoint           if value = True 则包含终止值在内，False反之
+#retstep            if value = True 则显示等差数列的差值
+#dtype              显示类型
+
+
+lin1=np.linspace(1,10,num=5,endpoint=False,retstep=True)
+print(lin1)
+print(type(lin1))
+
+lin2=np.linspace(1,2)
+print(lin2)
+```
+
+
+
+##### 1.3	等比数列
+
+```python
+#logspace 		等比数列
+#np.logspace(start,stop,num=50,endpoint=True,base=10.0,dtype=None)
+#start              起始值
+#stop               终止值
+#num               	生成数量  defult is 50
+#endpoint           if value = True 则包含终止值在内，False反之
+#base               等比数列的底数 ，默认为10
+#dtype              显示类型
+
+log1=np.logspace(0,9,10,base=2)     #base wei disu. chong base de 0 cifang dao base de 9 cifang zhong shengcheng yige 10 wei shuzu
+print(log1)
+```
+
+
+
+##### 1.4	全零数列
+
+```python
+#Zero array 	全零数列
+#numpy.zero(shape,dtype=float,order='C')
+
+zero1=np.zeros(5)           #defult is float
+print(zero1)
+
+zero2=np.zeros(5,dtype='int')
+print(zero2)
+
+zero3=np.zeros((2,2))
+print(zero3)
+print('**'*20)
+
+zero4=np.zeros((2,2,2))
+print(zero4)
+
+
+ar1=np.arange(0,12).reshape(2,2,3)
+print(ar1)
+
+#jiang suzhu zhuanhuancheng zero suzu
+zero5=np.zeros_like(ar1)
+print(zero5)
+```
+
+
+
+##### 1.5	全一数列
+
+```python
+#one array 	全一数列
+one1=np.ones((2,2))
+print(one1)
+
+one2=np.ones_like(ar1)
+print(one2)
+
+print('**'*20)
+```
+
+
+
+
+
+### Chapter Two	-------------------------------	数组属性
+
+##### 2.1	数组的类型
 
 ```python
 #------------------------------------数组的类型-----------------------------------
@@ -99,10 +202,11 @@ print(ar7)
 
 ar8=np.around(ar7,2)                #保留2位小数
 print(ar8)
-
 ```
 
 
+
+##### 2.1	数组的维度
 
 ```python
 #----------------------------------data shape 数组维度--------------------------------
@@ -154,6 +258,12 @@ print(ar11)
 
 
 
+
+
+### Chapter Three	-------------------	数组之间的运算
+
+##### 3.1	数组间的基本运算
+
 ```python
 #-------------------------数组运算-------------------------
 #数组运算采用广播原则
@@ -177,7 +287,13 @@ print(ar17*2)
 
 #数组相乘
 print(ar18*ar17)
+```
 
+
+
+##### 3.2	不同维度的运算规则
+
+```python
 #------------------------不同维度的运算规则------------------
 #不同维度的运算首先要保证 z的值时相同的，否则无法运算
 
@@ -201,6 +317,8 @@ print('-------'*10)
 print(ar20-ar19)
 print('-------'*10)
 
+
+
 #-----------------列运算--------------
 ar21=np.array([[[1],[4]],[[1],[3]]])
 ar22=np.array([[1,2],[3,4]])
@@ -216,6 +334,8 @@ print(ar21)
 print(ar22-ar21)
 print('-------'*10)
 
+
+
 #一维与三维运算时，三维的每一组都要与一维进行计算
 print(ar19-ar21)
 print('-------'*10)
@@ -227,6 +347,12 @@ print('-------'*10)
 ```
 
 
+
+
+
+### Chapter Four--------------------------数据读取和操作
+
+##### 4.1	读取外部数据
 
 ```python
 #------------------------数据读取------------------------
@@ -249,14 +375,15 @@ print(data2)
 
 
 
+##### 4.2	数组转置
+
 ```python
 #------------------------数组转置------------------------
+#	行变成列   列变成行
 
 #transpose
-
 t1=np.arange(16).reshape((4,4))
 print(t1)
-
 
 t2=t1.transpose()
 print(t2)
@@ -266,9 +393,12 @@ print(t3)
 #or
 t4=t1.swapaxes(1,0)         #swpaxes defult setting is 0,1
 print(t4)
+
 ```
 
 
+
+##### 4.3	数组的索引和切片
 
 ```python
 #------------------------numpy 索引和切片------------------------
@@ -326,6 +456,8 @@ print(data1[[0,1,2],[0,1,2]])
 ```
 
 
+
+##### 4.3	数组的数值修改
 
 ```python
 #------------------------数值修改------------------------
@@ -385,5 +517,155 @@ print(data34)
 
 
 
+##### 4.4	数组行列交换
+
+```python
+#------数组行列交换
+#------交换 行
+
+print(data3)
+print('**'*20)
+
+data3[[0,1],:]=data3[[1,0],:]		#第一行和第二行位置互换
+print(data3)
+print('**'*20)
 
 
+#------交换 列
+data3[:,[1,4]]=data3[:,[4,1]]		#第二列和第五列位置互换
+print(data3)
+```
+
+
+
+
+
+### Chapter Five	-------------------------------	数组统计
+
+##### 5.1	平均值 
+
+```python
+#平均值 mean
+#defult is flot
+#2D
+ar2=np.arange(0,4).reshape(2,2)
+print(ar2)
+mean1=ar2.mean()
+print(mean1)
+
+mean2=ar2.mean(axis=0)          #axis biao ge ge lei qiu mingjun zhi
+print(mean2)
+print('###'*20)
+mean3=ar2.mean(axis=1)          #axis=1    hang mingjunzhi
+print(mean3)
+
+#3d ?
+print('###'*20)
+```
+
+
+
+##### 5.2	中间值
+
+```python
+#median	中间值
+
+#1d
+ar3=np.array([1,2,3,4,5,8])
+m2=np.median(ar3)
+print(m2)
+
+#2d
+ar4=np.array([[1,2,3,4,5],[5,6,7,8,9]])
+m1=np.median(ar4)
+print(m1)
+```
+
+
+
+##### 5.3	标准差
+
+```python
+#ndarray.std   标准差
+
+ar5=np.array((77,98,123,355,124,288))
+print(np.std(ar5))
+
+ar6=np.array((77,78,73,75,74,78))
+print(np.std(ar6))
+
+
+#------how to archive：
+meanj=np.mean(ar5)
+print(meanj)
+
+j=(ar5-meanj)
+print(j)
+
+jj=j**2
+print(jj)
+
+jjj=np.sum(jj)
+print(jjj)
+
+jjjj=jjj/ar5.size
+
+result=np.sqrt(jjjj)
+print(result)
+```
+
+##### 5.4	方差
+
+```python
+#fang cha ndarry.var()
+```
+
+
+
+##### 5.5 	最大值和最小值
+
+```python
+#Maxum      ndarray.max()
+ar7=np.arange(0,10).reshape(2,5)
+print(ar7)
+print(ar7.max())
+
+print('axis=0,an lei zhao',ar7.max(axis=0))
+print('arxs=1 an hang zhao',ar7.max(axis=1))
+```
+
+```python
+#minum
+
+print(ar7.min())
+print('axis=0,an lei zhao',ar7.min(axis=0))
+print('arxs=1 an hang zhao',ar7.min(axis=1))
+```
+
+
+
+##### 5.6	数组数据的合
+
+```python
+#sum
+print(ar7.sum())
+print('axis=0,lei de he',ar7.sum(axis=0))
+print('arxs=1,hang de he',ar7.sum(axis=1))
+```
+
+
+
+##### 5.7	加权平均值
+
+```python
+# numpy.average(a,aixs=None,weights=None,returned=False)
+
+# avg=sum(a*weights)/sum(weight)         #Weight cannot be 0
+
+
+ar5=np.array((77,98,123,355,124,288))
+weight=(0.1,0.4,0.2,0.2,0.2,0.8)
+
+quanpingjun=np.average(ar5,weights=weight)
+print(quanpingjun)
+```
