@@ -1,13 +1,26 @@
-<div class="wrapper-sidebar">
-  <header class="sidebar clearfix">
-    <div class="site-info">
-      {% if site.avatar %}
-        <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-      {% endif %} 
-      <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-      <p class="site-description">{{ site.description }}</p>
-    </div>
+<div class="timeline">
+  <header class="timeline-header">
+    <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+    <p class="site-description">{{ site.description }}</p>
   </header>
+  <div class="timeline-items">
+    {% for item in site.timeline %}
+    <div class="timeline-item">
+      <div class="timeline-date">{{ item.date }}</div>
+      <div class="timeline-content">
+        <a href="{{ item.url }}" class="timeline-avatar">
+          {% if item.avatar %}
+            <img src="{{ item.avatar }}" alt="Avatar"/>
+          {% endif %}
+        </a>
+        <h2 class="timeline-title">{{ item.title }}</h2>
+        <p class="timeline-description">{{ item.description }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
 
   <div class="navlist">
     <nav>
