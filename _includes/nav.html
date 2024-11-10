@@ -1,42 +1,26 @@
 <div class="timeline">
   <header class="timeline-header">
-    <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-    <p class="site-description">{{ site.description }}</p>
+    <div class="site-info">
+      {% if site.avatar %}
+        <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+      {% endif %}
+      <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+      <p class="site-description">{{ site.description }}</p>
+    </div>
   </header>
-  <div class="timeline-items">
-    {% for item in site.timeline %}
-    <div class="timeline-item">
-      <div class="timeline-date">{{ item.date }}</div>
+
+  <div class="timeline-events">
+    {% for nav in site.navigation %}
+    <div class="timeline-event">
+      <div class="timeline-bullet"></div>
       <div class="timeline-content">
-        <a href="{{ item.url }}" class="timeline-avatar">
-          {% if item.avatar %}
-            <img src="{{ item.avatar }}" alt="Avatar"/>
-          {% endif %}
-        </a>
-        <h2 class="timeline-title">{{ item.title }}</h2>
-        <p class="timeline-description">{{ item.description }}</p>
+        <a href="{{ nav.url | prepend: site.baseurl }}">{{ nav.name }}</a>
       </div>
     </div>
     {% endfor %}
   </div>
-</div>
 
-
-  <div class="navlist">
-    <nav>
-      {% for nav in site.navigation %}
-      {% if nav.url contains 'http://' or nav.url contains 'https://' %}
-      <a href="{{ nav.url }}">{{ nav.name }}</a>
-      {% else %}
-      <a href="{{ site.baseurl }}{{ nav.url }}">{{ nav.name }}</a>
-      {% endif %}
-      {% endfor %}
-    </nav>
-  </div>
-
-  <div class="wrapper-footer-desktop">
-    <footer class="footer">
-      {% include footer.html %}
-    </footer>
-  </div>
+  <footer class="timeline-footer">
+    {% include footer.html %}
+  </footer>
 </div>
